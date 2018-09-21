@@ -1,95 +1,110 @@
 package branche1;
 
+import java.net.MalformedURLException;
+import java.rmi.AccessException;
 import java.rmi.Naming;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 
 import headquarterServer.HeadquarterInterface;
-import headquarterServer.HeahquarterRemoteObject;
+import headquarterServer.HeadquarterServer;
 import model.Account;
 import model.Customer;
+import model.RemoteCustomer;
+import model.RemoteCustomerList;
 
 public class Branche1RemoteObject extends UnicastRemoteObject
       implements Branche1Interface
-{
 
+{
+   HeadquarterInterface server;
    /**
-    * 
-    */
+   * 
+   */
    private static final long serialVersionUID = 1L;
 
-   public Branche1RemoteObject() throws RemoteException
+   public Branche1RemoteObject()
+         throws RemoteException, MalformedURLException, NotBoundException
+
    {
-      super();
-
-      // try
-      // {
-      //
-      // headquarterInterface = (HeadquarterInterface) Naming
-      // .lookup("rmi://localhost:1099/headquarter");
-      //
-      // }
-      // catch (Exception ex)
-      // {
-      // ex.printStackTrace();
-      // }
-
+      server = new RemoteCustomerList();
    }
 
-   public static void main(String[] args) throws RemoteException
+   public static void main(String[] args) throws AccessException,
+         RemoteException, NotBoundException, MalformedURLException
    {
-      Branche1Interface branche1Server = new Branche1RemoteObject();
 
       try
       {
+         LocateRegistry.createRegistry(1097);
 
-         LocateRegistry.createRegistry(1098);
-         Naming.rebind("branche1", branche1Server);
-         System.out.println("the branche1  server is ready ... ");
+         Branche1Interface branchServer = new Branche1RemoteObject();
+
+         Naming.rebind("branchServer", branchServer);
+         System.out.println("the branch server is ready ... ");
       }
       catch (Exception ex)
       {
          ex.printStackTrace();
       }
 
-      HeadquarterInterface headquarterInterface = new HeahquarterRemoteObject();
-      try
-      {
+      HeadquarterInterface server = new RemoteCustomerList();
 
-         headquarterInterface = (HeadquarterInterface) Naming
-               .lookup("rmi://localhost:1099/headquarter");
+      server = (HeadquarterInterface) Naming
+            .lookup("rmi://localhost:1099/headquarter");
+      System.out.println(" client is ready");
 
-      }
-      catch (Exception ex)
-      {
-         ex.printStackTrace();
-      }
+      Account account = new Account("DKK", 1000, 123456789);
 
-      headquarterInterface.sayHi();
+      server.registerCustomer("Fadi", " 0109991234", " Horsens ", account);
 
-      headquarterInterface.printClientMessage(
-            " I am invoking this method from Branch1 class ", branche1Server);
-      Account account = new Account("dkk", 100, 123456789);
-      Customer customer1 = new Customer("Fadi", "0101011912", account);
-      headquarterInterface.addCustomer(customer1);
-      headquarterInterface.getAllCustomers();
-   }
-
-   @Override
-   public void sayHi() throws RemoteException
-   {
-      System.out.println(" Hi from the Branche1 remote object ");
+      server.showAllCustomers();
 
    }
 
    @Override
-   public void printClientMessage(String message, Object obj)
-         throws RemoteException
+   public void removeCustomer(RemoteCustomer customer) throws RemoteException
+   {
+      server.removeCustomer(customer);
+
+   }
+
+   @Override
+   public Customer getCustomerByCpr(String cpr) throws RemoteException
    {
 
-      // System.out.println(
-      // "the message from " + obj.getClass().getName() + " is :" + message);
+      return server.getCustomerByCpr(cpr);
+   }
+
+   @Override
+   public ArrayList<Customer> getAllCustomers() throws RemoteException
+   {
+
+      return server.getAllCustomers();
+   }
+
+   @Override
+   public void showAllCustomers() throws RemoteException
+   {
+      server.showAllCustomers();
+   }
+
+   @Override
+   public void SayHi() throws RemoteException
+   {
+      server.SayHi();
+      System.out.println(" this hi is from the branch server");
+   }
+
+   @Override
+   public Customer registerCustomer(String name, String cpr, String address,
+         Account account) throws RemoteException
+   {
+
+      return server.registerCustomer(name, cpr, address, account);
    }
 
 }

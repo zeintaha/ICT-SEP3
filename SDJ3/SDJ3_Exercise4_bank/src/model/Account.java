@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class Account implements Serializable
 {
+   /**
+    * 
+    */
+   private static final long serialVersionUID = 1L;
    private String currency;
    private double balance;
    private long accountNumber;
@@ -57,15 +61,15 @@ public class Account implements Serializable
       }
    }
 
-   public void transfer(Customer toCustomer, double amount, String currency)
+   public void transfer(RemoteCustomer toCustomer, double amount, String currency)
    {
 
-      if (currency.equals(this.currency))
-      {
-
-         this.balance -= amount;
-         toCustomer.getAccount().balance += amount;
-      }
+//      if (currency.equals(this.currency))
+//      {
+//
+//         this.balance -= amount;
+//         toCustomer.getAccount().balance += amount;
+//      }
 
    }
 

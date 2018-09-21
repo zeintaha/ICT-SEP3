@@ -1,41 +1,16 @@
 package model;
 
-import java.io.Serializable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public class Customer implements Serializable {
-	private String name;
-	private String cpr;
-	private Account account;
-
-	public Customer(String name, String cpr, Account account) {
-		this.name = name;
-		this.cpr = cpr;
-		this.account = account;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getCpr() {
-		return cpr;
-	}
-
-	public void setCpr(String cpr) {
-		this.cpr = cpr;
-	}
-
-	public Account getAccount() {
-		return account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-	
-
-	public String toString() {
-		return "Customer [Name =" + name + ", CPR=" + cpr + ", Account Details=" + account.toString() + "]";
-	}
+public interface Customer extends Remote
+{
+   String getName()throws RemoteException;
+   String getCpr()throws RemoteException;
+   void setCpr(String cpr)throws RemoteException;
+   Account getAccount()throws RemoteException;
+   void setAddress(String address)throws RemoteException;
+   String getAddress()throws RemoteException;
+   String toString1()throws RemoteException;
 
 }
