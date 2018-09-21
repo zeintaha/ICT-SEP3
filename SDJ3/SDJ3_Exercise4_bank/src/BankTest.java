@@ -19,9 +19,9 @@ public class BankTest {
 		System.out.println(customers.getCustomerByCpr("102030-0056").toString());
 		System.out.println(customers.getAllCustomers());
 		
-		account1.deposite(12, "dkk");
-		account2.withdraw(12, "dkk");
-		account1.transfer(customer2, 12, "dkk");
+		account1.deposite(112, "dkk");
+		account2.withdraw(112, "dkk");
+		account1.transfer(customer2, 33);
 		
 		System.out.println(customer1.toString());
 		System.out.println(customer2.toString());

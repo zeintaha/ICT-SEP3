@@ -45,9 +45,9 @@ public class Account {
 
 	}
 
-	public void transfer(Customer toCustomer, double amount, String currency) {
+	public void transfer(Customer toCustomer, double amount) {
 
-		if (currency.equals(this.currency)) {
+		if (this.currency.equals(toCustomer.getAccount().currency)) {
 
 			this.balance -= amount;
 			toCustomer.getAccount().balance += amount;
