@@ -13,7 +13,6 @@ import model.Customer;
 public class Branche1RemoteObject extends UnicastRemoteObject
       implements Branche1Interface
 {
-  
 
    /**
     * 
@@ -41,11 +40,9 @@ public class Branche1RemoteObject extends UnicastRemoteObject
    public static void main(String[] args) throws RemoteException
    {
       Branche1Interface branche1Server = new Branche1RemoteObject();
-      
+
       try
       {
-
-        
 
          LocateRegistry.createRegistry(1098);
          Naming.rebind("branche1", branche1Server);
@@ -68,9 +65,9 @@ public class Branche1RemoteObject extends UnicastRemoteObject
       {
          ex.printStackTrace();
       }
-     
+
       headquarterInterface.sayHi();
-     
+
       headquarterInterface.printClientMessage(
             " I am invoking this method from Branch1 class ", branche1Server);
       Account account = new Account("dkk", 100, 123456789);
@@ -91,8 +88,8 @@ public class Branche1RemoteObject extends UnicastRemoteObject
          throws RemoteException
    {
 
-//      System.out.println(
-//            "the message from " + obj.getClass().getName() + " is :" + message);
+      // System.out.println(
+      // "the message from " + obj.getClass().getName() + " is :" + message);
    }
 
 }
