@@ -1,5 +1,8 @@
+package model;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
 	private String name;
 	private String cpr;
 	private Account account;
@@ -29,6 +32,7 @@ public class Customer {
 	public void setAccount(Account account) {
 		this.account = account;
 	}
+	
 
 	public String toString() {
 		return "Customer [Name =" + name + ", CPR=" + cpr + ", Account Details=" + account.toString() + "]";

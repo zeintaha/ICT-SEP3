@@ -1,17 +1,18 @@
 package branches2;
 
 
-import java.io.Serializable;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 
 import headquarterServer.HeadquarterInterface;
 import headquarterServer.HeahquarterRemoteObject;
+import model.Customer;
 
 public class Branche2RemoteObject extends UnicastRemoteObject
-      implements Serializable, Branche2Interface, HeadquarterInterface
+      implements  Branche2Interface, HeadquarterInterface
 {
   
 
@@ -86,6 +87,27 @@ public class Branche2RemoteObject extends UnicastRemoteObject
 
       System.out.println(
             "the message from " + obj.getClass().getName() + " is :" + message);
+   }
+
+   @Override
+   public void addCustomer(Customer customer) throws RemoteException
+   {
+      // TODO Auto-generated method stub
+      
+   }
+
+   @Override
+   public void removeCustomre(Customer customer) throws RemoteException
+   {
+      // TODO Auto-generated method stub
+      
+   }
+
+   @Override
+   public ArrayList<Customer> getAllCustomers() throws RemoteException
+   {
+      // TODO Auto-generated method stub
+      return null;
    }
 
 }

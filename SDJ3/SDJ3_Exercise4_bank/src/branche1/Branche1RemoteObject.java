@@ -1,6 +1,5 @@
 package branche1;
 
-import java.io.Serializable;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -8,13 +7,14 @@ import java.rmi.server.UnicastRemoteObject;
 
 import headquarterServer.HeadquarterInterface;
 import headquarterServer.HeahquarterRemoteObject;
+import model.Account;
+import model.Customer;
 
 public class Branche1RemoteObject extends UnicastRemoteObject
-      implements Serializable, Branche1Interface, HeadquarterInterface
+      implements Branche1Interface
 {
   
 
-   private HeadquarterInterface headquarterInterface;
    /**
     * 
     */
@@ -24,6 +24,39 @@ public class Branche1RemoteObject extends UnicastRemoteObject
    {
       super();
 
+      // try
+      // {
+      //
+      // headquarterInterface = (HeadquarterInterface) Naming
+      // .lookup("rmi://localhost:1099/headquarter");
+      //
+      // }
+      // catch (Exception ex)
+      // {
+      // ex.printStackTrace();
+      // }
+
+   }
+
+   public static void main(String[] args) throws RemoteException
+   {
+      Branche1Interface branche1Server = new Branche1RemoteObject();
+      
+      try
+      {
+
+        
+
+         LocateRegistry.createRegistry(1098);
+         Naming.rebind("branche1", branche1Server);
+         System.out.println("the branche1  server is ready ... ");
+      }
+      catch (Exception ex)
+      {
+         ex.printStackTrace();
+      }
+
+      HeadquarterInterface headquarterInterface = new HeahquarterRemoteObject();
       try
       {
 
@@ -35,40 +68,15 @@ public class Branche1RemoteObject extends UnicastRemoteObject
       {
          ex.printStackTrace();
       }
-
-   }
-
-   public static void main(String[] args)
-   {
-      try
-      {
-         LocateRegistry.createRegistry(1098);
-
-         Branche1Interface branche1Server = new Branche1RemoteObject();
-
-         Naming.rebind("branche1", branche1Server);
-         System.out.println("the branche1  server is ready ... ");
-      }
-      catch (Exception ex)
-      {
-         ex.printStackTrace();
-      }
-
-      
-      try
-      {
-         HeadquarterInterface headquarterServerInstance = new HeahquarterRemoteObject();
-         headquarterServerInstance.sayHi();
-          Branche1RemoteObject b = new Branche1RemoteObject();
-         headquarterServerInstance.printClientMessage(" I am invoking this method from Branch1 class ", b);
-      }
-      catch (RemoteException e)
-      {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
-      
-      
+     
+      headquarterInterface.sayHi();
+     
+      headquarterInterface.printClientMessage(
+            " I am invoking this method from Branch1 class ", branche1Server);
+      Account account = new Account("dkk", 100, 123456789);
+      Customer customer1 = new Customer("Fadi", "0101011912", account);
+      headquarterInterface.addCustomer(customer1);
+      headquarterInterface.getAllCustomers();
    }
 
    @Override
@@ -83,8 +91,8 @@ public class Branche1RemoteObject extends UnicastRemoteObject
          throws RemoteException
    {
 
-      System.out.println(
-            "the message from " + obj.getClass().getName() + " is :" + message);
+//      System.out.println(
+//            "the message from " + obj.getClass().getName() + " is :" + message);
    }
 
 }
