@@ -1,8 +1,10 @@
 package headquarterServer;
 
+import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
@@ -14,36 +16,20 @@ import model.RemoteCustomerList;
 public class HeadquarterServer extends UnicastRemoteObject
       implements HeadquarterInterface
 {
-    HeadquarterInterface list = new RemoteCustomerList();
+   HeadquarterInterface list = new RemoteCustomerList();
 
    /**
     * 
     */
    private static final long serialVersionUID = 1L;
 
-   public HeadquarterServer() throws RemoteException
+   public HeadquarterServer()
+         throws RemoteException, IOException, ClassNotFoundException
    {
-      
-   }
 
-   public static void main(String[] args) throws RemoteException
-   {
-      HeadquarterInterface h = new HeadquarterServer();
-      
-      try
-      {
-         LocateRegistry.createRegistry(1099);
-
-         HeadquarterInterface hqServer = new HeadquarterServer();
-
-         Naming.rebind("headquarter", hqServer);
-         System.out.println("the Headquarter server is ready ... ");
-      }
-      catch (Exception ex)
-      {
-         ex.printStackTrace();
-      }
-
+      Registry reg = LocateRegistry.createRegistry(1099);
+      reg.rebind("headquarter", this);
+      System.out.println("the Headquarter server is ready ... ");
    }
 
    @Override

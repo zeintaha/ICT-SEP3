@@ -6,6 +6,7 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
@@ -31,27 +32,9 @@ public class Branche1RemoteObject extends UnicastRemoteObject
 
    {
       server = new RemoteCustomerList();
-   }
-
-   public static void main(String[] args) throws AccessException,
-         RemoteException, NotBoundException, MalformedURLException
-   {
-
-      try
-      {
-         LocateRegistry.createRegistry(1097);
-
-         Branche1Interface branchServer = new Branche1RemoteObject();
-
-         Naming.rebind("branchServer", branchServer);
-         System.out.println("the branch server is ready ... ");
-      }
-      catch (Exception ex)
-      {
-         ex.printStackTrace();
-      }
-
-      HeadquarterInterface server = new RemoteCustomerList();
+      Registry reg = LocateRegistry.createRegistry(1098);
+      reg.rebind("branch", this);
+      System.out.println("the branch server is ready ... ");
 
       server = (HeadquarterInterface) Naming
             .lookup("rmi://localhost:1099/headquarter");
@@ -60,7 +43,6 @@ public class Branche1RemoteObject extends UnicastRemoteObject
       Account account = new Account("DKK", 1000, 123456789);
 
       server.registerCustomer("Fadi", " 0109991234", " Horsens ", account);
-
       server.showAllCustomers();
 
    }
