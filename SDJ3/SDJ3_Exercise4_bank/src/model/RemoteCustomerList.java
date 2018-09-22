@@ -52,7 +52,7 @@ public class RemoteCustomerList extends UnicastRemoteObject
    {
       for (int i = 0; i < customers.size(); i++)
       {
-         System.out.println(customers.get(i).toString());
+         System.out.println(customers.get(i));
       }
 
    }

@@ -1,4 +1,6 @@
-package branche1;
+
+package branches2;
+
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -8,7 +10,7 @@ import model.Account;
 import model.Customer;
 import model.RemoteCustomer;
 
-public interface Branche1Interface extends Remote
+public interface Branch2Interface extends Remote
 {
 
    void removeCustomer(RemoteCustomer customer) throws RemoteException;

@@ -17,8 +17,8 @@ import model.Customer;
 import model.RemoteCustomer;
 import model.RemoteCustomerList;
 
-public class Branche1RemoteObject extends UnicastRemoteObject
-      implements Branche1Interface
+public class Branch1RemoteObject extends UnicastRemoteObject
+      implements Branch1Interface
 
 {
    HeadquarterInterface server;
@@ -27,13 +27,13 @@ public class Branche1RemoteObject extends UnicastRemoteObject
    */
    private static final long serialVersionUID = 1L;
 
-   public Branche1RemoteObject()
+   public Branch1RemoteObject()
          throws RemoteException, MalformedURLException, NotBoundException
 
    {
       server = new RemoteCustomerList();
       Registry reg = LocateRegistry.createRegistry(1098);
-      reg.rebind("branch", this);
+      reg.rebind("branch1", this);
       System.out.println("the branch server is ready ... ");
 
       server = (HeadquarterInterface) Naming

@@ -11,6 +11,7 @@ public class Account implements Serializable
    private String currency;
    private double balance;
    private long accountNumber;
+   private Exechange exechange = new Exechange();
 
    public Account(String currency, double balance, long accountNumber)
    {
@@ -43,11 +44,15 @@ public class Account implements Serializable
    public void deposite(double amount, String currency)
    {
 
-      if (currency.equals(this.currency))
+      if (this.getCurrency().equals(this.currency))
       {
 
          this.balance += amount;
       }
+      else { this.exechange.exechangeTheCurrency(this, amount,currency);
+         
+      }
+      System.out.println(" now the balance is " + this.balance);
 
    }
 
@@ -59,6 +64,7 @@ public class Account implements Serializable
 
          this.balance -= amount;
       }
+      System.out.println(" now the balance is " + this.balance);
    }
 
    public void transfer(RemoteCustomer toCustomer, double amount, String currency)
@@ -70,6 +76,7 @@ public class Account implements Serializable
 //         this.balance -= amount;
 //         toCustomer.getAccount().balance += amount;
 //      }
+      System.out.println(" now the balance is " + this.balance);
 
    }
 
