@@ -29,14 +29,32 @@ public class Branch1RemoteObject extends UnicastRemoteObject
          throws RemoteException, MalformedURLException, NotBoundException
 
    {
-      server = new RemoteCustomerList();
-      Registry reg = LocateRegistry.createRegistry(1098);
-      reg.rebind("branch1", this);
-      System.out.println("the branch server is ready ... ");
+      
 
-      server = (HeadquarterInterface) Naming
-            .lookup("rmi://localhost:1099/headquarter");
-      System.out.println(" client is ready");
+   }
+
+   public void runTheServer() throws RemoteException
+   {
+      Registry reg = LocateRegistry.createRegistry(1098);
+       reg.rebind("branch1", this);
+       System.out.println(" branch1 server is ready ... ");
+
+   }
+
+   public void connectToTheHeadquarter() throws RemoteException
+   {
+      server = new RemoteCustomerList();
+      try
+      {
+         server = (HeadquarterInterface) Naming
+               .lookup("rmi://localhost:1099/headquarter");
+      }
+      catch (MalformedURLException | NotBoundException e)
+      {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+      System.out.println(" branch 1 is connected to the headquarter server");
 
       Account account = new Account("DKK", 1000, 123456789);
 

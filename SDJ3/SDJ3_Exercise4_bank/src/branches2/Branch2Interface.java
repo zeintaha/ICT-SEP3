@@ -1,7 +1,6 @@
 
 package branches2;
 
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -22,6 +21,10 @@ public interface Branch2Interface extends Remote
    void showAllCustomers() throws RemoteException;
 
    public void SayHi() throws RemoteException;
+
+   public void runTheServer() throws RemoteException;
+
+   public void connectToTheHeadquarter() throws RemoteException;
 
    Customer registerCustomer(String name, String cpr, String address,
          Account account) throws RemoteException;

@@ -26,9 +26,9 @@ public class HeadquarterServer extends UnicastRemoteObject
          throws RemoteException, IOException, ClassNotFoundException
    {
 
-      Registry reg = LocateRegistry.createRegistry(1099);
-      reg.rebind("headquarter", this);
-      System.out.println("the Headquarter server is ready ... ");
+//      Registry reg = LocateRegistry.createRegistry(1099);
+//      reg.rebind("headquarter", this);
+//      System.out.println("the Headquarter server is ready ... ");
    }
 
    @Override
