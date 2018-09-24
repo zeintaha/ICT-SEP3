@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.rmi.RemoteException;
 
 public class Account implements Serializable
 {
@@ -44,14 +45,16 @@ public class Account implements Serializable
    public void deposite(double amount, String currency)
    {
 
-      if (this.getCurrency().equals(this.currency))
+      if (currency.equalsIgnoreCase(getCurrency()))
       {
 
          this.balance += amount;
       }
-      else { this.exechange.exechangeTheCurrency(this, amount,currency);
-         
-      }
+      else
+      {
+         exechange.exechangeTheCurrencyDeposite(this, amount, currency);
+
+     }
       System.out.println(" now the balance is " + this.balance);
 
    }
@@ -59,25 +62,35 @@ public class Account implements Serializable
    public void withdraw(double amount, String currency)
    {
 
-      if (currency.equals(this.currency))
+      if (this.getCurrency().equalsIgnoreCase(currency))
       {
 
          this.balance -= amount;
       }
+      else
+      {
+         this.exechange.exechangeTheCurrencyWithdraw(this, amount, currency);
+      }
       System.out.println(" now the balance is " + this.balance);
    }
 
-   public void transfer(RemoteCustomer toCustomer, double amount, String currency)
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException
    {
 
-//      if (currency.equals(this.currency))
-//      {
-//
-//         this.balance -= amount;
-//         toCustomer.getAccount().balance += amount;
-//      }
-      System.out.println(" now the balance is " + this.balance);
+      if (!(currency.equals("dk")))
+      {
+         exechange.exechangeTheCurrencyTransfere(this, amount, currency);
+         this.balance -= amount;
+         toCustomer.getAccount().balance += amount;
 
+         System.out.println(" now the balance is " + this.balance);
+      }
+      else if (currency.equals("dk"))
+      {
+         this.balance -= amount;
+         toCustomer.getAccount().balance += amount;
+      }
    }
 
    public String toString()

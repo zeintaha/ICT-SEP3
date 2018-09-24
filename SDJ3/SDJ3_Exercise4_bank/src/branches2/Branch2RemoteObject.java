@@ -1,7 +1,6 @@
 package branches2;
 
 import java.net.MalformedURLException;
-import java.rmi.AccessException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -11,7 +10,6 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
 import headquarterServer.HeadquarterInterface;
-import headquarterServer.HeadquarterServer;
 import model.Account;
 import model.Customer;
 import model.RemoteCustomer;

@@ -1,12 +1,8 @@
 package ClientTest;
 
 import java.net.MalformedURLException;
-import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-
-import branche1.Branch1Interface;
-import branche1.Branch1RemoteObject;
 
 public class Test
 {public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException
