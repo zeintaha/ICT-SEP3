@@ -14,7 +14,7 @@ public class Account implements Serializable
    private long accountNumber;
    private Exechange exechange = new Exechange();
 
-   public Account(String currency, double balance, long accountNumber)
+   public Account(String currency, double balance, long accountNumber) throws RemoteException
    {
       this.currency = currency;
       this.balance = balance;
@@ -22,22 +22,22 @@ public class Account implements Serializable
 
    }
 
-   public String getCurrency()
+   public String getCurrency() throws RemoteException
    {
       return currency;
    }
 
-   public double getBalance()
+   public double getBalance() throws RemoteException
    {
       return balance;
    }
 
-   public void setBalance(double balance)
+   public void setBalance(double balance) throws RemoteException
    {
       this.balance = balance;
    }
 
-   public long getAccountNumber()
+   public long getAccountNumber() throws RemoteException
    {
       return accountNumber;
    }
@@ -46,7 +46,7 @@ public class Account implements Serializable
    
    
    
-   public void deposite(double amount, String currency)
+   public void deposite(double amount, String currency) throws RemoteException
    {
 
       if (currency.equalsIgnoreCase(getCurrency()))
@@ -68,7 +68,7 @@ public class Account implements Serializable
    
    
    
-   public void withdraw(double amount, String currency)
+   public void withdraw(double amount, String currency) throws RemoteException
    {
 
       if (this.getCurrency().equalsIgnoreCase(currency))
@@ -102,7 +102,7 @@ public class Account implements Serializable
       }
    }
 
-   public String toString()
+   public String totring() throws RemoteException 
    {
       return "[Currency=" + currency + ", Balance=" + balance + ", Number="
             + accountNumber + "]";

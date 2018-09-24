@@ -20,10 +20,20 @@ public interface Branch1Interface extends Remote
    void showAllCustomers() throws RemoteException;
 
    public void SayHi() throws RemoteException;
+
    public void runTheServer() throws RemoteException;
+
    public void connectToTheHeadquarter() throws RemoteException;
 
    Customer registerCustomer(String name, String cpr, String address,
          Account account) throws RemoteException;
+   
+   public void withdraw(double amount, String currency) throws RemoteException;
+
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException;
+
+   public void deposite(double amount, String currency) throws RemoteException;
+
 
 }

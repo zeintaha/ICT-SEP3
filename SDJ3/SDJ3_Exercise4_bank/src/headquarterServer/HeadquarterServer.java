@@ -26,9 +26,7 @@ public class HeadquarterServer extends UnicastRemoteObject
          throws RemoteException, IOException, ClassNotFoundException
    {
 
-//      Registry reg = LocateRegistry.createRegistry(1099);
-//      reg.rebind("headquarter", this);
-//      System.out.println("the Headquarter server is ready ... ");
+
    }
 
    @Override
@@ -55,8 +53,8 @@ public class HeadquarterServer extends UnicastRemoteObject
    @Override
    public RemoteCustomer getCustomerByCpr(String cpr) throws RemoteException
    {
-      // TODO Auto-generated method stub
-      return null;
+      
+      return (RemoteCustomer) list.getCustomerByCpr(cpr);
    }
 
    @Override
@@ -72,6 +70,27 @@ public class HeadquarterServer extends UnicastRemoteObject
    {
 
       return list.registerCustomer(name, cpr, address, account);
+   }
+
+   @Override
+   public void withdraw(double amount, String currency) throws RemoteException
+   {
+     list.withdraw(amount, currency);
+      
+   }
+
+   @Override
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException
+   {
+      list.transfer(toCustomer, amount, currency);
+   }
+
+   @Override
+   public void deposite(double amount, String currency) throws RemoteException
+   {
+      list.deposite(amount, currency);
+      
    }
 
 }

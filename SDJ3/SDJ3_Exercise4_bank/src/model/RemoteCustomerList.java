@@ -13,7 +13,8 @@ public class RemoteCustomerList extends UnicastRemoteObject
     * 
     */
    private static final long serialVersionUID = 1L;
-   public ArrayList<Customer> customers = new ArrayList<Customer>();;
+   public ArrayList<Customer> customers = new ArrayList<Customer>();
+   private Account account;
 
    public RemoteCustomerList() throws RemoteException
    {
@@ -71,6 +72,34 @@ public class RemoteCustomerList extends UnicastRemoteObject
      RemoteCustomer customer = new RemoteCustomer(name,cpr,address,account);
      customers.add(customer);
       return customer;
+   }
+
+
+
+   @Override
+   public void withdraw(double amount, String currency) throws RemoteException
+   {
+      account.withdraw(amount, currency);
+      
+   }
+
+
+
+   @Override
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException
+   {
+      account.transfer(toCustomer, amount, currency);
+      
+   }
+
+
+
+   @Override
+   public void deposite(double amount, String currency) throws RemoteException
+   {
+     account.deposite(amount, currency);
+      
    }
 
 }

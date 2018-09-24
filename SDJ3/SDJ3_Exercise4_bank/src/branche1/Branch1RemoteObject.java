@@ -104,5 +104,26 @@ public class Branch1RemoteObject extends UnicastRemoteObject
 
       return server.registerCustomer(name, cpr, address, account);
    }
+   
+   @Override
+   public void withdraw(double amount, String currency) throws RemoteException
+   {
+      server.withdraw(amount, currency);
+      
+   }
+
+   @Override
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException
+   {
+      server.transfer(toCustomer, amount, currency);
+   }
+
+   @Override
+   public void deposite(double amount, String currency) throws RemoteException
+   {
+      server.deposite(amount, currency);
+      
+   }
 
 }

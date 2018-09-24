@@ -29,7 +29,6 @@ public class Branch2RemoteObject extends UnicastRemoteObject
          throws RemoteException, MalformedURLException, NotBoundException
 
    {
-     
 
    }
 
@@ -96,13 +95,33 @@ public class Branch2RemoteObject extends UnicastRemoteObject
          // TODO Auto-generated catch block
          e.printStackTrace();
       }
-      System.out
-            .println("  branch 2 is connected to the headquarter server");
+      System.out.println("  branch 2 is connected to the headquarter server");
 
       Account account = new Account("DKK", 1000, 123456789);
 
       server.registerCustomer("Fadi", " 0109991234", " Horsens ", account);
       server.showAllCustomers();
+
+   }
+
+   @Override
+   public void withdraw(double amount, String currency) throws RemoteException
+   {
+      server.withdraw(amount, currency);
+
+   }
+
+   @Override
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException
+   {
+      server.transfer(toCustomer, amount, currency);
+   }
+
+   @Override
+   public void deposite(double amount, String currency) throws RemoteException
+   {
+      server.deposite(amount, currency);
 
    }
 

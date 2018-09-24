@@ -28,5 +28,13 @@ public interface Branch2Interface extends Remote
 
    Customer registerCustomer(String name, String cpr, String address,
          Account account) throws RemoteException;
+   
+   public void withdraw(double amount, String currency) throws RemoteException;
+
+   public void transfer(RemoteCustomer toCustomer, double amount,
+         String currency) throws RemoteException;
+
+   public void deposite(double amount, String currency) throws RemoteException;
+
 
 }
