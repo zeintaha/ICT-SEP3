@@ -42,6 +42,10 @@ public class Account implements Serializable
       return accountNumber;
    }
 
+   
+   
+   
+   
    public void deposite(double amount, String currency)
    {
 
@@ -52,13 +56,18 @@ public class Account implements Serializable
       }
       else
       {
-         exechange.exechangeTheCurrencyDeposite(this, amount, currency);
+    	 
+         double newamount = exechange.exechangeTheCurrencyDeposite(this, amount, currency);
+         this.balance += newamount;
 
      }
       System.out.println(" now the balance is " + this.balance);
 
    }
 
+   
+   
+   
    public void withdraw(double amount, String currency)
    {
 

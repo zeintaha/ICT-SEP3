@@ -6,12 +6,11 @@ public class TestHashTable
    {
       Exechange h = new Exechange();
       h.setExechange(100, 200, 1);
-     System.out.println(h.getDollarValue());
+      System.out.println(h.getDollarValue());
       Account account = new Account("kr", 1000, 123456789);
-      account.deposite(1000, "dollar");
-      account.toString();
+      account.deposite(100, "dollar");
+ 
 
-      account.toString();
 
    }
 }
