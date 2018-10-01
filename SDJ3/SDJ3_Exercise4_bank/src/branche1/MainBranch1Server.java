@@ -2,15 +2,8 @@ package branche1;
 
 import java.net.MalformedURLException;
 import java.rmi.AccessException;
-import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-
-import headquarterServer.HeadquarterInterface;
-import model.Account;
-import model.RemoteCustomerList;
 
 public class MainBranch1Server
 {
