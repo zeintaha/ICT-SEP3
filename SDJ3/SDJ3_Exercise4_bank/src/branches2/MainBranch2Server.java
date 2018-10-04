@@ -5,9 +5,6 @@ import java.rmi.AccessException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-import branche1.Branch1Interface;
-import branche1.Branch1RemoteObject;
-
 public class MainBranch2Server
 {
 

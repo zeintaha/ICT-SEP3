@@ -15,9 +15,9 @@ public class Exechange implements Serializable {
 
 	public void setExechange(double value1, double value2, double value3) {
 
-		this.currencies.put("dollar", value1);
-		this.currencies.put("euro", value2);
-		this.currencies.put("kr", value3);
+		Exechange.currencies.put("dollar", value1);
+		Exechange.currencies.put("euro", value2);
+		Exechange.currencies.put("kr", value3);
 
 	}
 
