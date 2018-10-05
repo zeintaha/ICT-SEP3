@@ -4,25 +4,28 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.rmi.server.RemoteRef;
 import java.util.Scanner;
 
 
 
-public class MessageClient
+public class Client
 {
    private DataInputStream in;
    private DataOutputStream out;
    private Socket socket;
    private Scanner input;
+   private Message message;
+   private ByteConverter bc;
+   public String msg= "hello world";
+  
 
-   public MessageClient(String host, int port) throws UnknownHostException, IOException
+   public Client(String host, int port) throws UnknownHostException, IOException
    {
       Socket clientsocket = new Socket(host, port);
      in = new DataInputStream(clientsocket.getInputStream());
      out = new DataOutputStream(clientsocket.getOutputStream());
 
-
-      execute();
       close();
    }
 
@@ -31,31 +34,35 @@ public class MessageClient
       final int PORT = 6789;
       final String HOST = "localhost";
       
-      MessageClient mc = new MessageClient(HOST, PORT);
-      mc.execute();
+      Client mc = new Client(HOST, PORT);
+//      mc.doOperation();
       
 
    }
+   
+  
 
-   private void execute()
+   public byte[] doOperation (RemoteRef s, int operationId, byte[] arguments)
 
    {
-      input = new Scanner(System.in);
-      String msg;
+      
 
       while (true)
       { // run until you terminate the program
          try
          {
-            msg = input.nextLine();
-
+        	 
+           bc = new ByteConverter();
+           byte[] byteMsg = bc.toByteArray(msg);
+        	 
+           message = new Message(0, 11112, s, 22221, byteMsg);
            
 
   
 
             // Send line to server
             System.out.println("Client> " + msg);
-            out.writeBytes(msg);
+            out.
 
             // Read line from Server.
             byte serverReply = in.readByte()
