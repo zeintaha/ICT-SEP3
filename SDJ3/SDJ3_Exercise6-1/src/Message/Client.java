@@ -1,4 +1,5 @@
 package Message;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -7,42 +8,33 @@ import java.net.UnknownHostException;
 import java.rmi.server.RemoteRef;
 import java.util.Scanner;
 
+public class Client {
+	private DataInputStream in;
+	private DataOutputStream out;
+	private Socket socket;
+	private Scanner input;
+	private Message message;
+	private ByteConverter bc;
+	public String msg = "hello world";
 
+	public Client(String host, int port) throws UnknownHostException, IOException {
+		Socket clientsocket = new Socket(host, port);
+		in = new DataInputStream(clientsocket.getInputStream());
+		out = new DataOutputStream(clientsocket.getOutputStream());
 
-public class Client
-{
-   private DataInputStream in;
-   private DataOutputStream out;
-   private Socket socket;
-   private Scanner input;
-   private Message message;
-   private ByteConverter bc;
-   public String msg= "hello world";
-  
+		close();
+	}
 
-   public Client(String host, int port) throws UnknownHostException, IOException
-   {
-      Socket clientsocket = new Socket(host, port);
-     in = new DataInputStream(clientsocket.getInputStream());
-     out = new DataOutputStream(clientsocket.getOutputStream());
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		final int PORT = 6789;
+		final String HOST = "localhost";
 
-      close();
-   }
-
-   public static void main(String[] args) throws UnknownHostException, IOException
-   {
-      final int PORT = 6789;
-      final String HOST = "localhost";
-      
-      Client mc = new Client(HOST, PORT);
+		Client mc = new Client(HOST, PORT);
 //      mc.doOperation();
-      
 
-   }
-   
-  
+	}
 
-   public byte[] doOperation (RemoteRef s, int operationId, byte[] arguments)
+	public byte[] doOperation (RemoteRef s, int operationId, byte[] arguments)
 
    {
       
@@ -80,18 +72,14 @@ public class Client
 
    }
 
-   private void close()
-   {
-      // Close connection.
-      try
-      {
-         socket.close();
-      }
-      catch (IOException e)
-      {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
+	private void close() {
+		// Close connection.
+		try {
+			socket.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-   }
+	}
 }
