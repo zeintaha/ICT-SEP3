@@ -1,4 +1,4 @@
-package dk.via.requestreply;
+package Message.dk.via.requestreply;
 
 import java.io.Serializable;
 

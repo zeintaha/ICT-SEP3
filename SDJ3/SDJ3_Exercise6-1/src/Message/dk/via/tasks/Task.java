@@ -1,4 +1,4 @@
-package dk.via.tasks;
+package Message.dk.via.tasks;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package dk.via.util;
+package Message.dk.via.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
