@@ -4,8 +4,6 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Collection;
-
 
 import model.customer.Customer;
 
@@ -16,7 +14,7 @@ public class CustomerDAOService extends UnicastRemoteObject
     * 
     */
    private static final long serialVersionUID = 1L;
-   private DatabaseHelper helper;
+   private DatabaseHelper<Customer> helper;
 
    public CustomerDAOService(String jdbcURL, String username, String password)
          throws RemoteException
@@ -46,6 +44,29 @@ public class CustomerDAOService extends UnicastRemoteObject
       return new Customer(cpr, name, address);
    }
 
- 
+   @Override
+   public Customer read(String cpr) throws RemoteException
+   {
+      CustomerMapper mapper = new CustomerMapper();
+      Customer cust = helper.mapSingle(mapper,
+            "SELECT * FROM Customer WHERE name = ?;", cpr);
+
+      return cust;
+   }
+
+   @Override
+   public void delete(Customer customer) throws RemoteException
+   {
+      helper.executeUpdate("DELETE FROM Customer WHERE cpr = ?",
+            customer.getCpr());
+   }
+
+   @Override
+   public void update(Customer customer) throws RemoteException
+   {
+      helper.executeUpdate(
+            "UPDATE Customer set name = ?, address = ? WHERE cpr = ?",
+            customer.getName(), customer.getAddress(), customer.getCpr());
+   }
 
 }

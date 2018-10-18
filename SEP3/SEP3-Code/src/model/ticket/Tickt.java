@@ -2,6 +2,9 @@ package model.ticket;
 
 import java.io.Serializable;
 
+import model.customer.Customer;
+import model.movie.AbstractMovie;
+
 public class Tickt implements Serializable
 {
    /**
@@ -9,11 +12,13 @@ public class Tickt implements Serializable
     */
    private static final long serialVersionUID = 1L;
    private String ticketNumber;
-   private String movieName;
+   private AbstractMovie movie;
+   private Customer customer ;
    
-   public Tickt(String ticketNumber, String movieName) {
+   public Tickt(String ticketNumber, AbstractMovie movie,Customer customer) {
       this.ticketNumber = ticketNumber;
-      this.movieName = movieName;
+      this.movie = movie;
+      this.customer= customer;
    }
 
    public String getTicketNumber()
@@ -21,16 +26,22 @@ public class Tickt implements Serializable
       return ticketNumber;
    }
    
-   public String getMovieName()
+   public AbstractMovie  getMovieName()
    {
-      return movieName;
+      return movie;
+   }
+   public Customer getCustoemr() {
+      return customer;
    }
 
    @Override
    public String toString()
    {
-      return "Tickt [ticketNumber=" + ticketNumber + "]";
+      return "Tickt [ticketNumber=" + ticketNumber + ", movie=" + movie
+            + ", customer=" + customer + "]";
    }
+
+  
    
 
 }
