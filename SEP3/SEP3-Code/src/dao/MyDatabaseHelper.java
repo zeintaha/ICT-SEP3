@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.postgresql.Driver;
+
 
 public class MyDatabaseHelper<T>
 {
@@ -21,14 +21,14 @@ public class MyDatabaseHelper<T>
       this.jdbcURL = jdbcURL;
       this.username = username;
       this.password = password;
-      try
+/*      try
       {
          DriverManager.registerDriver(new Driver());
       }
       catch (SQLException e)
       {
          throw new RemoteException("No JDBC driver found", e);
-      }
+      }*/
    }
 
    public Connection getConnection() throws SQLException

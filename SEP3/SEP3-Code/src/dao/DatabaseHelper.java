@@ -3,6 +3,7 @@ package dao;
 
 import java.rmi.RemoteException;
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +11,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.postgresql.Driver;
+
 
 public class DatabaseHelper<T> {
    private String jdbcURL;
@@ -21,11 +22,11 @@ public class DatabaseHelper<T> {
       this.jdbcURL = jdbcURL;
       this.username = username;
       this.password = password;
-      try {
-         DriverManager.registerDriver(new Driver());
-      } catch (SQLException e) {
-         throw new RemoteException("No JDBC driver", e);
-      }
+//      try {
+//         DriverManager.registerDriver(new Driver());
+//      } catch (SQLException e) {
+//         throw new RemoteException("No JDBC driver", e);
+//      }
    }
    
    public DatabaseHelper(String jdbcURL) throws RemoteException {
@@ -38,6 +39,7 @@ public class DatabaseHelper<T> {
       } else {
          return DriverManager.getConnection(jdbcURL, username, password);
       }
+     
    }
 
    private static PreparedStatement prepare(Connection connection, String sql, Object... parameters) throws SQLException {

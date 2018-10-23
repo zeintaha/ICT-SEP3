@@ -6,7 +6,15 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="Libery/MyDatabase.jar"/>
 	<classpathentry kind="lib" path="Libery/postgresql-42.2.2 (1).jar"/>
+=======
+	<classpathentry kind="lib" path="mssql-jdbc-7.0.0.jre10.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+>>>>>>> 2b0aa7c075c73b8219657345035475e26edfb58c
 	<classpathentry kind="output" path="bin"/>
 </classpath>
