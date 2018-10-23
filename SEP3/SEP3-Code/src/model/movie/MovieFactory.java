@@ -11,8 +11,7 @@ public class MovieFactory implements Serializable
    private static final long serialVersionUID = 1L;
 
    public static AbstractMovie create(String name, String director,
-         String description, Category category,String duration, String urlTrailer,
-			String urlFullMovie, String urlImage)
+         String description, Category category)
    {
 
       AbstractMovie movie = null;
@@ -21,23 +20,23 @@ public class MovieFactory implements Serializable
          switch (category)
          {
             case Action:
-               movie = new ActionMovie(name, director, description,duration, urlTrailer, urlFullMovie, urlImage);
+               movie = new ActionMovie(name, director, description);
                break;
             case Adventure:
-               movie = new AdventureMovie(name, director, description,duration, urlTrailer, urlFullMovie, urlImage);
+               movie = new AdventureMovie(name, director, description);
                break;
             case Comedy:
-               movie = new ComedyMovie(name, director, description,duration, urlTrailer, urlFullMovie, urlImage);
+               movie = new ComedyMovie(name, director, description);
                break;
 
             case Drama:
-               movie = new DramaMovie(name, director, description,duration, urlTrailer, urlFullMovie, urlImage);
+               movie = new DramaMovie(name, director, description);
                break;
             case Horror:
-               movie = new HorrorMovie(name, director, description,duration, urlTrailer, urlFullMovie, urlImage);
+               movie = new HorrorMovie(name, director, description);
                break;
             default:
-               movie = new ActionMovie(name, director, description,duration, urlTrailer, urlFullMovie, urlImage);
+               movie = new ActionMovie(name, director, description);
                break;
          }
 

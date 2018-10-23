@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -16,5 +17,9 @@
 		</attributes>
 	</classpathentry>
 >>>>>>> 2b0aa7c075c73b8219657345035475e26edfb58c
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/fadid/OneDrive/Skrivebord/third semester/SDJ (Software Development ) 3/postgresql-42.2.5.jar"/>
+>>>>>>> parent of 2aa3cb7... Movie
 	<classpathentry kind="output" path="bin"/>
 </classpath>
