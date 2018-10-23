@@ -11,11 +11,10 @@ public static void main(String[] args) throws RemoteException
    Server server = new Server();
   CustomerDAOService customer = (CustomerDAOService) server.getCustomerDAO();
  
-//  customer.create("010101", "fidodido", "Horsens3");
+  //customer.create("010101", "fidodido", "Horsens3");
  
-Customer custom = customer.read("1234567890");
+Customer custom = customer.read("010101");
   System.out.println("done");
-  System.out.println(custom.toString());
+System.out.println(custom.toString());
 }
-
 }
