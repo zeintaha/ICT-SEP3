@@ -5,6 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 import dao.CustomerDAO;
 import dao.CustomerDAOService;
+import dao.MovieDAOService;
 
 
 
@@ -19,12 +20,12 @@ public class Server extends UnicastRemoteObject implements ServerRemote
    private static final String PASSWORD = "0940";
    
    private CustomerDAOService customerDAO;
-   
-   public Server() throws RemoteException{
-      customerDAO = new CustomerDAOService(JDBC_URL, USERNAME, PASSWORD);
-   }
-   
-   
+   private MovieDAOService movieDAO;
+
+	public Server() throws RemoteException {
+		customerDAO = new CustomerDAOService(JDBC_URL, USERNAME, PASSWORD);
+		movieDAO = new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
+	}  
    
   public CustomerDAO getCustomerDAO() throws RemoteException{
    return customerDAO;
