@@ -22,11 +22,11 @@ public class DatabaseHelper<T> {
       this.jdbcURL = jdbcURL;
       this.username = username;
       this.password = password;
-//      try {
-//         DriverManager.registerDriver(new Driver());
-//      } catch (SQLException e) {
-//         throw new RemoteException("No JDBC driver", e);
-//      }
+      try {
+         DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+      } catch (SQLException e) {
+         throw new RemoteException("No JDBC driver", e);
+      }
    }
    
    public DatabaseHelper(String jdbcURL) throws RemoteException {

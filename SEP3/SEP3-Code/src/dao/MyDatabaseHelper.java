@@ -21,14 +21,14 @@ public class MyDatabaseHelper<T>
       this.jdbcURL = jdbcURL;
       this.username = username;
       this.password = password;
-/*      try
+      try
       {
-         DriverManager.registerDriver(new Driver());
+         DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
       }
       catch (SQLException e)
       {
          throw new RemoteException("No JDBC driver found", e);
-      }*/
+      }
    }
 
    public Connection getConnection() throws SQLException
