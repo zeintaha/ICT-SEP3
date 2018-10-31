@@ -19,7 +19,7 @@ public class MainClass
 //   System.out.println(" done");
       
       MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
-      AbstractMovie movie= new CrimeMovie("Once Upon", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
+      AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
       cust.create(movie);
       System.out.println(" done");
     
