@@ -9,7 +9,6 @@ public class ActionMovie extends AbstractMovie implements Serializable
    public ActionMovie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		super(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
-		System.out.println(" hi i am action movie ");
 	}
 
 @Override

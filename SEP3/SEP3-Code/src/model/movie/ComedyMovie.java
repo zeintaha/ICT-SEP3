@@ -8,7 +8,6 @@ public class ComedyMovie extends AbstractMovie implements Serializable
    public ComedyMovie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		super(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
-		System.out.println(" hi i am comedy movie ");
 	}
 @Override
 public String toString() {

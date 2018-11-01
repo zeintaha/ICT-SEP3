@@ -1,4 +1,4 @@
-package dao;
+package MovieDAO;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

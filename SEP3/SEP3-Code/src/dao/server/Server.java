@@ -3,9 +3,9 @@ package dao.server;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
+import MovieDAO.MovieDAOService;
 import dao.CustomerDAO;
 import dao.CustomerDAOService;
-import dao.MovieDAOService;
 
 
 

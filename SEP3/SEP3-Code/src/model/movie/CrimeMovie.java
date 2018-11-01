@@ -8,7 +8,6 @@ public class CrimeMovie extends AbstractMovie implements Serializable
    public CrimeMovie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		super(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
-		System.out.println(" hi i am crime movie ");
 	}
    @Override
    public String toString()

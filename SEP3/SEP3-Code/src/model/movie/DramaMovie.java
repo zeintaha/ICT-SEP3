@@ -8,7 +8,6 @@ public class DramaMovie extends AbstractMovie implements Serializable
    public DramaMovie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		super(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
-		System.out.println(" hi i am drama movie ");
 	}
 @Override
 public String toString() {

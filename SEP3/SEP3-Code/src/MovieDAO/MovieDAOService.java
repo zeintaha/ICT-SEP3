@@ -1,10 +1,12 @@
-package dao;
+package MovieDAO;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import dao.DataMapper;
+import dao.DatabaseHelper;
 import model.movie.AbstractMovie;
 import model.movie.ActionMovie;
 import model.movie.AdventureMovie;
@@ -80,14 +82,14 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	}
 
 	@Override
-	public AbstractMovie read(String name) throws RemoteException {
-		// TODO Auto-generated method stubz
+	public AbstractMovie read(String name) throws RemoteException{
 		return null;
 	}
 
 	@Override
 	public void delete(AbstractMovie movie) throws RemoteException {
-		// TODO Auto-generated method stub
+		helper.executeUpdate("DELETE FROM Movie WHERE name = ?",
+            movie.getName());
 
 	}
 

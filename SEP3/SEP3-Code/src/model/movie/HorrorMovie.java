@@ -8,7 +8,6 @@ public class HorrorMovie extends AbstractMovie implements Serializable
    public HorrorMovie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		super(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
-		System.out.println(" hi i am horror movie ");
 	}
 @Override
 public String toString() {
