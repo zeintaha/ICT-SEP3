@@ -3,14 +3,14 @@ package MovieDAO;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import model.movie.Movie;
+import model.movie.AbstractMovie;
 
 public interface MovieDAO extends Remote {
 
-	public void create(Movie movie) throws RemoteException;
+	public void create(AbstractMovie movie) throws RemoteException;
 
-	public Movie read(String name) throws RemoteException;
+	public AbstractMovie read(String name) throws RemoteException;
 
-	public void delete(Movie movie) throws RemoteException;
+	public void delete(AbstractMovie movie) throws RemoteException;
 
 }

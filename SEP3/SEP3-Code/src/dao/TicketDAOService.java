@@ -12,7 +12,7 @@ import model.ticket.Ticket;
 public class TicketDAOService extends UnicastRemoteObject
 implements TicketDAO{
 
-	protected TicketDAOService(String jdbcURL, String username, String password) throws RemoteException {
+	public TicketDAOService(String jdbcURL, String username, String password) throws RemoteException {
 		 this.helper = new DatabaseHelper<>(jdbcURL, username, password);
 		// TODO Auto-generated constructor stub
 	}
@@ -38,8 +38,9 @@ implements TicketDAO{
 	public Ticket create(String ticketNumber, AbstractMovie movie, Customer customer) throws RemoteException {
 		 helper.executeUpdate("INSERT INTO Customer VALUES (?, ?, ?)", ticketNumber, movie,
 		            customer);
+		 System.out.println(" hi from ticketdao service");
 		      return new Ticket(ticketNumber, movie, customer);
-		// TODO Auto-generated method stub
+		      
 	
 	}
 

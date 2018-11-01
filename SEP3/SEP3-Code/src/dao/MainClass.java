@@ -2,8 +2,10 @@ package dao;
 
 import MovieDAO.MovieDAO;
 import MovieDAO.MovieDAOService;
+import model.customer.Customer;
 import model.movie.AbstractMovie;
 import model.movie.CrimeMovie;
+import model.movie.DramaMovie;
 
 public class MainClass
 {
@@ -16,10 +18,12 @@ public class MainClass
 	      final String PASSWORD = "n5*SFSVSSG&1!x";
    
 
-      MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
-      AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
-      cust.create(movie);
-//       cust.delete(movie);
+//      TicketDAOService ticket= new TicketDAOService(JDBC_URL, USERNAME, PASSWORD);
+//      Customer customer = new Customer("fadi", "goegri", "456789");
+//      String numbeer = "wfds ";
+//      AbstractMovie movie = new DramaMovie("saf","saf","saf","saf","saf","saf", "saf");     
+//      ticket.create(numbeer,movie,customer );
+//    
       System.out.println(" done");
     
    }
