@@ -1,5 +1,5 @@
-import dao.MovieDAO;
-import dao.MovieDAOService;
+
+
 import model.movie.AbstractMovie;
 import model.movie.CrimeMovie;
 
@@ -17,10 +17,10 @@ public class MainClass
 //   cust.create("012544", "fadi", "Horsens");
 //   System.out.println(" done");
       
-      MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
-      AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
-      cust.create(movie);
-      System.out.println(" done");
+//      MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
+//      AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
+//      cust.create(movie);
+//      System.out.println(" done");
     
    }
 

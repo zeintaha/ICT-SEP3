@@ -18,7 +18,7 @@ public class TestTheDatabaseHelper
       try (Connection con = DriverManager.getConnection(connectionUrl);
             Statement stmt = con.createStatement();)
       {
-         String SQL = "create table Ticket ";
+         String SQL = "create Table Ticket (ticketNumber VARCHAR(50) NOT NULL, customer VARCHAR(50) NOT NULL, movie VARCHAR(50) NOT NULL)";
          ResultSet rs = stmt.executeQuery(SQL);
 
          // Iterate through the data in the result set and display it.

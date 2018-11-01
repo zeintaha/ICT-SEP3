@@ -18,11 +18,11 @@ public class MainClass
 	      final String PASSWORD = "n5*SFSVSSG&1!x";
    
 
-//      TicketDAOService ticket= new TicketDAOService(JDBC_URL, USERNAME, PASSWORD);
-//      Customer customer = new Customer("fadi", "goegri", "456789");
-//      String numbeer = "wfds ";
-//      AbstractMovie movie = new DramaMovie("saf","saf","saf","saf","saf","saf", "saf");     
-//      ticket.create(numbeer,movie,customer );
+      TicketDAOService ticket= new TicketDAOService(JDBC_URL, USERNAME, PASSWORD);
+    
+      String numbeer = "wfds ";
+    
+      ticket.create(numbeer,"anyMoive","fadi" );
 //    
       System.out.println(" done");
     

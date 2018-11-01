@@ -22,8 +22,8 @@ implements TicketDAO{
 	      public Ticket create(ResultSet rs) throws SQLException
 	      {
 	         String ticketNumber = rs.getString("ticketNumber");
-	         AbstractMovie movie = (AbstractMovie) rs.getObject("movie");
-	         Customer customer = (Customer) rs.getObject("customer");
+	         String movie =  rs.getString("movie");
+	         String customer =  rs.getString("customer");
 	         return new Ticket(ticketNumber, movie, customer);
 	      }
 	   }
@@ -35,11 +35,11 @@ implements TicketDAO{
 	private DatabaseHelper<Ticket> helper;
 
 	@Override
-	public Ticket create(String ticketNumber, AbstractMovie movie, Customer customer) throws RemoteException {
-		 helper.executeUpdate("INSERT INTO Customer VALUES (?, ?, ?)", ticketNumber, movie,
-		            customer);
+	public Ticket create(String ticketNumber, String string, String string2) throws RemoteException {
+		 helper.executeUpdate("INSERT INTO Customer VALUES (?, ?, ?)", ticketNumber, string,
+		            string2);
 		 System.out.println(" hi from ticketdao service");
-		      return new Ticket(ticketNumber, movie, customer);
+		      return new Ticket(ticketNumber, string, string2);
 		      
 	
 	}
