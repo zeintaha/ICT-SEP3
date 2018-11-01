@@ -5,7 +5,7 @@ import java.io.Serializable;
 import model.customer.Customer;
 import model.movie.AbstractMovie;
 
-public class Tickt implements Serializable
+public class Ticket implements Serializable
 {
    /**
     * 
@@ -15,7 +15,7 @@ public class Tickt implements Serializable
    private AbstractMovie movie;
    private Customer customer ;
    
-   public Tickt(String ticketNumber, AbstractMovie movie,Customer customer) {
+   public Ticket(String ticketNumber, AbstractMovie movie,Customer customer) {
       this.ticketNumber = ticketNumber;
       this.movie = movie;
       this.customer= customer;
