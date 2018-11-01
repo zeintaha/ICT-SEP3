@@ -2,7 +2,7 @@ package model.movie;
 
 import java.io.Serializable;
 
-public abstract class AbstractMovie implements Serializable {
+public abstract class Movie implements Serializable {
 	/**
 	* 
 	*/
@@ -15,7 +15,7 @@ public abstract class AbstractMovie implements Serializable {
 	private String urlFullMovie;
 	private String urlImage;
 
-	public AbstractMovie(String name, String director, String discription, String duration, String urlTrailer,
+	public Movie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		this.name = name;
 		this.director = director;

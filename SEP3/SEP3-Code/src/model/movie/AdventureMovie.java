@@ -2,14 +2,13 @@ package model.movie;
 
 import java.io.Serializable;
 
-public class AdventureMovie extends AbstractMovie implements Serializable
+public class AdventureMovie extends Movie implements Serializable
 {
 	 private static final long serialVersionUID = 1L;
 	 
    public AdventureMovie(String name, String director, String discription, String duration, String urlTrailer,
 			String urlFullMovie, String urlImage) {
 		super(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
-		System.out.println(" hi i am adventure movie ");
 	}
 
 @Override
