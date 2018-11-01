@@ -47,13 +47,13 @@ implements TicketDAO{
 	
 	
 
-//	@Override
-//	public void update(Ticket ticket) throws RemoteException {
+	@Override
+	public void update(Ticket ticket) throws RemoteException {
 //		helper.executeUpdate(
 //	            "UPDATE Ticket set ticketNumber = ?, movie = ? WHERE ticketNumber = ?",
-////	            ticket.getTicketNumber(), ticket.getMovieName(), Customer.getCpr());
-//		
-//	}
+//            ticket.getTicketNumber(), ticket.getMovieName(), Customer.getCpr());
+		
+	}
 
 
 

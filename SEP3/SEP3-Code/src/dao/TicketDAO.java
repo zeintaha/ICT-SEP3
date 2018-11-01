@@ -14,7 +14,7 @@ public interface TicketDAO extends Remote {
 
 	public void delete(Ticket ticket) throws RemoteException;
 
-//	public void update(Ticket ticket) throws RemoteException;
+	public void update(Ticket ticket) throws RemoteException;
 
 
 
