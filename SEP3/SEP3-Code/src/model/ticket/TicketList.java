@@ -10,26 +10,26 @@ public class TicketList implements Serializable
     */
    private static final long serialVersionUID = 1L;
 
-   ArrayList<Tickt> tickets;
+   ArrayList<Ticket> tickets;
 
    public TicketList()
    {
       tickets = new ArrayList<>();
    }
 
-   public void addTicket(Tickt ticket)
+   public void addTicket(Ticket ticket)
    {
       tickets.add(ticket);
    }
 
-   public void removeTicket(Tickt ticket)
+   public void removeTicket(Ticket ticket)
    {
       tickets.remove(ticket);
    }
 
-   public Tickt getTicketNumber(Tickt ticket)
+   public Ticket getTicketNumber(Ticket ticket)
    {
-      Tickt temp = null;
+      Ticket temp = null;
 
       for (int i = 0; i < tickets.size(); i++)
       {
