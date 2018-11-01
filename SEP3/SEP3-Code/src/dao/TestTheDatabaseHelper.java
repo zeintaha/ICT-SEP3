@@ -20,7 +20,7 @@ public class TestTheDatabaseHelper
           String connectionUrl = "jdbc:sqlserver://dbserversep3.database.windows.net:1433;database=moviedb;user=dbserveradmin@dbserversep3;password=n5*SFSVSSG&1!x;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
           try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
-              String SQL = "select * from Ticket";
+              String SQL = "select name from Customer";
               ResultSet rs = stmt.executeQuery(SQL);
 
               // Iterate through the data in the result set and display it.
