@@ -2,7 +2,7 @@ package model.movie;
 
 import java.io.Serializable;
 
-public class ComedyMovie extends AbstractMovie implements Serializable
+public class ComedyMovie extends Movie implements Serializable
 {
 	private static final long serialVersionUID = 1L;
    public ComedyMovie(String name, String director, String discription, String duration, String urlTrailer,

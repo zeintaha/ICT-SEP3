@@ -10,12 +10,12 @@ public class MovieFactory implements Serializable
     */
    private static final long serialVersionUID = 1L;
 
-   public static AbstractMovie create(String name, String director,
+   public static Movie create(String name, String director,
          String description, Category category,String duration, String urlTrailer,
 			String urlFullMovie, String urlImage)
    {
 
-      AbstractMovie movie = null;
+      Movie movie = null;
      
       
          switch (category)

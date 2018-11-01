@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import dao.DataMapper;
 import dao.DatabaseHelper;
-import model.movie.AbstractMovie;
+import model.movie.Movie;
 import model.movie.ActionMovie;
 import model.movie.AdventureMovie;
 import model.movie.ComedyMovie;
@@ -25,15 +25,15 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	private static final String Horror = "Horror";
 
 	private static final long serialVersionUID = 1L;
-	private DatabaseHelper<AbstractMovie> helper;
+	private DatabaseHelper<Movie> helper;
 
 	public MovieDAOService(String jdbcURL, String username, String password) throws RemoteException {
 		this.helper = new DatabaseHelper<>(jdbcURL, username, password);
 	}
 
-	private static class AbstractMovieMapper implements DataMapper<AbstractMovie> {
+	private static class MovieMapper implements DataMapper<Movie> {
 		@Override
-		public AbstractMovie create(ResultSet rs) throws SQLException {
+		public Movie create(ResultSet rs) throws SQLException {
 			String name = rs.getString("name");
 			String director = rs.getString("director");
 			String discription = rs.getString("discription");
@@ -60,7 +60,7 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 		}
 }
 	@Override
-	public void create(AbstractMovie movie) throws RemoteException {
+	public void create(Movie movie) throws RemoteException {
 		String category = "";
 		if (movie instanceof ActionMovie) {
 			category = "ActionMovie";
@@ -82,12 +82,14 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	}
 
 	@Override
-	public AbstractMovie read(String name) throws RemoteException{
-		return null;
+	public Movie read(String name) throws RemoteException{
+		MovieMapper mapper= new MovieMapper();
+		Movie cust=helper.mapSingle(mapper, "SELECT * FROM Movie WHERE name = ?;", name);
+		return cust;
 	}
 
 	@Override
-	public void delete(AbstractMovie movie) throws RemoteException {
+	public void delete(Movie movie) throws RemoteException {
 		helper.executeUpdate("DELETE FROM Movie WHERE name = ?",
             movie.getName());
 
