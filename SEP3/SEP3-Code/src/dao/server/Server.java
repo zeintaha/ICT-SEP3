@@ -7,6 +7,8 @@ import MovieDAO.MovieDAO;
 import MovieDAO.MovieDAOService;
 import dao.CustomerDAO;
 import dao.CustomerDAOService;
+import dao.UserDAO;
+import dao.UserDAOService;
 import model.movie.AbstractMovie;
 
 public class Server extends UnicastRemoteObject implements ServerRemote {
@@ -18,10 +20,12 @@ public class Server extends UnicastRemoteObject implements ServerRemote {
 
 	private CustomerDAOService customerDAO;
 	private MovieDAOService movieDAO;
+	private UserDAOService userDAO;
 
 	public Server() throws RemoteException {
 		customerDAO = new CustomerDAOService(JDBC_URL, USERNAME, PASSWORD);
 		movieDAO = new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
+		userDAO = new UserDAOService(JDBC_URL, USERNAME, PASSWORD);
 	}
 
 	public CustomerDAO getCustomerDAO() throws RemoteException {
@@ -33,4 +37,10 @@ public class Server extends UnicastRemoteObject implements ServerRemote {
 	public MovieDAO getMovieDAO() throws RemoteException {
 		return movieDAO;
 	}
+
+   @Override
+   public UserDAO getUserDAO() throws RemoteException
+   {
+      return userDAO;
+   }
 }
