@@ -83,7 +83,10 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 
 	@Override
 	public AbstractMovie read(String name) throws RemoteException{
-		return null;
+		AbstractMovieMapper mapper = new AbstractMovieMapper();
+		AbstractMovie mov=helper.mapSingle(mapper, "SELECT * FROM Movie WHERE name = ?;", name);
+		
+		return mov;
 	}
 
 	@Override
