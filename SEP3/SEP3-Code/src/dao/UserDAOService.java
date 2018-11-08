@@ -40,7 +40,7 @@ public class UserDAOService extends UnicastRemoteObject
    public User create(String cpr, String name, String address)
          throws RemoteException
    {
-      helper.executeUpdate("INSERT INTO User VALUES (?, ?, ?)", cpr, name,
+      helper.executeUpdate("INSERT INTO Users VALUES (?, ?, ?)", cpr, name,
             address);
       return new User(cpr, name, address);
    }
@@ -50,7 +50,7 @@ public class UserDAOService extends UnicastRemoteObject
    {
       UserMapper mapper = new UserMapper();
       User usr = helper.mapSingle(mapper,
-            "SELECT * FROM User WHERE name = ?;", cpr);
+            "SELECT * FROM Users WHERE name = ?;", cpr);
 
       return usr;
    }
@@ -58,7 +58,7 @@ public class UserDAOService extends UnicastRemoteObject
    @Override
    public void delete(User user) throws RemoteException
    {
-      helper.executeUpdate("DELETE FROM User WHERE cpr = ?",
+      helper.executeUpdate("DELETE FROM Users WHERE cpr = ?",
             user.getCpr());
       
    }
@@ -67,7 +67,7 @@ public class UserDAOService extends UnicastRemoteObject
    public void update(User user) throws RemoteException
    {
       helper.executeUpdate(
-            "UPDATE User set name = ?, address = ? WHERE cpr = ?",
+            "UPDATE Users set name = ?, address = ? WHERE cpr = ?",
             user.getName(), user.getAddress(), user.getCpr());
       
    }

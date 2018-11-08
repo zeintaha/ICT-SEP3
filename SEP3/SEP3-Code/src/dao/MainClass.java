@@ -5,7 +5,11 @@ import MovieDAO.MovieDAOService;
 import model.movie.AbstractMovie;
 import model.movie.CrimeMovie;
 import model.movie.DramaMovie;
+
 import model.ticket.Ticket;
+
+import model.user.User;
+
 
 public class MainClass
 {
@@ -21,6 +25,7 @@ public class MainClass
 //   cust.create("012544", "fadi", "Horsens");
 //   System.out.println(" done");
       
+
       MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
       AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
     //  cust.create(movie);
@@ -31,6 +36,22 @@ public class MainClass
       Ticket tic = new Ticket("54", "Balkis", "NEW GIRL");
       ticket.create("54", "Balkis", "NEW GIRL");
       System.out.println(" done");
+
+//      MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
+//      AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
+//      cust.create(movie);
+////       cust.delete(movie);
+//      System.out.println(" done");
+      
+      UserDAO use = new UserDAOService(JDBC_URL, USERNAME, PASSWORD);
+      User user = new User("Oskars", "Ogre", "234567");
+      
+//      use.create("234567", "Oskars", "Salaspils");
+//      use.update(user);
+      use.delete(user);
+      System.out.println("Done");
+      
+
     
    }
 
