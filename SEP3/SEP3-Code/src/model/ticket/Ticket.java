@@ -12,13 +12,16 @@ public class Ticket implements Serializable
     */
    private static final long serialVersionUID = 1L;
    private String ticketNumber;
-   private AbstractMovie movie;
-   private Customer customer ;
+   private String movieName;
+   private String customerName;
+  
    
-   public Ticket(String ticketNumber, AbstractMovie movie,Customer customer) {
+ 
+   
+   public Ticket(String ticketNumber, String customerName,String movieName) {
       this.ticketNumber = ticketNumber;
-      this.movie = movie;
-      this.customer= customer;
+      this.movieName = movieName;
+      this.customerName  = customerName;
    }
 
    public String getTicketNumber()
@@ -26,19 +29,19 @@ public class Ticket implements Serializable
       return ticketNumber;
    }
    
-   public AbstractMovie  getMovieName()
+   public String  getMovieName()
    {
-      return movie;
+      return movieName;
    }
-   public Customer getCustoemr() {
-      return customer;
+   public String getCustoemrName() {
+      return customerName;
    }
 
    @Override
    public String toString()
    {
-      return "Tickt [ticketNumber=" + ticketNumber + ", movie=" + movie
-            + ", customer=" + customer + "]";
+      return "Tickt [ticketNumber=" + ticketNumber + ", movie=" + movieName
+            + ", customer=" + customerName + "]";
    }
 
   

@@ -5,6 +5,7 @@ import MovieDAO.MovieDAOService;
 import model.movie.AbstractMovie;
 import model.movie.CrimeMovie;
 import model.movie.DramaMovie;
+import model.ticket.Ticket;
 
 public class MainClass
 {
@@ -22,8 +23,13 @@ public class MainClass
       
       MovieDAO cust= new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
       AbstractMovie movie= new CrimeMovie("Once Upon Fadi version", "Nadeem","Nice movie","2 hours","www.imdb.com","www.azure.com","http://imdb.com");
-      cust.create(movie);
+    //  cust.create(movie);
 //       cust.delete(movie);
+     // System.out.println(" done");
+      
+      TicketDAO  ticket = new TicketDAOService(JDBC_URL, USERNAME, PASSWORD);
+      Ticket tic = new Ticket("54", "Balkis", "NEW GIRL");
+      ticket.create("54", "Balkis", "NEW GIRL");
       System.out.println(" done");
     
    }
