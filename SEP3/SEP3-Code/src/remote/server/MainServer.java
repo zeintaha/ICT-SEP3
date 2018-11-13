@@ -1,13 +1,10 @@
-package MovieDAO;
+package remote.server;
 
 import java.rmi.NotBoundException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-
-import dao.server.Server;
-import dao.server.ServerRemote;
 
 public class MainServer {
 	private static<T extends Remote> T bind(Registry registry, String URI, T remoteObject) throws RemoteException {

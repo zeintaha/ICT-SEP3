@@ -1,4 +1,4 @@
-package dao;
+package dao.ticket;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

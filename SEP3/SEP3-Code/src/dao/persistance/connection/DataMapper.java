@@ -1,4 +1,4 @@
-package dao;
+package dao.persistance.connection;
 
 import java.rmi.RemoteException;
 import java.sql.ResultSet;

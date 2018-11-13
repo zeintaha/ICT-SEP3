@@ -1,13 +1,12 @@
-package dao.server;
+package remote.server;
 
-import java.rmi.Remote; 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 import MovieDAO.MovieDAO;
-import dao.CustomerDAO;
-import dao.TicketDAO;
-import dao.UserDAO;
-import model.movie.AbstractMovie;
+import dao.customer.CustomerDAO;
+import dao.ticket.TicketDAO;
+import dao.user.UserDAO;
 
 
 

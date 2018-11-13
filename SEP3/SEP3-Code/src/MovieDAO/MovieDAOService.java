@@ -5,8 +5,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import dao.DataMapper;
-import dao.DatabaseHelper;
+import dao.persistance.connection.DataMapper;
+import dao.persistance.connection.DatabaseHelper;
 import model.movie.AbstractMovie;
 import model.movie.ActionMovie;
 import model.movie.AdventureMovie;
@@ -27,8 +27,8 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	private static final long serialVersionUID = 1L;
 	private DatabaseHelper<AbstractMovie> helper;
 
-	public MovieDAOService(String jdbcURL, String username, String password) throws RemoteException {
-		this.helper = new DatabaseHelper<>(jdbcURL, username, password);
+	public MovieDAOService() throws RemoteException, SQLException {
+		this.helper = new DatabaseHelper<>();
 	}
 
 	private static class AbstractMovieMapper implements DataMapper<AbstractMovie> {
@@ -84,7 +84,7 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	@Override
 	public AbstractMovie read(String name) throws RemoteException{
 		AbstractMovieMapper mapper = new AbstractMovieMapper();
-		AbstractMovie mov=helper.mapSingle(mapper, "SELECT * FROM Movie WHERE name = ?;", name);
+		AbstractMovie mov=helper.getSingle(mapper, "SELECT * FROM Movie WHERE name = ?;", name);
 		
 		return mov;
 	}

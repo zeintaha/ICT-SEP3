@@ -1,20 +1,19 @@
-package dao;
+package dao.ticket;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
-import model.customer.Customer;
-import model.movie.AbstractMovie;
+import dao.persistance.connection.DataMapper;
+import dao.persistance.connection.DatabaseHelper;
 import model.ticket.Ticket;
 
 public class TicketDAOService extends UnicastRemoteObject
 implements TicketDAO{
 
-	public TicketDAOService(String jdbcURL, String username, String password) throws RemoteException {
-		 this.helper = new DatabaseHelper<>(jdbcURL, username, password);
-		// TODO Auto-generated constructor stub
+	public TicketDAOService() throws RemoteException, SQLException {
+		 this.helper = new DatabaseHelper<>();
+	
 	}
 	 private static class TicketMapper implements DataMapper<Ticket>
 	   {
@@ -49,7 +48,7 @@ implements TicketDAO{
 	@Override
 	public Ticket read(String ticketNumber) throws RemoteException {
 		TicketMapper mapper = new TicketMapper();
-		Ticket ticket = helper.mapSingle(mapper, "SELECT * FROM Customer WHERE name = ?;", ticketNumber);
+		Ticket ticket = helper.getSingle(mapper, "SELECT * FROM Customer WHERE name = ?;", ticketNumber);
 		return ticket;
 	}
 
