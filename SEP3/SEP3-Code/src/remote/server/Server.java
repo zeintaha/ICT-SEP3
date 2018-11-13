@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 import MovieDAO.MovieDAO;
 import MovieDAO.MovieDAOService;
-import dao.customer.CustomerDAO;
-import dao.customer.CustomerDAOService;
-import dao.ticket.TicketDAO;
-import dao.ticket.TicketDAOService;
-import dao.user.UserDAO;
-import dao.user.UserDAOService;
+import dao.customerDao.CustomerDAO;
+import dao.customerDao.CustomerDAOService;
+import dao.ticketDao.TicketDAO;
+import dao.ticketDao.TicketDAOService;
+import dao.user.Dao.UserDAO;
+import dao.user.Dao.UserDAOService;
 
 public class Server extends UnicastRemoteObject implements ServerRemote {
 

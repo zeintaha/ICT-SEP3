@@ -4,9 +4,9 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 import MovieDAO.MovieDAO;
-import dao.customer.CustomerDAO;
-import dao.ticket.TicketDAO;
-import dao.user.UserDAO;
+import dao.customerDao.CustomerDAO;
+import dao.ticketDao.TicketDAO;
+import dao.user.Dao.UserDAO;
 
 
 

@@ -1,4 +1,4 @@
-package dao.ticket;
+package dao.ticketDao;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;

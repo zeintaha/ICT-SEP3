@@ -1,4 +1,4 @@
-package dao.customer;
+package dao.customerDao;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
