@@ -4,9 +4,9 @@ import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import dao.persistance.connection.DataMapper;
-import dao.persistance.connection.DatabaseHelper;
 import model.ticket.Ticket;
+import persistance.connection.DataMapper;
+import persistance.connection.DatabaseHelper;
 
 public class TicketDAOService extends UnicastRemoteObject
 implements TicketDAO{

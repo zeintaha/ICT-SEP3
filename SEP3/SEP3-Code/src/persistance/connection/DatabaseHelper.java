@@ -1,4 +1,4 @@
-package dao.persistance.connection;
+package persistance.connection;
 
 import java.rmi.RemoteException;
 import java.sql.Connection;

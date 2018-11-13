@@ -1,12 +1,10 @@
-package MovieDAO;
+package dao.movieDao;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import dao.persistance.connection.DataMapper;
-import dao.persistance.connection.DatabaseHelper;
 import model.movie.AbstractMovie;
 import model.movie.ActionMovie;
 import model.movie.AdventureMovie;
@@ -14,6 +12,8 @@ import model.movie.ComedyMovie;
 import model.movie.CrimeMovie;
 import model.movie.DramaMovie;
 import model.movie.HorrorMovie;
+import persistance.connection.DataMapper;
+import persistance.connection.DatabaseHelper;
 
 public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 

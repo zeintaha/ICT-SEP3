@@ -1,4 +1,4 @@
-package dao.persistance.connection;
+package persistance.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,7 +19,9 @@ public class ConnectionManager {
 	public static ConnectionManager getInstance() {
 		if (instance == null) {
 			instance = new ConnectionManager();
+		
 		}
+		
 		return instance;
 	}
 

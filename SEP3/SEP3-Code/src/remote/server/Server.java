@@ -4,10 +4,10 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.SQLException;
 
-import MovieDAO.MovieDAO;
-import MovieDAO.MovieDAOService;
 import dao.customerDao.CustomerDAO;
 import dao.customerDao.CustomerDAOService;
+import dao.movieDao.MovieDAO;
+import dao.movieDao.MovieDAOService;
 import dao.ticketDao.TicketDAO;
 import dao.ticketDao.TicketDAOService;
 import dao.user.Dao.UserDAO;

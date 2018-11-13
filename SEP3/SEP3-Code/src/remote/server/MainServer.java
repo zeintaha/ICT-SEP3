@@ -7,6 +7,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class MainServer {
+	@SuppressWarnings("unchecked")
 	private static<T extends Remote> T bind(Registry registry, String URI, T remoteObject) throws RemoteException {
 		registry.rebind(URI, remoteObject);
 		try {
@@ -18,6 +19,7 @@ public class MainServer {
 	
 	
 	public static void main(String[] args) throws Exception {
+		
 		Registry reg = LocateRegistry.createRegistry(1099);
 		ServerRemote sr=bind(reg,"SR",new Server());
 	}
