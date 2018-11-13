@@ -12,8 +12,8 @@ import model.ticket.Ticket;
 public class TicketDAOService extends UnicastRemoteObject
 implements TicketDAO{
 
-	public TicketDAOService(String jdbcURL, String username, String password) throws RemoteException {
-		 this.helper = new DatabaseHelper<>(jdbcURL, username, password);
+	public TicketDAOService(String jdbcURL, String username, String password) throws RemoteException, SQLException {
+		 this.helper = new DatabaseHelper<>();
 		// TODO Auto-generated constructor stub
 	}
 	 private static class TicketMapper implements DataMapper<Ticket>
@@ -49,7 +49,7 @@ implements TicketDAO{
 	@Override
 	public Ticket read(String ticketNumber) throws RemoteException {
 		TicketMapper mapper = new TicketMapper();
-		Ticket ticket = helper.mapSingle(mapper, "SELECT * FROM Customer WHERE name = ?;", ticketNumber);
+		Ticket ticket = helper.getSingle(mapper, "SELECT * FROM Customer WHERE name = ?;", ticketNumber);
 		return ticket;
 	}
 

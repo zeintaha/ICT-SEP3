@@ -11,46 +11,26 @@ import java.util.List;
 
 public class DatabaseHelper<T>
 {
-   private String jdbcURL;
-   private String username;
-   private String password;
+	private static Connection connection = null;
 
-   public DatabaseHelper(String jdbcURL, String username, String password)
-         throws RemoteException
+   public DatabaseHelper()
+         throws RemoteException, SQLException
    {
-      this.jdbcURL = jdbcURL;
-      this.username = username;
-      this.password = password;
-      try
-      {
-         DriverManager.registerDriver(
-               new com.microsoft.sqlserver.jdbc.SQLServerDriver());
-      }
-      catch (SQLException e)
-      {
-         throw new RemoteException("No JDBC driver", e);
-      }
+     
+     connection = ConnectionManager.getInstance().getConnection();
+     try
+     {
+        DriverManager.registerDriver(
+              new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+     }
+     catch (SQLException e)
+     {
+        throw new RemoteException("No JDBC driver", e);
+     }
    }
 
-   public DatabaseHelper(String jdbcURL) throws RemoteException
-   {
-      this(jdbcURL, null, null);
-   }
 
-   public Connection getConnection() throws SQLException
-   {
-      if (username == null)
-      {
-         return DriverManager.getConnection(jdbcURL);
-      }
-      else
-      {
-         return DriverManager.getConnection(jdbcURL, username, password);
-      }
-
-   }
-
-   private static PreparedStatement prepare(Connection connection, String sql,
+   private static PreparedStatement prepare( String sql,
          Object... parameters) throws SQLException
    {
 
@@ -62,19 +42,19 @@ public class DatabaseHelper<T>
       return stat;
    }
 
-   public ResultSet executeQuery(Connection connection, String sql,
+   public ResultSet executeQuery( String sql,
          Object... parameters) throws SQLException
    {
-      PreparedStatement stat = prepare(connection, sql, parameters);
+      PreparedStatement stat = prepare( sql, parameters);
       return stat.executeQuery();
    }
 
    public int executeUpdate(String sql, Object... parameters)
          throws RemoteException
    {
-      try (Connection connection = getConnection())
+      try 
       {
-         PreparedStatement stat = prepare(connection, sql, parameters);
+         PreparedStatement stat = prepare( sql, parameters);
          return stat.executeUpdate();
       }
       catch (SQLException e)
@@ -83,12 +63,12 @@ public class DatabaseHelper<T>
       }
    }
 
-   public T mapSingle(DataMapper<T> mapper, String sql, Object... parameters)
+   public T getSingle(DataMapper<T> mapper, String sql, Object... parameters)
          throws RemoteException
    {
-      try (Connection connection = getConnection())
+      try 
       {
-         ResultSet rs = executeQuery(connection, sql, parameters);
+         ResultSet rs = executeQuery( sql, parameters);
          if (rs.next())
          {
             return mapper.create(rs);
@@ -104,12 +84,12 @@ public class DatabaseHelper<T>
       }
    }
 
-   public List<T> map(DataMapper<T> mapper, String sql, Object... parameters)
+   public List<T> getList(DataMapper<T> mapper, String sql, Object... parameters)
          throws RemoteException
    {
-      try (Connection connection = getConnection())
+      try 
       {
-         ResultSet rs = executeQuery(connection, sql, parameters);
+         ResultSet rs = executeQuery( sql, parameters);
          LinkedList<T> allObjects = new LinkedList<>();
          while (rs.next())
          {

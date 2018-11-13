@@ -1,4 +1,5 @@
 import java.rmi.RemoteException;
+import java.sql.SQLException;
 
 import dao.CustomerDAOService;
 import dao.server.Server;
@@ -6,7 +7,7 @@ import model.customer.Customer;
 
 public class TestMain
 {
-public static void main(String[] args) throws RemoteException
+public static void main(String[] args) throws RemoteException, SQLException
 {
    Server server = new Server();
   CustomerDAOService customer = (CustomerDAOService) server.getCustomerDAO();
