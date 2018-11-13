@@ -2,7 +2,6 @@ package dao.server;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.sql.SQLException;
 
 import MovieDAO.MovieDAO;
 import MovieDAO.MovieDAOService;
@@ -26,10 +25,10 @@ public class Server extends UnicastRemoteObject implements ServerRemote {
 	private UserDAOService userDAO;
 	private TicketDAOService ticketDAO;
 
-	public Server() throws RemoteException, SQLException {
-		customerDAO = new CustomerDAOService();
+	public Server() throws RemoteException {
+		customerDAO = new CustomerDAOService(JDBC_URL, USERNAME, PASSWORD);
 		movieDAO = new MovieDAOService(JDBC_URL, USERNAME, PASSWORD);
-		userDAO = new UserDAOService();
+		userDAO = new UserDAOService(JDBC_URL, USERNAME, PASSWORD);
 	    ticketDAO = new TicketDAOService(JDBC_URL, USERNAME, PASSWORD);
 	}
 

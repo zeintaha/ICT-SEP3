@@ -17,11 +17,11 @@ public class UserDAOService extends UnicastRemoteObject
    private static final long serialVersionUID = 1L;
    private DatabaseHelper<User> helper;
 
-   public UserDAOService()
-         throws RemoteException, SQLException
+   public UserDAOService(String jdbcURL, String username, String password)
+         throws RemoteException
    {
 
-      this.helper = new DatabaseHelper<>();
+      this.helper = new DatabaseHelper<>(jdbcURL, username, password);
    }
 
    private static class UserMapper implements DataMapper<User>
@@ -49,7 +49,7 @@ public class UserDAOService extends UnicastRemoteObject
    public User read(String cpr) throws RemoteException
    {
       UserMapper mapper = new UserMapper();
-      User usr = helper.getSingle(mapper,
+      User usr = helper.mapSingle(mapper,
             "SELECT * FROM Users WHERE name = ?;", cpr);
 
       return usr;
