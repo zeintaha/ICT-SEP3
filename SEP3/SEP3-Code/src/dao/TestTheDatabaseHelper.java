@@ -20,11 +20,12 @@ public class TestTheDatabaseHelper
           String connectionUrl = "jdbc:sqlserver://dbserversep3.database.windows.net:1433;database=moviedb;user=dbserveradmin@dbserversep3;password=n5*SFSVSSG&1!x;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
           try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
-              String SQL = "select * from tickettest";
-        //     String SQL1 = "create table Tickettest(ticketNumber varchar(255),moviename varchar(255),customername varchar(255))";
-          //    String SQL2 = "insert into Tickettest (ticketNumber, moviename,customername ) values ('87','New girl' ,'Balkis')";
+             // String SQL = "select * from tickettest";
+            String SQL1 = "create table Ticket(ticketNumber varchar(255),moviename varchar(255),customername varchar(255))";
+             String SQL2 = "insert into Ticket (ticketNumber, moviename,customername ) values ('87','New girl' ,'Balkis')";
+              String SQL3 = "drop table tickettest";
               
-              ResultSet rs = stmt.executeQuery(SQL);
+              ResultSet rs = stmt.executeQuery(SQL2);
 
               // Iterate through the data in the result set and display it.
               while (rs.next()) {
