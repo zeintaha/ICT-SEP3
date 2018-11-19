@@ -14,7 +14,7 @@ public class CustomerList implements Serializable
 
    public CustomerList()
    {
-      customers = new ArrayList<>();
+      customers = new ArrayList<Customer>();
    }
 
    public void addCustomer(Customer customer)

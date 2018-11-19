@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 import dao.customerDao.CustomerDAO;
 import dao.movieDao.MovieDAO;
 import dao.ticketDao.TicketDAO;
-import dao.user.Dao.UserDAO;
+import dao.userDao.UserDAO;
 
 
 

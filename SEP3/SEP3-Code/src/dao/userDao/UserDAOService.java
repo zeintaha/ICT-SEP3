@@ -1,4 +1,4 @@
-package dao.user.Dao;
+package dao.userDao;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.user.User;
-import persistance.connection.DataMapper;
-import persistance.connection.DatabaseHelper;
+import persistence.connection.DataMapper;
+import persistence.connection.DatabaseHelper;
 
 public class UserDAOService extends UnicastRemoteObject
       implements UserDAO

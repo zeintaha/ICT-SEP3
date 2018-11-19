@@ -1,4 +1,4 @@
-package persistance.connection;
+package persistence.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,7 +21,7 @@ public class ConnectionManager {
 			instance = new ConnectionManager();
 		
 		}
-		
+		System.out.println("pooling connection ");
 		return instance;
 	}
 

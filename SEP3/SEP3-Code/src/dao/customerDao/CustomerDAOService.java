@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.customer.Customer;
-import persistance.connection.DataMapper;
-import persistance.connection.DatabaseHelper;
+import persistence.connection.DataMapper;
+import persistence.connection.DatabaseHelper;
 
 public class CustomerDAOService extends UnicastRemoteObject
       implements CustomerDAO

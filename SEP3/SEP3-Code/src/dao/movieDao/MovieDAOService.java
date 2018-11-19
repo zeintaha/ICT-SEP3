@@ -12,8 +12,8 @@ import model.movie.ComedyMovie;
 import model.movie.CrimeMovie;
 import model.movie.DramaMovie;
 import model.movie.HorrorMovie;
-import persistance.connection.DataMapper;
-import persistance.connection.DatabaseHelper;
+import persistence.connection.DataMapper;
+import persistence.connection.DatabaseHelper;
 
 public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 

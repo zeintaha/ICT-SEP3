@@ -1,4 +1,4 @@
-package persistance.connection;
+package persistence.connection;
 
 import java.rmi.RemoteException;
 import java.sql.Connection;

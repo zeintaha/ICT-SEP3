@@ -10,8 +10,8 @@ import dao.movieDao.MovieDAO;
 import dao.movieDao.MovieDAOService;
 import dao.ticketDao.TicketDAO;
 import dao.ticketDao.TicketDAOService;
-import dao.user.Dao.UserDAO;
-import dao.user.Dao.UserDAOService;
+import dao.userDao.UserDAO;
+import dao.userDao.UserDAOService;
 
 public class Server extends UnicastRemoteObject implements ServerRemote {
 
