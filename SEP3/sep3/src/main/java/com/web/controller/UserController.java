@@ -37,9 +37,9 @@ public class UserController {
 	}
 
 	@PostMapping()
-	public String createUser(@RequestBody String cpr, @RequestBody String name) {
-
-		return "we have created " + cpr + "  " + name;
+	public User createUser(@RequestBody User user) throws RemoteException {
+User createdUser = brokerClient.createUser(user.getCpr(), user.getName(), user.getAddress());
+		return createdUser;
 
 	}
 

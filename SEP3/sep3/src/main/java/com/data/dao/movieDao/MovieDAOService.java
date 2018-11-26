@@ -60,7 +60,7 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 		}
 }
 	@Override
-	public void create(AbstractMovie movie) throws RemoteException {
+	public AbstractMovie create(AbstractMovie movie) throws RemoteException {
 		String category = "";
 		if (movie instanceof ActionMovie) {
 			category = "ActionMovie";
@@ -79,6 +79,7 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 		helper.executeUpdate("INSERT INTO Movie(name, director, discription, category, duration, urlTrailer, urlFullMovie, urlImage) VALUES(?,?,?,?,?,?,?,?)", 
 				movie.getName(), movie.getDirector(), movie.getDiscription(), category, movie.getDuration(), movie.getUrlTrailer(), movie.getUrlFullMovie(),
 				movie.getUrlImage());
+		return movie;
 	}
 
 	@Override

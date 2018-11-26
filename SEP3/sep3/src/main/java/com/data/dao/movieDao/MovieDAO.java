@@ -7,7 +7,7 @@ import com.data.model.movie.AbstractMovie;
 
 public interface MovieDAO extends Remote {
 
-	public void create(AbstractMovie movie) throws RemoteException;
+	public AbstractMovie create(AbstractMovie movie) throws RemoteException;
 
 	public AbstractMovie read(String name) throws RemoteException;
 

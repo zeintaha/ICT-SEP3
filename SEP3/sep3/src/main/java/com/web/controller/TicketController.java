@@ -36,9 +36,9 @@ public class TicketController {
 	}
 
 	@PostMapping()
-	public String createTicket(@RequestBody String cpr, @RequestBody String name) {
-
-		return "we have created " + cpr + "  " + name;
+	public Ticket createTicket(@RequestBody Ticket ticket) throws RemoteException {
+		Ticket createdticket = brokerClient.createTicket(ticket.getTicketNumber(), ticket.getCustoemrName(), ticket.getMovieName());
+		return createdticket;
 
 	}
 

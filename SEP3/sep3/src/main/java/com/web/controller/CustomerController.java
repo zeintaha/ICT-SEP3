@@ -2,6 +2,8 @@ package com.web.controller;
 
 import java.rmi.RemoteException;
 
+import javax.swing.border.Border;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,11 +40,11 @@ public class CustomerController {
 	}
 
 	@PostMapping()
-	public String createUser(@RequestBody String cpr,@RequestBody String name,@RequestBody String address) {
-		
-		
-		return "we have created " + cpr + "  " + name;
+	public Customer createUser(@RequestBody Customer customer) throws RemoteException {
 
+		Customer customeradded = brokerClient.createCustomer(customer.getCpr(), customer.getName(),
+				customer.getAddress());
+		return customeradded;
 	}
 
 	@DeleteMapping("/{cpr}")
@@ -53,6 +55,5 @@ public class CustomerController {
 		;
 		return customer;
 	}
-	
 
 }

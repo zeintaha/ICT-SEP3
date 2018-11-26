@@ -52,8 +52,8 @@ public class BrokerClient extends UnicastRemoteObject {
 		server.getCustomerDAO().update(customer);
 	}
 
-	public void createMovie(AbstractMovie movie) throws RemoteException {
-		server.getMovieDAO().create(movie);
+	public AbstractMovie createMovie(AbstractMovie movie) throws RemoteException {
+		return server.getMovieDAO().create(movie);
 
 	}
 

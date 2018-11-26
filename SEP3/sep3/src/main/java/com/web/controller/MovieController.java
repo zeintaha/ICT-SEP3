@@ -37,9 +37,11 @@ public class MovieController {
 	}
 
 	@PostMapping()
-	public String createUser(@RequestBody String cpr, @RequestBody String name) {
+	public AbstractMovie createUser(@RequestBody AbstractMovie movie) throws RemoteException {
 
-		return "we have created " + cpr + "  " + name;
+		
+		AbstractMovie createdMovie = brokerClient.createMovie(movie);
+		return createdMovie;
 
 	}
 
