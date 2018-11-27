@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.data.model.customer.Customer;
 import com.data.model.user.User;
 import com.web.BrokerClient;
 
@@ -38,7 +37,7 @@ public class UserController {
 
 	@PostMapping()
 	public User createUser(@RequestBody User user) throws RemoteException {
-User createdUser = brokerClient.createUser(user.getCpr(), user.getName(), user.getAddress());
+		User createdUser = brokerClient.createUser(user.getCpr(), user.getName(), user.getAddress());
 		return createdUser;
 
 	}
