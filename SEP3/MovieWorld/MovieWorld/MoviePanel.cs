@@ -133,6 +133,9 @@ namespace MovieWorld
             trailer.axWindowsMediaPlayer_Trailer.URL = UrlFullMovie;
             trailer.label_Title.Text = "Streming Movie: " + MovieTitle;
             trailer.Show();
+
+            //Subscribe subscribe = new Subscribe();
+            //subscribe.Show();
         }
 
         private void button_trailer(object sender, EventArgs e)

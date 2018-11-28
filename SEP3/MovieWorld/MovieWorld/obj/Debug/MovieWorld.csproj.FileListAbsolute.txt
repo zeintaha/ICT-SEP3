@@ -55,3 +55,4 @@ C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\Mo
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.pdb
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.BuyTicket.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csprojAssemblyReference.cache
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.Subscribe.resources
