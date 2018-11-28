@@ -27,8 +27,10 @@ public class MainServer {
 	public static void main(String[] args) throws Exception {
 		
 		Registry reg = LocateRegistry.createRegistry(1099);
+		@SuppressWarnings("unused")
 		ServerRemote sr=bind(reg,"SR",new Server());
 		System.out.println("the server is ready and waiting for the client");
+		@SuppressWarnings("unused")
 		BrokerClient cus = new BrokerClient();
 		
 	}
