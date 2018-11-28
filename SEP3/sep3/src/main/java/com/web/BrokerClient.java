@@ -18,7 +18,7 @@ import com.data.model.user.User;
 @Service
 public class BrokerClient extends UnicastRemoteObject {
 
-	/**
+	/** 
 		 * 
 		 */
 	private static final long serialVersionUID = 1L;
@@ -32,6 +32,7 @@ public class BrokerClient extends UnicastRemoteObject {
 		this.server = (ServerRemote) registry.lookup("SR");
 		System.out.println(" client is ready");
 		System.out.println(server.getCustomerDAO().read("Me"));
+		System.out.println(server.getMovieDAO().read("once"));
 
 	}
 
