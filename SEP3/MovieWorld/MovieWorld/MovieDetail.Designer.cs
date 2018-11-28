@@ -53,6 +53,7 @@
             this.button_buy.TabIndex = 9;
             this.button_buy.Text = "Buy Ticket";
             this.button_buy.UseVisualStyleBackColor = false;
+            this.button_buy.Click += new System.EventHandler(this.button_buy_Click);
             // 
             // button_watch
             // 

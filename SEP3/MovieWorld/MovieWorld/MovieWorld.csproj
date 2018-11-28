@@ -70,6 +70,12 @@
     <Compile Include="Adventure.Designer.cs">
       <DependentUpon>Adventure.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyTicket.Designer.cs">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Comedy.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adventure.resx">
       <DependentUpon>Adventure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyTicket.resx">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Comedy.resx">
       <DependentUpon>Comedy.cs</DependentUpon>

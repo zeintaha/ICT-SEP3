@@ -73,5 +73,10 @@ namespace MovieWorld
         {
 
         }
+
+        private void button_buy_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

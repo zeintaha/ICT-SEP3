@@ -16,10 +16,12 @@ namespace MovieWorld
         private string _title;
         private string UrlTrailer;
         private string UrlFullMovie;
+        private string UrlImagelocation;
         private string MovieId;
         private string MovieTitle;
+        
 
-
+        MovieDetail movieDetail = new MovieDetail();
         Label title = new Label();
         PictureBox image = new PictureBox();
 
@@ -80,7 +82,7 @@ namespace MovieWorld
         private void imClicked(object sender, EventArgs e)
         {
 
-            MovieDetail movieDetail = new MovieDetail();
+           
             string UrlImage = ((System.Windows.Forms.PictureBox)sender).ImageLocation.ToString();
 
             foreach (Movie m in MovieList.movies)
@@ -96,8 +98,10 @@ namespace MovieWorld
 
                     UrlTrailer = m.UrlTrailer;
                     UrlFullMovie = m.UrlFullMovie;
+                    UrlImagelocation = m.UrlImage;
                     MovieId = m.MovieId;
                     MovieTitle = m.Name;
+                    
 
 
 
@@ -114,7 +118,12 @@ namespace MovieWorld
 
         private void button_buy(object sender, EventArgs e)
         {
-            MessageBox.Show("Trailer Button clicked for "+ MovieId);
+            
+
+            BuyTicket buyTicket  = new BuyTicket();
+
+            buyTicket.pictureBox_buy.ImageLocation = UrlImagelocation;
+            buyTicket.Show();
         }
 
         private void button_watch(object sender, EventArgs e)

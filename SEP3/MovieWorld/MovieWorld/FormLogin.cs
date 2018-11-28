@@ -15,7 +15,7 @@ namespace MovieWorld
         private bool _dragging;
         private Point _offset;
 
-        public Form RefToForm1 { get; set; }
+        public Form RefToMain { get; set; }
         public FormLogin()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace MovieWorld
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.RefToForm1.Show();
+            this.RefToMain.Show();
             Close();
         }
 
@@ -67,7 +67,7 @@ namespace MovieWorld
             //check if eligible to be logged in 
             if (login.IsLoggedIn(user, pass))
             {
-                MessageBox.Show("You are logged in successfully");
+                //MessageBox.Show("You are logged in successfully");
                 Main main = new Main();
                 login.Isuser = true;
                 if (login.Isuser == true) {

@@ -116,10 +116,10 @@ namespace MovieWorld
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             if (Session.IsSession == false) { 
-            FormLogin obj1 = new FormLogin();
-            obj1.RefToForm1 = this;
+            FormLogin formLogin = new FormLogin();
+            formLogin.RefToMain = this;
             this.Visible = false;
-            obj1.Show();
+            formLogin.Show();
             }
             else if (Session.IsSession == true) {
 
@@ -165,12 +165,12 @@ namespace MovieWorld
 
         private void button9_Click(object sender, EventArgs e)
         {
-            new AddMovie().Show();
+            
 
-            AddMovie obj2 = new AddMovie();
-            obj2.RefToForm1 = this;
+            AddMovie addMovie = new AddMovie();
+            addMovie.RefToMain = this;
             this.Visible = false;
-            obj2.Show();
+            addMovie.Show();
 
         }
 
@@ -232,10 +232,10 @@ namespace MovieWorld
         {
             
 
-            RemoveMovie obj2 = new RemoveMovie();
-            obj2.RefToForm1 = this;
+            RemoveMovie removeMovie = new RemoveMovie();
+            removeMovie.RefToMain = this;
             this.Visible = false;
-            obj2.Show();
+            removeMovie.Show();
 
         }
     }

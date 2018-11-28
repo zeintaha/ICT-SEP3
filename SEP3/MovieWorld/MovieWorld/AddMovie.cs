@@ -12,7 +12,7 @@ namespace MovieWorld
 {
     public partial class AddMovie : Form
     {
-        public Form RefToForm1 { get; set; }
+        public Form RefToMain { get; set; }
 
         private bool _dragging;
         private Point _offset;
@@ -58,7 +58,7 @@ namespace MovieWorld
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.RefToForm1.Show();
+            this.RefToMain.Show();
             Close();
         }
 
