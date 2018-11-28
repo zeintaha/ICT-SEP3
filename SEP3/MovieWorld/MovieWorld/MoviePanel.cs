@@ -128,12 +128,16 @@ namespace MovieWorld
 
         private void button_watch(object sender, EventArgs e)
         {
-            MessageBox.Show("Trailer Button clicked "+ UrlFullMovie);
+            
+            PlayMovie trailer = new PlayMovie();
+            trailer.axWindowsMediaPlayer_Trailer.URL = UrlFullMovie;
+            trailer.label_Title.Text = "Streming Movie: " + MovieTitle;
+            trailer.Show();
         }
 
         private void button_trailer(object sender, EventArgs e)
         {
-            //MessageBox.Show("Trailer Button clicked "+ UrlTrailer);
+            
             PlayMovie trailer = new PlayMovie();
             trailer.axWindowsMediaPlayer_Trailer.URL = UrlTrailer;
             trailer.label_Title.Text = "Trailer: "+MovieTitle;
