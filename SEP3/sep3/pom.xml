@@ -29,11 +29,14 @@
 
 
 	<dependencies>
-		<dependency>
+		
+	<dependency>
+		
 			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
+				<artifactId>sqljdbc4</artifactId>
+				<version>4.0</version>
+				
 		</dependency>
-
 		<dependency>
 			<groupId>com.paypal.sdk</groupId>
 			<artifactId>rest-api-sdk</artifactId>
@@ -76,11 +79,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<!-- plugin>
 				<groupId>com.microsoft.sqlserver</groupId>
 				<artifactId>sqljdbc4.2</artifactId>
 				<version>4.2</version>
-			</plugin>
+			</plugin -->
 		</plugins>
 	</build>
 

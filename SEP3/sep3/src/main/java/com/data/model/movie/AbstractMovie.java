@@ -14,9 +14,19 @@ public abstract class AbstractMovie implements Serializable {
 	private String urlTrailer;
 	private String urlFullMovie;
 	private String urlImage;
+	private String category;
 
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public AbstractMovie() {
+		
+	}
 	public AbstractMovie(String name, String director, String discription, String duration, String urlTrailer,
-			String urlFullMovie, String urlImage) {
+			String urlFullMovie, String urlImage,String category) {
 		this.name = name;
 		this.director = director;
 		this.discription = discription;
@@ -24,6 +34,7 @@ public abstract class AbstractMovie implements Serializable {
 		this.urlTrailer = urlTrailer;
 		this.urlFullMovie = urlFullMovie;
 		this.urlImage = urlImage;
+		this.category = category;
 	}
 
 	public String getName() {

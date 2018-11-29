@@ -5,6 +5,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +20,7 @@ import com.data.model.user.User;
 @Service
 public class BrokerClient extends UnicastRemoteObject {
 
-	/** 
+	/**
 		 * 
 		 */
 	private static final long serialVersionUID = 1L;
@@ -26,13 +28,16 @@ public class BrokerClient extends UnicastRemoteObject {
 	private ServerRemote server;
 
 	@Autowired
-	public BrokerClient() throws RemoteException, NotBoundException {
+	public BrokerClient() throws RemoteException, NotBoundException, SQLException, ClassNotFoundException {
 		super();
 		Registry registry = LocateRegistry.getRegistry(1099);
 		this.server = (ServerRemote) registry.lookup("SR");
 		System.out.println(" client is ready");
 		System.out.println(server.getCustomerDAO().read("Me"));
 		System.out.println(server.getMovieDAO().read("once"));
+		ArrayList<AbstractMovie> list = new ArrayList<AbstractMovie>();
+		list = 	server.getMovieDAO().getAllMovies();
+		System.out.println(list.toString());
 
 	}
 
@@ -40,7 +45,7 @@ public class BrokerClient extends UnicastRemoteObject {
 		return server.getCustomerDAO().create(cpr, name, address);
 	}
 
-	public Customer readCustomer(String cpr) throws RemoteException {
+	public Customer readCustomer(String cpr) throws RemoteException, SQLException {
 		return server.getCustomerDAO().read(cpr);
 	}
 
@@ -95,6 +100,11 @@ public class BrokerClient extends UnicastRemoteObject {
 
 	public void deleteTicket(Ticket ticket) throws RemoteException {
 		server.getTicketDAO().delete(ticket);
+	}
+
+	public ArrayList<AbstractMovie> getAllMovies() throws RemoteException, ClassNotFoundException, SQLException {
+		 
+		return server.getMovieDAO().getAllMovies();
 	}
 
 }

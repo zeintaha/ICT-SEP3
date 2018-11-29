@@ -1,6 +1,7 @@
 package com.web.controller;
 
 import java.rmi.RemoteException;
+import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,7 +30,7 @@ public class CustomerController {
 
 	@GetMapping("/{cpr}")
 
-	public Customer readCustomer(@PathVariable String cpr) throws RemoteException {
+	public Customer readCustomer(@PathVariable String cpr) throws RemoteException, SQLException {
 
 		Customer customer = brokerClient.readCustomer(cpr);
 		return customer;
@@ -38,14 +39,15 @@ public class CustomerController {
 
 	@PostMapping()
 	public Customer createUser(@RequestBody Customer customer) throws RemoteException {
-
-		Customer customeradded = brokerClient.createCustomer(customer.getCpr(), customer.getName(),
+		String name = customer.getName();
+		Customer createdcustomer = brokerClient.createCustomer(customer.getCpr(), customer.getName(),
 				customer.getAddress());
-		return customeradded;
+		return createdcustomer;
+
 	}
 
 	@DeleteMapping("/{cpr}")
-	public Customer deleteUser(@PathVariable String cpr) throws RemoteException {
+	public Customer deleteUser(@PathVariable String cpr) throws RemoteException, SQLException {
 
 		Customer customer = brokerClient.readCustomer(cpr);
 		brokerClient.deleteCustomer(customer);

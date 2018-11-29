@@ -9,6 +9,8 @@ import com.data.connection.DataMapper;
 import com.data.connection.DatabaseHelper;
 import com.data.model.customer.Customer;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 
 
 
@@ -46,14 +48,17 @@ public class CustomerDAOService extends UnicastRemoteObject
 	   
       helper.executeUpdate("INSERT INTO Customer VALUES (?, ?, ?)", cpr, name,
             address);
+      
+      
       return new Customer(cpr, name, address);
    }
 
-   public Customer read(String name) throws RemoteException
+   public Customer read(String name) throws RemoteException, SQLException
    {
       CustomerMapper mapper = new CustomerMapper();
       Customer cust = helper.getSingle(mapper,
             "SELECT * FROM Customer WHERE name = ?;", name);
+
 
       return cust;
    

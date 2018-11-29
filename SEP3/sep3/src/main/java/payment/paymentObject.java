@@ -32,11 +32,11 @@ public class paymentObject {
 	}
 
 	// Set redirect URLs
-	public RedirectUrls getLinks() {
+	public void getLinks() {
 		redirectUrls = new RedirectUrls();
 		redirectUrls.setCancelUrl("http://localhost:3000/cancel");
 		redirectUrls.setReturnUrl("http://localhost:3000/process");
-		return redirectUrls;
+		
 	}
 
 	// Set payment details

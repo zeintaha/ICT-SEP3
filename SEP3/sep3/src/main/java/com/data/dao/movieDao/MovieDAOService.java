@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.data.connection.DataMapper;
 import com.data.connection.DatabaseHelper;
@@ -28,7 +29,7 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	private DatabaseHelper<AbstractMovie> helper;
 
 	public MovieDAOService() throws RemoteException, SQLException {
-		this.helper = new DatabaseHelper<>();
+		this.helper = new DatabaseHelper<AbstractMovie>();
 	}
 
 	private static class AbstractMovieMapper implements DataMapper<AbstractMovie> {
@@ -43,41 +44,45 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 			String urlImage = rs.getString("urlImage");
 			switch (rs.getString("category")) {
 			case Action:
-				return new ActionMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
+				return new ActionMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Action");
 			case Adventure:
-				return new AdventureMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
+				return new AdventureMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Adventure");
 			case Comedy:
-				return new ComedyMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
+				return new ComedyMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Comedy");
 			case Crime:
-				return new CrimeMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
+				return new CrimeMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Crime");
 			case Drama:
-				return new DramaMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
+				return new DramaMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Drama");
 			case Horror:
-				return new HorrorMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage);
+				return new HorrorMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Horror");
 			default:
-				return null;
+				
+				return new ActionMovie(name, director, discription, duration, urlTrailer, urlFullMovie, urlImage,"Action");
 		}
 		}
 }
 	@Override
 	public AbstractMovie create(AbstractMovie movie) throws RemoteException {
-		String category = "";
-		if (movie instanceof ActionMovie) {
-			category = "ActionMovie";
-		} else if (movie instanceof AdventureMovie) {
-			category = "AdventureMovie";
-		} else if (movie instanceof ComedyMovie) {
-			category = "ComedyMovie";
-		} else if (movie instanceof CrimeMovie) {
-			category = "CrimeMovie";
-		} else if (movie instanceof DramaMovie) {
-			category = "DramaMovie";
-		} else if (movie instanceof DramaMovie) {
-			category = "HorrorMovie";
-		}
+//		String category = "";
+//		if (movie instanceof ActionMovie) {
+//			category = "ActionMovie";
+//		} else if (movie instanceof AdventureMovie) {
+//			category = "AdventureMovie";
+//		} else if (movie instanceof ComedyMovie) {
+//			category = "ComedyMovie";
+//		} else if (movie instanceof CrimeMovie) {
+//			category = "CrimeMovie";
+//		} else if (movie instanceof DramaMovie) {
+//			category = "DramaMovie";
+//		} else if (movie instanceof DramaMovie) {
+//			category = "HorrorMovie";
+//		}
+//		else {
+//			category = "ActionMovie";
+//		}
 
 		helper.executeUpdate("INSERT INTO Movie(name, director, discription, category, duration, urlTrailer, urlFullMovie, urlImage) VALUES(?,?,?,?,?,?,?,?)", 
-				movie.getName(), movie.getDirector(), movie.getDiscription(), category, movie.getDuration(), movie.getUrlTrailer(), movie.getUrlFullMovie(),
+				movie.getName(), movie.getDirector(), movie.getDiscription(), movie.getCategory(), movie.getDuration(), movie.getUrlTrailer(), movie.getUrlFullMovie(),
 				movie.getUrlImage());
 		return movie;
 	}
@@ -85,7 +90,7 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	@Override
 	public AbstractMovie read(String name) throws RemoteException{
 		AbstractMovieMapper mapper = new AbstractMovieMapper();
-		AbstractMovie mov=helper.getSingle(mapper, "SELECT * FROM Movie WHERE name = ?;", name);
+		AbstractMovie mov = helper.getSingle(mapper, "SELECT * FROM Movie WHERE name = ?;", name);
 		
 		return mov;
 	}
@@ -94,6 +99,18 @@ public class MovieDAOService extends UnicastRemoteObject implements MovieDAO {
 	public void delete(AbstractMovie movie) throws RemoteException {
 		helper.executeUpdate("DELETE FROM Movie WHERE name = ?",
             movie.getName());
+
+	}
+
+	@Override
+	public ArrayList<AbstractMovie> getAllMovies() throws RemoteException, ClassNotFoundException, SQLException {
+		
+		
+		AbstractMovieMapper mapper = new AbstractMovieMapper();
+		String sql ="SELECT * FROM Movie";
+		return helper.getAll(mapper, sql);
+		
+				
 
 	}
 

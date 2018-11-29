@@ -30,7 +30,7 @@ public class MainServer {
 		@SuppressWarnings("unused")
 		ServerRemote sr=bind(reg,"SR",new Server());
 		System.out.println("the server is ready and waiting for the client");
-		@SuppressWarnings("unused")
+		
 		BrokerClient cus = new BrokerClient();
 		
 	}

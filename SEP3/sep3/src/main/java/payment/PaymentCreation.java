@@ -19,11 +19,12 @@ public class PaymentCreation {
 	APIContext apiContext = new APIContext(clientID, clientSecret, mode);
 
 	paymentObject paymentObject = new paymentObject();
+	Payment createdPayment = paymentObject.getPayment();
 
-	public void PaymentCreation() {
+	public PaymentCreation() {
 		try {
 
-			Payment createdPayment = paymentObject.getPayment();
+			
 			createdPayment.create(apiContext);
 
 			Iterator links = createdPayment.getLinks().iterator();
@@ -39,13 +40,13 @@ public class PaymentCreation {
 	}
 
 	public void executePayment(HttpServletRequest req) {
-		Payment payment = new Payment();
-		payment.setId(req.getParameter("paymentId"));
+		
+		createdPayment.setId(req.getParameter("paymentId"));
 
 		PaymentExecution paymentExecution = new PaymentExecution();
 		paymentExecution.setPayerId(req.getParameter("PayerID"));
 		try {
-			Payment createdPayment = payment.execute(apiContext, paymentExecution);
+			createdPayment.execute(apiContext, paymentExecution);
 			System.out.println(createdPayment);
 		} catch (PayPalRESTException e) {
 			System.err.println(e.getDetails());
