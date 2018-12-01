@@ -31,13 +31,6 @@ public class DatabaseHelper<T> {
 		return stat;
 	}
 
-	private static PreparedStatement preparefortheList(String sql) throws SQLException {
-
-		PreparedStatement stat = connection.prepareStatement(sql);
-
-		return stat;
-	}
-
 	public ResultSet executeQuery(String sql, Object... parameters) throws SQLException {
 		PreparedStatement stat = prepare(sql, parameters);
 		return stat.executeQuery();

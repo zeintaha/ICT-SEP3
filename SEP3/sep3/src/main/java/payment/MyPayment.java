@@ -1,8 +1,13 @@
 package payment;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -47,7 +52,6 @@ public class MyPayment {
 		payment.setIntent("sale");
 		payment.setPayer(payer);
 		payment.setTransactions(transactions);
-
 //		RedirectUrls redirectUrls = new RedirectUrls();
 		redirectUrls.setCancelUrl("https://example.com/cancel");
 		redirectUrls.setReturnUrl("https://example.com/return");
@@ -74,15 +78,41 @@ try {
 	
 
 			Iterator links = payment1.getLinks().iterator();
+			String href = null;
 			while (links.hasNext()) {
 				Links link = (Links) links.next();
 				if (link.getRel().equalsIgnoreCase("approval_url")) {
-					// Redirect the customer to link.getHref()
+					href = link.getHref();
 				}
 			}
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Go to " + href + " to complete transaction.\nPress enter when ready");
+			Desktop.getDesktop().browse(new URI(href));
+			scanner.nextLine();
+			PaymentExecution paymentExecution = new PaymentExecution();
+			
+			
+			// consider this 
+//			System.out.println(	payment1.getPayer().getPayerInfo().getPayerId());		
+//			paymentExecution.setPayerId(payId);
+			
+			
+			paymentExecution.setPayerId("DUSYFH5YB7NC8");
+
+			
+			Payment payment2 = payment1.execute(apiContext, paymentExecution);
+			System.out.println(payment2);
 		} catch (PayPalRESTException e) {
 			System.err.println(e.getDetails());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
+		
 	}
 
 	public void executePayment(HttpServletRequest req) {
