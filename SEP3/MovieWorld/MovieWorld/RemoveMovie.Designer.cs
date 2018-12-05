@@ -105,13 +105,6 @@
             this.comboBoxSelectMovie.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelectMovie.ForeColor = System.Drawing.Color.Black;
             this.comboBoxSelectMovie.FormattingEnabled = true;
-            this.comboBoxSelectMovie.Items.AddRange(new object[] {
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Horror"});
             this.comboBoxSelectMovie.Location = new System.Drawing.Point(279, 205);
             this.comboBoxSelectMovie.Name = "comboBoxSelectMovie";
             this.comboBoxSelectMovie.Size = new System.Drawing.Size(365, 29);

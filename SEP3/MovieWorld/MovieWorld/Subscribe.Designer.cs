@@ -33,18 +33,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox_Subscription = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker_Dob = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_Mobile = new System.Windows.Forms.TextBox();
-            this.textBox_LastName = new System.Windows.Forms.TextBox();
             this.textBox_FirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_Address = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker_Dob = new System.Windows.Forms.DateTimePicker();
+            this.textBox_LastName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_Mobile = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,47 +109,6 @@
             this.comboBox_Subscription.TabIndex = 1;
             this.comboBox_Subscription.Text = "Choose Subscription";
             // 
-            // dateTimePicker_Dob
-            // 
-            this.dateTimePicker_Dob.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.dateTimePicker_Dob.Location = new System.Drawing.Point(303, 338);
-            this.dateTimePicker_Dob.Name = "dateTimePicker_Dob";
-            this.dateTimePicker_Dob.Size = new System.Drawing.Size(365, 30);
-            this.dateTimePicker_Dob.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(126, 339);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 22);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Date of Birth";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(126, 283);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 22);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Mobile Number";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(126, 227);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 22);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Last Name";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -160,28 +119,6 @@
             this.label4.Size = new System.Drawing.Size(103, 22);
             this.label4.TabIndex = 34;
             this.label4.Text = "First Name";
-            // 
-            // textBox_Mobile
-            // 
-            this.textBox_Mobile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Mobile.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Mobile.Location = new System.Drawing.Point(303, 282);
-            this.textBox_Mobile.Name = "textBox_Mobile";
-            this.textBox_Mobile.Size = new System.Drawing.Size(365, 30);
-            this.textBox_Mobile.TabIndex = 5;
-            this.textBox_Mobile.Text = "Mobile Number";
-            this.textBox_Mobile.Enter += new System.EventHandler(this.textBox_Mobile_Enter);
-            // 
-            // textBox_LastName
-            // 
-            this.textBox_LastName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_LastName.ForeColor = System.Drawing.Color.Black;
-            this.textBox_LastName.Location = new System.Drawing.Point(303, 226);
-            this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(365, 30);
-            this.textBox_LastName.TabIndex = 4;
-            this.textBox_LastName.Text = "Last Name";
-            this.textBox_LastName.Enter += new System.EventHandler(this.textBox_LastName_Enter);
             // 
             // textBox_FirstName
             // 
@@ -238,6 +175,69 @@
             this.textBox_Address.Text = "Address";
             this.textBox_Address.Enter += new System.EventHandler(this.textBox_Address_Enter);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(126, 339);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 22);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Date of Birth";
+            // 
+            // dateTimePicker_Dob
+            // 
+            this.dateTimePicker_Dob.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.dateTimePicker_Dob.Location = new System.Drawing.Point(303, 338);
+            this.dateTimePicker_Dob.Name = "dateTimePicker_Dob";
+            this.dateTimePicker_Dob.Size = new System.Drawing.Size(365, 30);
+            this.dateTimePicker_Dob.TabIndex = 6;
+            // 
+            // textBox_LastName
+            // 
+            this.textBox_LastName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_LastName.ForeColor = System.Drawing.Color.Black;
+            this.textBox_LastName.Location = new System.Drawing.Point(303, 226);
+            this.textBox_LastName.Name = "textBox_LastName";
+            this.textBox_LastName.Size = new System.Drawing.Size(365, 30);
+            this.textBox_LastName.TabIndex = 4;
+            this.textBox_LastName.Text = "Last Name";
+            this.textBox_LastName.Enter += new System.EventHandler(this.textBox_LastName_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(126, 227);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 22);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Last Name";
+            // 
+            // textBox_Mobile
+            // 
+            this.textBox_Mobile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Mobile.ForeColor = System.Drawing.Color.Black;
+            this.textBox_Mobile.Location = new System.Drawing.Point(303, 282);
+            this.textBox_Mobile.Name = "textBox_Mobile";
+            this.textBox_Mobile.Size = new System.Drawing.Size(365, 30);
+            this.textBox_Mobile.TabIndex = 5;
+            this.textBox_Mobile.Text = "Mobile Number";
+            this.textBox_Mobile.Enter += new System.EventHandler(this.textBox_Mobile_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(126, 283);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 22);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Mobile Number";
+            // 
             // Subscribe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -280,17 +280,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox_Subscription;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_Dob;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_Mobile;
-        private System.Windows.Forms.TextBox textBox_LastName;
         private System.Windows.Forms.TextBox textBox_FirstName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox_Address;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Dob;
+        private System.Windows.Forms.TextBox textBox_LastName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_Mobile;
+        private System.Windows.Forms.Label label6;
     }
 }

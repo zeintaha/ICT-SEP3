@@ -128,21 +128,27 @@ namespace MovieWorld
 
         private void button_watch(object sender, EventArgs e)
         {
-            
-            PlayMovie trailer = new PlayMovie();
-            trailer.axWindowsMediaPlayer_Trailer.URL = UrlFullMovie;
-            trailer.label_Title.Text = "Streming Movie: " + MovieTitle;
-            trailer.Show();
 
-            //Subscribe subscribe = new Subscribe();
-            //subscribe.Show();
+            if (Session.IsSession == false)
+            {
+                //Subscribe subscribe = new Subscribe();
+                //subscribe.Show();
+            }
+            else 
+            {
+                //PlayMovie playMovie = new PlayMovie();
+                //playMovie.axWindowsMediaPlayer.URL = UrlFullMovie;
+                //playMovie.label_Title.Text = "Streming Movie: " + MovieTitle;
+                //playMovie.Show();
+                MessageBox.Show("1");
+            }
         }
 
         private void button_trailer(object sender, EventArgs e)
         {
             
             PlayMovie trailer = new PlayMovie();
-            trailer.axWindowsMediaPlayer_Trailer.URL = UrlTrailer;
+            trailer.axWindowsMediaPlayer.URL = UrlTrailer;
             trailer.label_Title.Text = "Trailer: "+MovieTitle;
             trailer.Show();
         }

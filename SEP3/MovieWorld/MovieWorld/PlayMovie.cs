@@ -28,9 +28,9 @@ namespace MovieWorld
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
-                axWindowsMediaPlayer_Trailer.fullScreen = true;
+                axWindowsMediaPlayer.fullScreen = true;
             }
         }
 
@@ -69,40 +69,40 @@ namespace MovieWorld
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 button1.BackgroundImage = MovieWorld.Properties.Resources.play_4_24__1____Copy;
-                axWindowsMediaPlayer_Trailer.Ctlcontrols.pause(); 
+                axWindowsMediaPlayer.Ctlcontrols.pause(); 
 
             }
-            else if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsPaused)
+            else if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPaused)
             {
                 button1.BackgroundImage = MovieWorld.Properties.Resources.media_pause_242;
-                axWindowsMediaPlayer_Trailer.Ctlcontrols.play();
+                axWindowsMediaPlayer.Ctlcontrols.play();
             }
 
-            else if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsStopped)
+            else if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
                 button1.BackgroundImage = MovieWorld.Properties.Resources.media_pause_242;
-                axWindowsMediaPlayer_Trailer.Ctlcontrols.play();
+                axWindowsMediaPlayer.Ctlcontrols.play();
             }
 
         }
 
         private void axWindowsMediaPlayer_Trailer_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
-            if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
 
 
                 button1.BackgroundImage = MovieWorld.Properties.Resources.media_pause_242;
             }
-            else if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsPaused)
+            else if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPaused)
             {
 
                 button1.BackgroundImage = MovieWorld.Properties.Resources.play_4_24__1____Copy;
             }
-            else if (axWindowsMediaPlayer_Trailer.playState == WMPLib.WMPPlayState.wmppsStopped)
+            else if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
 
                 button1.BackgroundImage = MovieWorld.Properties.Resources.play_4_24__1____Copy;

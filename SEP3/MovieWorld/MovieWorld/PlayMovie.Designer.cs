@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayMovie));
             this.label_Title = new System.Windows.Forms.Label();
-            this.axWindowsMediaPlayer_Trailer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_fullScreen = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer_Trailer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,16 +48,16 @@
             this.label_Title.Size = new System.Drawing.Size(0, 30);
             this.label_Title.TabIndex = 13;
             // 
-            // axWindowsMediaPlayer_Trailer
+            // axWindowsMediaPlayer
             // 
-            this.axWindowsMediaPlayer_Trailer.Enabled = true;
-            this.axWindowsMediaPlayer_Trailer.Location = new System.Drawing.Point(10, 32);
-            this.axWindowsMediaPlayer_Trailer.Name = "axWindowsMediaPlayer_Trailer";
-            this.axWindowsMediaPlayer_Trailer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer_Trailer.OcxState")));
-            this.axWindowsMediaPlayer_Trailer.Size = new System.Drawing.Size(637, 361);
-            this.axWindowsMediaPlayer_Trailer.TabIndex = 0;
-            this.axWindowsMediaPlayer_Trailer.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer_Trailer_PlayStateChange);
-            this.axWindowsMediaPlayer_Trailer.Enter += new System.EventHandler(this.axWindowsMediaPlayer_Trailer_Enter);
+            this.axWindowsMediaPlayer.Enabled = true;
+            this.axWindowsMediaPlayer.Location = new System.Drawing.Point(10, 32);
+            this.axWindowsMediaPlayer.Name = "axWindowsMediaPlayer";
+            this.axWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer.OcxState")));
+            this.axWindowsMediaPlayer.Size = new System.Drawing.Size(637, 361);
+            this.axWindowsMediaPlayer.TabIndex = 0;
+            this.axWindowsMediaPlayer.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer_Trailer_PlayStateChange);
+            this.axWindowsMediaPlayer.Enter += new System.EventHandler(this.axWindowsMediaPlayer_Trailer_Enter);
             // 
             // button1
             // 
@@ -103,15 +103,14 @@
             this.Controls.Add(this.label_Title);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button_fullScreen);
-            this.Controls.Add(this.axWindowsMediaPlayer_Trailer);
+            this.Controls.Add(this.axWindowsMediaPlayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PlayMovie";
-            this.Text = "Trailer";
             this.Load += new System.EventHandler(this.Trailer_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Trailer_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Trailer_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Trailer_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer_Trailer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,7 +119,7 @@
 
         #endregion
 
-        public AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer_Trailer;
+        public AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer;
         private System.Windows.Forms.Button button_fullScreen;
         public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label label_Title;
