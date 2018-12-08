@@ -18,8 +18,10 @@ namespace MovieWorld
         {
             InitializeComponent();
             guestlayout();
+            
 
-
+            allGenres1.Show();
+            allGenres1.BringToFront();
 
         }
 
@@ -31,9 +33,12 @@ namespace MovieWorld
         private void button1_Click(object sender, EventArgs e)
         {
             MenuPanel.Show();
-            //movies1.BringToFront();
             MenuPanel.Height = buttonAllGenres.Height;
             MenuPanel.Top = buttonAllGenres.Top;
+
+            allGenres1.Show();
+            allGenres1.BringToFront();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -50,9 +55,12 @@ namespace MovieWorld
         private void button2_Click(object sender, EventArgs e)
         {
             MenuPanel.Show();
-           // action1.BringToFront();
             MenuPanel.Height = buttonAction.Height;
             MenuPanel.Top = buttonAction.Top;
+
+            action1.Show();
+            action1.BringToFront();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -60,9 +68,11 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonAdventure.Height;
             MenuPanel.Top = buttonAdventure.Top;
-            //adventure1.BringToFront();
+
+            adventure1.Show();
+            adventure1.BringToFront();
             
-            MessageBox.Show("Enter the passowrd!");
+           
 
         }
 
@@ -74,7 +84,9 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonComedy.Height;
             MenuPanel.Top = buttonComedy.Top;
-            //comedy1.BringToFront();
+
+            comedy1.Show();
+            comedy1.BringToFront();
 
         }
 
@@ -83,7 +95,8 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonCrime.Height;
             MenuPanel.Top = buttonCrime.Top;
-            //crime1.BringToFront();
+            crime1.Show();
+            crime1.BringToFront();
 
         }
 
@@ -92,7 +105,9 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonDrama.Height;
             MenuPanel.Top = buttonDrama.Top;
-            //drama1.BringToFront();
+
+            drama1.Show();
+            drama1.BringToFront();
 
         }
 
@@ -102,7 +117,8 @@ namespace MovieWorld
             MenuPanel.Height = buttonHorror.Height;
             MenuPanel.Top = buttonHorror.Top;
 
-            //horror1.BringToFront();
+            horror1.Show();
+            horror1.BringToFront();
 
         }
 

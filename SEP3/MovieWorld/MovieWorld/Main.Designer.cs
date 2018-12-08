@@ -53,7 +53,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.drama1 = new MovieWorld.Drama();
+            this.crime1 = new MovieWorld.Crime();
+            this.comedy1 = new MovieWorld.Comedy();
+            this.action1 = new MovieWorld.Action();
+            this.adventure1 = new MovieWorld.Adventure();
             this.allGenres1 = new MovieWorld.AllGenres();
+            this.horror1 = new MovieWorld.Horror();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogging)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
@@ -392,6 +398,51 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // drama1
+            // 
+            this.drama1.AutoScroll = true;
+            this.drama1.BackColor = System.Drawing.SystemColors.Control;
+            this.drama1.Location = new System.Drawing.Point(226, 25);
+            this.drama1.Name = "drama1";
+            this.drama1.Size = new System.Drawing.Size(1067, 627);
+            this.drama1.TabIndex = 6;
+            // 
+            // crime1
+            // 
+            this.crime1.AutoScroll = true;
+            this.crime1.BackColor = System.Drawing.SystemColors.Control;
+            this.crime1.Location = new System.Drawing.Point(226, 25);
+            this.crime1.Name = "crime1";
+            this.crime1.Size = new System.Drawing.Size(1067, 627);
+            this.crime1.TabIndex = 5;
+            // 
+            // comedy1
+            // 
+            this.comedy1.AutoScroll = true;
+            this.comedy1.BackColor = System.Drawing.SystemColors.Control;
+            this.comedy1.Location = new System.Drawing.Point(226, 25);
+            this.comedy1.Name = "comedy1";
+            this.comedy1.Size = new System.Drawing.Size(1067, 627);
+            this.comedy1.TabIndex = 4;
+            // 
+            // action1
+            // 
+            this.action1.AutoScroll = true;
+            this.action1.BackColor = System.Drawing.SystemColors.Control;
+            this.action1.Location = new System.Drawing.Point(226, 25);
+            this.action1.Name = "action1";
+            this.action1.Size = new System.Drawing.Size(1067, 627);
+            this.action1.TabIndex = 3;
+            // 
+            // adventure1
+            // 
+            this.adventure1.AutoScroll = true;
+            this.adventure1.BackColor = System.Drawing.SystemColors.Control;
+            this.adventure1.Location = new System.Drawing.Point(226, 25);
+            this.adventure1.Name = "adventure1";
+            this.adventure1.Size = new System.Drawing.Size(1067, 627);
+            this.adventure1.TabIndex = 2;
+            // 
             // allGenres1
             // 
             this.allGenres1.AutoScroll = true;
@@ -401,12 +452,27 @@
             this.allGenres1.Size = new System.Drawing.Size(1067, 627);
             this.allGenres1.TabIndex = 1;
             // 
+            // horror1
+            // 
+            this.horror1.AutoScroll = true;
+            this.horror1.BackColor = System.Drawing.SystemColors.Control;
+            this.horror1.Location = new System.Drawing.Point(226, 25);
+            this.horror1.Name = "horror1";
+            this.horror1.Size = new System.Drawing.Size(1067, 627);
+            this.horror1.TabIndex = 7;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1293, 652);
+            this.Controls.Add(this.horror1);
+            this.Controls.Add(this.drama1);
+            this.Controls.Add(this.crime1);
+            this.Controls.Add(this.comedy1);
+            this.Controls.Add(this.action1);
+            this.Controls.Add(this.adventure1);
             this.Controls.Add(this.allGenres1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -458,6 +524,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label labellogging;
+        private Adventure adventure1;
+        private Action action1;
+        private Comedy comedy1;
+        private Crime crime1;
+        private Drama drama1;
+        private Horror horror1;
     }
 }
 

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MovieWorld
 {
     public partial class Adventure : UserControl
     {
+
         BackgroundWorker worker;
         private delegate void Delegate();
 
@@ -23,6 +25,11 @@ namespace MovieWorld
         }
 
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void worker_doWork(object sender, DoWorkEventArgs e)
         {
             Delegate del = new Delegate(CreateLayout);
@@ -30,22 +37,25 @@ namespace MovieWorld
 
         }
 
+
         public void CreateLayout()
         {
 
 
+
             foreach (Movie m in MovieList.movies)
             {
-                if (m.Genre == "Adventure") { 
-                MoviePanel moviePanel = new MoviePanel();
+                if (m.Genre == "Adventure")
+                {
+                    MoviePanel moviePanel = new MoviePanel();
 
-                moviePanel.Title = m.Name;
-                moviePanel.Link = m.UrlFullMovie;
-                moviePanel.Image = m.UrlImage;
-                moviePanel.Height = 230;
-                moviePanel.Width = 150;
-                flowLayoutPanel1.Controls.Add(moviePanel);
-                 }
+                    moviePanel.Title = m.Name;
+                    moviePanel.Link = m.UrlFullMovie;
+                    moviePanel.Image = m.UrlImage;
+                    moviePanel.Height = 230;
+                    moviePanel.Width = 150;
+                    flowLayoutPanel1.Controls.Add(moviePanel);
+                }
             }
         }
 
@@ -54,6 +64,5 @@ namespace MovieWorld
             worker.DoWork += worker_doWork;
             worker.RunWorkerAsync();
         }
-
     }
 }
