@@ -79,8 +79,10 @@ namespace MovieWorld
             Create();
         }
 
+
         private void imClicked(object sender, EventArgs e)
         {
+
 
            
             string UrlImage = ((System.Windows.Forms.PictureBox)sender).ImageLocation.ToString();
@@ -102,23 +104,15 @@ namespace MovieWorld
                     MovieId = m.MovieId;
                     MovieTitle = m.Name;
                     
-
-
-
-
-
                 }
             }
 
-
-            
             movieDetail.Show();
 
         }
 
         private void button_buy(object sender, EventArgs e)
         {
-            
 
             BuyTicket buyTicket  = new BuyTicket();
 
@@ -129,24 +123,28 @@ namespace MovieWorld
         private void button_watch(object sender, EventArgs e)
         {
 
+            
+
+
             if (Session.IsSession == false)
             {
-                //Subscribe subscribe = new Subscribe();
-                //subscribe.Show();
+                Subscribe subscribe = new Subscribe();
+                subscribe.Show();
+               
             }
-            else 
+            else if (Session.IsSession == true)
             {
-                //PlayMovie playMovie = new PlayMovie();
-                //playMovie.axWindowsMediaPlayer.URL = UrlFullMovie;
-                //playMovie.label_Title.Text = "Streming Movie: " + MovieTitle;
-                //playMovie.Show();
-                MessageBox.Show("1");
+                PlayMovie playMovie = new PlayMovie();
+                playMovie.axWindowsMediaPlayer.URL = UrlFullMovie;
+                playMovie.label_Title.Text = "Streming Movie: " + MovieTitle;
+                playMovie.Show();
             }
+
         }
 
         private void button_trailer(object sender, EventArgs e)
         {
-            
+
             PlayMovie trailer = new PlayMovie();
             trailer.axWindowsMediaPlayer.URL = UrlTrailer;
             trailer.label_Title.Text = "Trailer: "+MovieTitle;

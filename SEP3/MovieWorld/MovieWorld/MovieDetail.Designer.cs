@@ -1,6 +1,6 @@
 ﻿namespace MovieWorld
 {
-    partial class MovieDetail
+    public partial class MovieDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -69,6 +69,7 @@
             this.button_watch.TabIndex = 7;
             this.button_watch.Text = "Watch Online";
             this.button_watch.UseVisualStyleBackColor = false;
+            this.button_watch.Click += new System.EventHandler(this.button_watch_Click);
             // 
             // label_desc
             // 

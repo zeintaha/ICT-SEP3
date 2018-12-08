@@ -78,5 +78,10 @@ namespace MovieWorld
         {
             
         }
+
+        private void button_watch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

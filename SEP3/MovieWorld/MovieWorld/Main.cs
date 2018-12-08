@@ -60,7 +60,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonAdventure.Height;
             MenuPanel.Top = buttonAdventure.Top;
-            // adventure1.BringToFront();
+            //adventure1.BringToFront();
             
             MessageBox.Show("Enter the passowrd!");
 

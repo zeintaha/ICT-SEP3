@@ -59,7 +59,7 @@ namespace MovieWorld
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
 
             //define local variables from the user inputs 
             string user = textBox_Username.Text;
@@ -81,6 +81,8 @@ namespace MovieWorld
                     
                     main.customerlayout();
                 }
+
+
 
                 main.Show();
                 this.Hide();

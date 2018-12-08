@@ -251,7 +251,7 @@ namespace MovieWorld
             {
                 //if (m.Genre == "Action") { 
                 MoviePanel moviePanel = new MoviePanel();
-                
+
                 moviePanel.Title = m.Name;
                 moviePanel.Link = m.UrlFullMovie;
                 moviePanel.Image = m.UrlImage;
