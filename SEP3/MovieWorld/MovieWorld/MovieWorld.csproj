@@ -327,6 +327,7 @@
     <None Include="Resources\play-24.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Taha.jpg" />
     <None Include="Resources\video-add-241.png" />
     <None Include="Resources\video-remove-24.png" />
     <None Include="Resources\video-add-24.png" />
@@ -355,7 +356,11 @@
     <None Include="Resources\contacts-161.png" />
     <None Include="Resources\key-16.png" />
     <None Include="Resources\logout-24.png" />
+    <None Include="Resources\Balkis.jpg" />
+    <None Include="Resources\Fadi.jpg" />
     <Content Include="Resources\media-pause-24.png" />
+    <None Include="Resources\Oskars.jpg" />
+    <None Include="Resources\Nadeem.jpg" />
     <Content Include="Resources\play-4-24 %281%29.png" />
     <Content Include="Resources\play-4-24.png" />
     <Content Include="Resources\play-5-24 %281%29.png" />

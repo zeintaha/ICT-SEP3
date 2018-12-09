@@ -103,6 +103,16 @@ namespace MovieWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Balkis {
+            get {
+                object obj = ResourceManager.GetObject("Balkis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_window_24 {
             get {
                 object obj = ResourceManager.GetObject("close-window-24", resourceCulture);
@@ -323,6 +333,16 @@ namespace MovieWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fadi {
+            get {
+                object obj = ResourceManager.GetObject("Fadi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap horror_24 {
             get {
                 object obj = ResourceManager.GetObject("horror-24", resourceCulture);
@@ -426,6 +446,26 @@ namespace MovieWorld.Properties {
         internal static System.Drawing.Bitmap media_pause_242 {
             get {
                 object obj = ResourceManager.GetObject("media-pause-242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nadeem {
+            get {
+                object obj = ResourceManager.GetObject("Nadeem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oskars {
+            get {
+                object obj = ResourceManager.GetObject("Oskars", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -576,6 +616,16 @@ namespace MovieWorld.Properties {
         internal static System.Drawing.Bitmap Smallfoot_2018_movie_poster {
             get {
                 object obj = ResourceManager.GetObject("Smallfoot-2018-movie-poster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Taha {
+            get {
+                object obj = ResourceManager.GetObject("Taha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

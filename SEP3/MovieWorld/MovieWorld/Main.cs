@@ -18,8 +18,8 @@ namespace MovieWorld
         {
             InitializeComponent();
             guestlayout();
-            
 
+            about1.Hide();
             allGenres1.Show();
             allGenres1.BringToFront();
 
@@ -35,6 +35,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonAllGenres.Height;
             MenuPanel.Top = buttonAllGenres.Top;
+            about1.Hide();
 
             allGenres1.Show();
             allGenres1.BringToFront();
@@ -57,6 +58,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonAction.Height;
             MenuPanel.Top = buttonAction.Top;
+            about1.Hide();
 
             action1.Show();
             action1.BringToFront();
@@ -68,6 +70,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonAdventure.Height;
             MenuPanel.Top = buttonAdventure.Top;
+            about1.Hide();
 
             adventure1.Show();
             adventure1.BringToFront();
@@ -84,6 +87,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonComedy.Height;
             MenuPanel.Top = buttonComedy.Top;
+            about1.Hide();
 
             comedy1.Show();
             comedy1.BringToFront();
@@ -95,6 +99,8 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonCrime.Height;
             MenuPanel.Top = buttonCrime.Top;
+            about1.Hide();
+
             crime1.Show();
             crime1.BringToFront();
 
@@ -105,6 +111,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonDrama.Height;
             MenuPanel.Top = buttonDrama.Top;
+            about1.Hide();
 
             drama1.Show();
             drama1.BringToFront();
@@ -116,6 +123,7 @@ namespace MovieWorld
             MenuPanel.Show();
             MenuPanel.Height = buttonHorror.Height;
             MenuPanel.Top = buttonHorror.Top;
+            about1.Hide();
 
             horror1.Show();
             horror1.BringToFront();
@@ -124,7 +132,8 @@ namespace MovieWorld
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-          //  about1.BringToFront();
+            about1.Show();
+            about1.BringToFront();
             MenuPanel.Hide();
             
         }
