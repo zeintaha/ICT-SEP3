@@ -1,0 +1,33 @@
+package sep.via.dk.sep3JPA.service.ownerService;
+
+import java.rmi.RemoteException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import sep.via.dk.sep3JPA.dao.owner.OwnerDAOImplementation;
+import sep.via.dk.sep3JPA.domain.Owner;
+
+@Service
+public class OwnerServiceImplementation implements OwnerService {
+
+	@Autowired
+	public OwnerDAOImplementation ownerDAO;
+
+	@Override
+	public boolean addOwner(Owner owner) {
+		if (ownerDAO.ownerExist(owner.getUsername())) {
+			return false;
+		} else {
+			ownerDAO.addOwner(owner);
+			return true;
+		}
+
+	}
+
+	@Override
+	public Owner getOwnerById(int id) throws RemoteException {
+		return ownerDAO.getOwnerById(id);
+	}
+
+}
