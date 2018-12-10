@@ -44,7 +44,9 @@ namespace MovieWorld
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Close();
+            User user = new User();
+            user.Show();
+            //Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
