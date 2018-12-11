@@ -9,7 +9,7 @@ import sep.via.dk.sep3JPA.dao.login.LoginDao;
 public class LoginServiceImplementation implements LoginService {
 
 	@Autowired
-	public LoginDao login;
+	private LoginDao login;
 
 	@Override
 	public boolean customerAuthentication(String username, String password) {

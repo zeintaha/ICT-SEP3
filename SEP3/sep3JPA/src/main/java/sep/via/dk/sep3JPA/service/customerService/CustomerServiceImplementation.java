@@ -1,7 +1,6 @@
 package sep.via.dk.sep3JPA.service.customerService;
 
 import java.rmi.RemoteException;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import sep.via.dk.sep3JPA.domain.Customer;
 public class CustomerServiceImplementation implements CustomerService {
 
 	@Autowired
-	public CustomerDAO customerDAO;
+	private CustomerDAO customerDAO;
 
 	@Override
 	public boolean addCustomer(Customer customer) {

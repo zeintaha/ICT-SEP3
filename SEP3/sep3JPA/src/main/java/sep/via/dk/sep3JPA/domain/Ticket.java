@@ -3,6 +3,7 @@ package sep.via.dk.sep3JPA.domain;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,26 +30,43 @@ public class Ticket implements Serializable {
 	private Integer id;
 
 	@ManyToOne
-	@JoinColumn(name = "customer_id")
-	private Customer cusotmer;
-
-	@ManyToOne
 	@JoinColumn(name = "movie_id")
 	private Movie movie;
 
+	@Column(name = "firstName", nullable = false)
+	private String firstName;
+
+	@Column(name = "lastName")
+	private String lastName;
+
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-	private LocalDate date;
+	@Column(name = "movieDate")
+	private LocalDate movieDate;
+
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	@Column(name = "issuingDate")
+	private LocalDate issuingDate;
+
+	@Column(name = "time")
+	private String time;
+
+	@Column(name = "dateOfBirth")
+	private String dateOfBirth;
 
 	public Ticket() {
 
 	}
 
-	public Ticket(Integer id, Customer cusotmer, Movie movie, LocalDate date) {
-		super();
+	public Ticket(Integer id, String firstName, String lastName, LocalDate movieDate, String time, String dateOfBirth,
+			Movie movie) {
+		this.issuingDate = LocalDate.now();
 		this.id = id;
-		this.cusotmer = cusotmer;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.movieDate = movieDate;
+		this.time = time;
+		this.dateOfBirth = dateOfBirth;
 		this.movie = movie;
-		this.date = date;
 	}
 
 	public Integer getId() {
@@ -59,12 +77,52 @@ public class Ticket implements Serializable {
 		this.id = id;
 	}
 
-	public Customer getCusotmer() {
-		return cusotmer;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setCusotmer(Customer cusotmer) {
-		this.cusotmer = cusotmer;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public LocalDate getMovieDate() {
+		return movieDate;
+	}
+
+	public void setMovieDate(LocalDate movieDate) {
+		this.movieDate = movieDate;
+	}
+
+	public LocalDate getIssuingDate() {
+		return issuingDate;
+	}
+
+	public void setIssuingDate(LocalDate issuingDate) {
+		this.issuingDate = issuingDate;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public Movie getMovie() {
@@ -75,17 +133,11 @@ public class Ticket implements Serializable {
 		this.movie = movie;
 	}
 
-	public LocalDate getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
-
 	@Override
 	public String toString() {
-		return "Ticket [id=" + id + ", cusotmer=" + cusotmer + ", movie=" + movie + ", date=" + date + "]";
+		return "Ticket [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", movieDate=" + movieDate
+				+ ", issuingDate=" + issuingDate + ", time=" + time + ", dateOfBirth=" + dateOfBirth + ", movie="
+				+ movie + "]";
 	}
 
 }

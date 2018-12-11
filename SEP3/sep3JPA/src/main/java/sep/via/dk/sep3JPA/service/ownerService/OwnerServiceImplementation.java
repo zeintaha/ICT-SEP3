@@ -5,14 +5,14 @@ import java.rmi.RemoteException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import sep.via.dk.sep3JPA.dao.owner.OwnerDAOImplementation;
+import sep.via.dk.sep3JPA.dao.owner.OwnerDAO;
 import sep.via.dk.sep3JPA.domain.Owner;
 
 @Service
 public class OwnerServiceImplementation implements OwnerService {
 
 	@Autowired
-	public OwnerDAOImplementation ownerDAO;
+	private OwnerDAO ownerDAO;
 
 	@Override
 	public boolean addOwner(Owner owner) {
