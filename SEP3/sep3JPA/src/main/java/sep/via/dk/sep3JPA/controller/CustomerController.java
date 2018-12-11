@@ -44,11 +44,11 @@ public class CustomerController {
 	}
 
 	@GetMapping("/customer/username")
-	public ResponseEntity<List<Customer>> getMovieByTitle(@RequestParam("username") String username) {
+	public ResponseEntity<Customer> getMovieByTitle(@RequestParam("username") String username) {
 
-		List<Customer> list = customerService.getCustomerByUsername(username);
+		Customer customer = customerService.getCustomerByUsername(username);
 		
-		return new ResponseEntity<List<Customer>>(list, HttpStatus.OK);
+		return new ResponseEntity<Customer>(customer, HttpStatus.OK);
 	}
 
 }

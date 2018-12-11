@@ -11,6 +11,8 @@ public interface CustomerDAO {
 
 	Customer getCustomerById(int id);
 
-	List<Customer> getCustomerByUsername(String username);
+Customer getCustomerByUsername(String username);
+
+	void setExpiryDate(Customer customer);
 
 }

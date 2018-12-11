@@ -10,7 +10,9 @@ public interface CustomerService {
 	boolean addCustomer(Customer customer) throws RemoteException;
 
 	Customer getCustomerById(int id) throws RemoteException;
+
+	Customer getCustomerByUsername(String username);
+
 	
-	List<Customer> getCustomerByUsername(String username);
 
 }

@@ -12,32 +12,28 @@ import sep.via.dk.sep3JPA.domain.Customer;
 @Service
 public class CustomerServiceImplementation implements CustomerService {
 
-	
-@Autowired
-public CustomerDAO customerDAO;
+	@Autowired
+	public CustomerDAO customerDAO;
 
-	
-@Override
-public boolean addCustomer(Customer customer) {
-    if (customerDAO.customerExist(customer.getUsername())) {
-        return false;
-    } else{
-    	customerDAO.addCustomer(customer);
-        return true;
-    }
-    
-}
+	@Override
+	public boolean addCustomer(Customer customer) {
+		if (customerDAO.customerExist(customer.getUsername())) {
+			return false;
+		} else {
+			customerDAO.setExpiryDate(customer);
+			return true;
+		}
 
+	}
 
 	@Override
 	public Customer getCustomerById(int id) throws RemoteException {
 		return customerDAO.getCustomerById(id);
 	}
 
-
 	@Override
-	public List<Customer> getCustomerByUsername(String username) {
-	
+	public Customer getCustomerByUsername(String username) {
+
 		return customerDAO.getCustomerByUsername(username);
 	}
 
