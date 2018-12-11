@@ -50,20 +50,20 @@ public class LoginDAOImplementation implements LoginDao {
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd");
 		String selectedDate = updatedCustomer.getExpiryDate();
-		if(selectedDate !=null) {
-		LocalDate parsedDate = LocalDate.parse(selectedDate, formatter);
+		if (selectedDate != null) {
+			LocalDate parsedDate = LocalDate.parse(selectedDate, formatter);
 
-		LocalDate today = LocalDate.now();
-		
-		if (today.isBefore(parsedDate)) {
+			LocalDate today = LocalDate.now();
 
-			return true;
-		}
+			if (today.isBefore(parsedDate)) {
 
-		else if (today.isAfter(parsedDate)) {
+				return true;
+			}
 
-			return false;
-		}
+			else if (today.isAfter(parsedDate)) {
+
+				return false;
+			}
 		}
 		return false;
 	}
