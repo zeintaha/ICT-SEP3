@@ -5,4 +5,5 @@ public interface LoginService {
 	boolean customerAuthentication(String username,String password);
 
 	boolean ownerAuthentication(String username, String password);
+	
 }

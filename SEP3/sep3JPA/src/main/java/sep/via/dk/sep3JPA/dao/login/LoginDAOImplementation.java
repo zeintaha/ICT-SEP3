@@ -2,7 +2,6 @@ package sep.via.dk.sep3JPA.dao.login;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

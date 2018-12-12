@@ -1,6 +1,8 @@
 package sep.via.dk.sep3JPA.service.customerService;
 
 import java.rmi.RemoteException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +21,7 @@ public class CustomerServiceImplementation implements CustomerService {
 		if (customerDAO.customerExist(customer.getUsername())) {
 			return false;
 		} else {
-			customerDAO.setExpiryDate(customer);
+			customerDAO.addCustomer(customer);
 			return true;
 		}
 
@@ -34,6 +36,38 @@ public class CustomerServiceImplementation implements CustomerService {
 	public Customer getCustomerByUsername(String username) {
 
 		return customerDAO.getCustomerByUsername(username);
+	}
+
+	@Override
+	public boolean setExpiryDate(Customer customer) {
+		String expiryDate = customer.getExpiryDate();
+		int expireAfter = 0;
+		switch (expiryDate) {
+		case "1 Month":
+			expireAfter = 1;
+			break;
+		case "3 Month":
+			expireAfter = 3;
+			break;
+
+		case "12 Month":
+			expireAfter = 12;
+			break;
+
+		default:
+			expireAfter = 1;
+
+			break;
+		}
+		LocalDate date = LocalDate.now();
+		LocalDate updatedDate = date.plusMonths(expireAfter);
+
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd");
+		String updatedExpiryDate = updatedDate.format(formatter);
+		customer.setExpiryDate(updatedExpiryDate);
+		boolean exist = addCustomer(customer);
+		return exist;
+		
 	}
 
 }

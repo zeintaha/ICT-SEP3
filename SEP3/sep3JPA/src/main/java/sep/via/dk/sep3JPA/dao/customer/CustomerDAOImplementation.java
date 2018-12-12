@@ -1,9 +1,5 @@
 package sep.via.dk.sep3JPA.dao.customer;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -12,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import sep.via.dk.sep3JPA.domain.Customer;
-import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 // for update data it will be needed in movie 
 @Transactional
@@ -49,44 +44,11 @@ public class CustomerDAOImplementation implements CustomerDAO {
 
 	@Override
 	public Customer getCustomerByUsername(String username) {
-//		String jpql = "select * from Customer as a WHERE a.username = ?0 ";
-//		return (List<Customer>) entityManager.createNativeQuery(jpql).setParameter(0, username).getResultList();
-//		
-		
-		
-		Customer customer = (Customer) entityManager.createNativeQuery("select * from Customer as a WHERE a.username = ?0", Customer.class).setParameter(0, username).getSingleResult();
+		Customer customer = (Customer) entityManager
+				.createNativeQuery("select * from Customer as a WHERE a.username = ?0", Customer.class)
+				.setParameter(0, username).getSingleResult();
 		return customer;
 	}
 
-	@Override
-	public void setExpiryDate(Customer customer) {
-		String expiryDate = customer.getExpiryDate();
-		int expireAfter = 0;
-		switch (expiryDate) {
-		case "1Month":
-			expireAfter = 1;
-			break;
-		case "3Month":
-			expireAfter = 3;
-			break;
-
-		case "12Month":
-			expireAfter = 12;
-			break;
-
-		default:
-			expireAfter = 1;
-
-			break;
-		}
-		LocalDate date = LocalDate.now();
-		LocalDate updatedDate = date.plusMonths(expireAfter);
-
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd");
-		String updatedExpiryDate = updatedDate.format(formatter);
-		customer.setExpiryDate(updatedExpiryDate);
-		addCustomer(customer);
-
-	}
 
 }

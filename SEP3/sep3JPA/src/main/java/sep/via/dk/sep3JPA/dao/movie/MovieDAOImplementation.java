@@ -26,10 +26,11 @@ public class MovieDAOImplementation implements MovieDAO {
 	}
 
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Movie> getListOfMovies() {
 		String query = "select m from Movie m order by m.title";
-
+		
 		return (List<Movie>) entityManager.createQuery(query).getResultList();
 	}
 
@@ -65,6 +66,7 @@ public class MovieDAOImplementation implements MovieDAO {
 
 	
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Movie> getMovieByTitle(String title) {
 		String jpql = "select * from Movie as a WHERE a.title = ?0 ";
