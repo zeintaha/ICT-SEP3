@@ -54,6 +54,10 @@ namespace MovieWorld
             {
                 MessageBox.Show("Invalid Email.");
             }
+            else {
+                System.Diagnostics.Process.Start("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6JG39662DR639245T");
+            }
+            
         }
 
         private void Subscribe_Load(object sender, EventArgs e)
@@ -71,24 +75,15 @@ namespace MovieWorld
             textBox_FirstName.Text = "";
         }
 
-        private void textBox_LastName_Enter(object sender, EventArgs e)
-        {
-            textBox_LastName.Text = "";
-        }
 
-        private void textBox_Mobile_Enter(object sender, EventArgs e)
-        {
-            textBox_Mobile.Text = "";
-        }
+
+
 
         private void textBox_Email_Enter(object sender, EventArgs e)
         {
             textBox_Email.Text = "";
         }
 
-        private void textBox_Address_Enter(object sender, EventArgs e)
-        {
-            textBox_Address.Text = "";
-        }
+
     }
 }

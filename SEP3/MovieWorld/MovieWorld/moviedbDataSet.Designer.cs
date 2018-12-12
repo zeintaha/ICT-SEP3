@@ -902,7 +902,7 @@ namespace MovieWorld {
             internal void InitVars() {
                 this.columnname = base.Columns["name"];
                 this.columndirector = base.Columns["director"];
-                this.columndiscription = base.Columns["discription"];
+                this.columndiscription = base.Columns["description"];
                 this.columncategory = base.Columns["category"];
                 this.columnduration = base.Columns["duration"];
                 this.columnurlTrailer = base.Columns["urlTrailer"];
@@ -917,7 +917,7 @@ namespace MovieWorld {
                 base.Columns.Add(this.columnname);
                 this.columndirector = new global::System.Data.DataColumn("director", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndirector);
-                this.columndiscription = new global::System.Data.DataColumn("discription", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columndiscription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndiscription);
                 this.columncategory = new global::System.Data.DataColumn("category", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncategory);
@@ -3016,7 +3016,7 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             tableMapping.DataSetTable = "Movie";
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("director", "director");
-            tableMapping.ColumnMappings.Add("discription", "discription");
+            tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("category", "category");
             tableMapping.ColumnMappings.Add("duration", "duration");
             tableMapping.ColumnMappings.Add("urlTrailer", "urlTrailer");
@@ -3025,11 +3025,11 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Movie] WHERE (([name] = @Original_name) AND ([director] = @Original_director) AND ([discription] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Movie] WHERE (([name] = @Original_name) AND ([director] = @Original_director) AND ([description] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "discription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_duration", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_urlTrailer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlTrailer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3037,12 +3037,12 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_urlImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlImage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Movie] ([name], [director], [discription], [category], [duration], [urlTrailer], [urlFullMovie], [urlImage]) VALUES (@name, @director, @discription, @category, @duration, @urlTrailer, @urlFullMovie, @urlImage);
-SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (name = @name)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Movie] ([name], [director], [description], [category], [duration], [urlTrailer], [urlFullMovie], [urlImage]) VALUES (@name, @director, @description, @category, @duration, @urlTrailer, @urlFullMovie, @urlImage);
+SELECT name, director, description, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (name = @name)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "discription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@duration", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlTrailer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlTrailer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3050,12 +3050,12 @@ SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Movie] SET [name] = @name, [director] = @director, [discription] = @discription, [category] = @category, [duration] = @duration, [urlTrailer] = @urlTrailer, [urlFullMovie] = @urlFullMovie, [urlImage] = @urlImage WHERE (([name] = @Original_name) AND ([director] = @Original_director) AND ([discription] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage));
-SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (name = @name)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Movie] SET [name] = @name, [director] = @director, [description] = @description, [category] = @category, [duration] = @duration, [urlTrailer] = @urlTrailer, [urlFullMovie] = @urlFullMovie, [urlImage] = @urlImage WHERE (([name] = @Original_name) AND ([director] = @Original_director) AND ([description] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage));
+SELECT name, director, description, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (name = @name)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "discription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@duration", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlTrailer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlTrailer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3063,7 +3063,7 @@ SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "discription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_duration", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_urlTrailer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlTrailer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3084,7 +3084,7 @@ SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie," +
+            this._commandCollection[0].CommandText = "SELECT name, director, description, category, duration, urlTrailer, urlFullMovie," +
                 " urlImage FROM dbo.Movie";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -3229,7 +3229,7 @@ SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(director));
             }
             if ((discription == null)) {
-                throw new global::System.ArgumentNullException("discription");
+                throw new global::System.ArgumentNullException("description");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(discription));
@@ -3314,7 +3314,7 @@ SELECT name, director, discription, category, duration, urlTrailer, urlFullMovie
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(director));
             }
             if ((discription == null)) {
-                throw new global::System.ArgumentNullException("discription");
+                throw new global::System.ArgumentNullException("description");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(discription));

@@ -12,7 +12,7 @@ namespace MovieWorld
         private string movieId;
         private string genre;
         private string director;
-        private string discription;
+        private string description;
         private string duration;
         private string urlTrailer;
         private string urlFullMovie;
@@ -22,7 +22,7 @@ namespace MovieWorld
         public string MovieId { get => movieId; set => movieId = value; }
         public string Genre { get => genre; set => genre = value; }
         public string Director { get => director; set => director = value; }
-        public string Discription { get => discription; set => discription = value; }
+        public string Description { get => description; set => description = value; }
         public string Duration { get => duration; set => duration = value; }
         public string UrlTrailer { get => urlTrailer; set => urlTrailer = value; }
         public string UrlFullMovie { get => urlFullMovie; set => urlFullMovie = value; }

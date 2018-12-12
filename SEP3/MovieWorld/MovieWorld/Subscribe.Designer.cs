@@ -37,14 +37,8 @@
             this.textBox_FirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_Email = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox_Address = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker_Dob = new System.Windows.Forms.DateTimePicker();
-            this.textBox_LastName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_Mobile = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +82,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(126, 115);
+            this.label8.Location = new System.Drawing.Point(126, 139);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 22);
             this.label8.TabIndex = 27;
@@ -103,7 +97,7 @@
             "1 Month",
             "3 Months",
             "12 Months"});
-            this.comboBox_Subscription.Location = new System.Drawing.Point(303, 115);
+            this.comboBox_Subscription.Location = new System.Drawing.Point(303, 139);
             this.comboBox_Subscription.Name = "comboBox_Subscription";
             this.comboBox_Subscription.Size = new System.Drawing.Size(365, 29);
             this.comboBox_Subscription.TabIndex = 1;
@@ -114,21 +108,21 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(126, 171);
+            this.label4.Location = new System.Drawing.Point(126, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 22);
+            this.label4.Size = new System.Drawing.Size(101, 22);
             this.label4.TabIndex = 34;
-            this.label4.Text = "First Name";
+            this.label4.Text = "Username";
             // 
             // textBox_FirstName
             // 
             this.textBox_FirstName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_FirstName.ForeColor = System.Drawing.Color.Black;
-            this.textBox_FirstName.Location = new System.Drawing.Point(303, 170);
+            this.textBox_FirstName.Location = new System.Drawing.Point(303, 205);
             this.textBox_FirstName.Name = "textBox_FirstName";
             this.textBox_FirstName.Size = new System.Drawing.Size(365, 30);
             this.textBox_FirstName.TabIndex = 3;
-            this.textBox_FirstName.Text = "First Name";
+            this.textBox_FirstName.Text = "Username";
             this.textBox_FirstName.Enter += new System.EventHandler(this.textBox_FirstName_Enter);
             // 
             // label2
@@ -136,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(126, 395);
+            this.label2.Location = new System.Drawing.Point(126, 343);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 22);
             this.label2.TabIndex = 39;
@@ -146,97 +140,33 @@
             // 
             this.textBox_Email.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Email.Location = new System.Drawing.Point(303, 394);
+            this.textBox_Email.Location = new System.Drawing.Point(303, 339);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(365, 30);
             this.textBox_Email.TabIndex = 7;
             this.textBox_Email.Text = "Email";
             this.textBox_Email.Enter += new System.EventHandler(this.textBox_Email_Enter);
             // 
-            // label9
+            // label3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(126, 451);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 22);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Address";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(126, 275);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 22);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Password";
             // 
-            // textBox_Address
+            // textBox1
             // 
-            this.textBox_Address.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Address.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Address.Location = new System.Drawing.Point(303, 450);
-            this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(365, 30);
-            this.textBox_Address.TabIndex = 8;
-            this.textBox_Address.Text = "Address";
-            this.textBox_Address.Enter += new System.EventHandler(this.textBox_Address_Enter);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(126, 339);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 22);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Date of Birth";
-            // 
-            // dateTimePicker_Dob
-            // 
-            this.dateTimePicker_Dob.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.dateTimePicker_Dob.Location = new System.Drawing.Point(303, 338);
-            this.dateTimePicker_Dob.Name = "dateTimePicker_Dob";
-            this.dateTimePicker_Dob.Size = new System.Drawing.Size(365, 30);
-            this.dateTimePicker_Dob.TabIndex = 6;
-            // 
-            // textBox_LastName
-            // 
-            this.textBox_LastName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_LastName.ForeColor = System.Drawing.Color.Black;
-            this.textBox_LastName.Location = new System.Drawing.Point(303, 226);
-            this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(365, 30);
-            this.textBox_LastName.TabIndex = 4;
-            this.textBox_LastName.Text = "Last Name";
-            this.textBox_LastName.Enter += new System.EventHandler(this.textBox_LastName_Enter);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(126, 227);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 22);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Last Name";
-            // 
-            // textBox_Mobile
-            // 
-            this.textBox_Mobile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Mobile.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Mobile.Location = new System.Drawing.Point(303, 282);
-            this.textBox_Mobile.Name = "textBox_Mobile";
-            this.textBox_Mobile.Size = new System.Drawing.Size(365, 30);
-            this.textBox_Mobile.TabIndex = 5;
-            this.textBox_Mobile.Text = "Mobile Number";
-            this.textBox_Mobile.Enter += new System.EventHandler(this.textBox_Mobile_Enter);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(126, 283);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 22);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Mobile Number";
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(303, 272);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(365, 30);
+            this.textBox1.TabIndex = 40;
+            this.textBox1.Text = "Password";
             // 
             // Subscribe
             // 
@@ -244,17 +174,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(964, 556);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox_Address);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_Email);
-            this.Controls.Add(this.dateTimePicker_Dob);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_Mobile);
-            this.Controls.Add(this.textBox_LastName);
             this.Controls.Add(this.textBox_FirstName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox_Subscription);
@@ -284,13 +208,7 @@
         private System.Windows.Forms.TextBox textBox_FirstName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_Email;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox_Address;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_Dob;
-        private System.Windows.Forms.TextBox textBox_LastName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox_Mobile;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

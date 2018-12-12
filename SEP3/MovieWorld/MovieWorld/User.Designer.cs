@@ -55,10 +55,10 @@
             // tabPage1
             // 
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1067, 624);
+            this.tabPage1.Size = new System.Drawing.Size(1067, 628);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = " Add Movie";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -108,6 +108,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User";
             this.Text = "User";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.User_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.User_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.User_MouseUp);
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

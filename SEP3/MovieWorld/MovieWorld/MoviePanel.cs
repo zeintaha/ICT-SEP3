@@ -91,7 +91,7 @@ namespace MovieWorld
             {
                 if (m.UrlImage == UrlImage) {
 
-                    movieDetail.label_desc.Text = m.Discription;
+                    movieDetail.label_desc.Text = m.Description;
                     movieDetail.label_title.Text = m.Name;
                     movieDetail.pictureBox_detailed.ImageLocation = m.UrlImage;
                     movieDetail.button_trailer.Click += new EventHandler(button_trailer);
