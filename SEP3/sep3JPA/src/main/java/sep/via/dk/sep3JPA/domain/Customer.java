@@ -25,7 +25,10 @@ public class Customer implements Serializable {
 	@Column(name = "username", nullable = false)
 	private String username;
 
-	@Column(name = "password", length = 2000)
+	@Column(name = "expiryDate")
+	private String expiryDate;
+
+	@Column(name = "password", length = 2000, nullable = false)
 	private String password;
 
 	@Column(name = "email", length = 2000)
@@ -35,12 +38,13 @@ public class Customer implements Serializable {
 
 	}
 
-	public Customer(Integer id, String username, String password, String email) {
+	public Customer(Integer id, String username, String password, String email, String expiryDate) {
 
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
+		this.expiryDate = expiryDate;
 	}
 
 	public Integer getId() {
@@ -75,9 +79,18 @@ public class Customer implements Serializable {
 		this.email = email;
 	}
 
+	public String getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(String expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + "]";
+		return "Customer [id=" + id + ", username=" + username + ", expiryDate=" + expiryDate + ", password=" + password
+				+ ", email=" + email + "]";
 	}
 
 }

@@ -6,14 +6,14 @@ import org.springframework.stereotype.Service;
 import sep.via.dk.sep3JPA.dao.login.LoginDao;
 
 @Service
-public class LoginImplementation implements LoginService {
+public class LoginServiceImplementation implements LoginService {
 
 	@Autowired
-	public LoginDao login;
+	private LoginDao login;
 
 	@Override
 	public boolean customerAuthentication(String username, String password) {
-		 if (login.customerAuthentication(username,password) ){
+		 if (login.customerAuthentication(username,password) && login.AuthenticateSubscription(username) ){
 		        return true;
 		    } 
 		        return false;

@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.dao.customer;
 
-import java.util.List;
-
 import sep.via.dk.sep3JPA.domain.Customer;
 
 public interface CustomerDAO {
@@ -11,6 +9,6 @@ public interface CustomerDAO {
 
 	Customer getCustomerById(int id);
 
-	List<Customer> getCustomerByUsername(String username);
+	Customer getCustomerByUsername(String username);
 
 }

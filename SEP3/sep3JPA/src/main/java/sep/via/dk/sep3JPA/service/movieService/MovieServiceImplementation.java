@@ -11,7 +11,7 @@ import sep.via.dk.sep3JPA.domain.movie.Movie;
 public class MovieServiceImplementation implements MovieService {
 
 	@Autowired
-	public MovieDAO movieDAO;
+	private MovieDAO movieDAO;
 
 	@Override
 	public void AddMovie(Movie movie) {

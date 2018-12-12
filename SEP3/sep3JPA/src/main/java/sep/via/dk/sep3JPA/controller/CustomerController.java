@@ -1,7 +1,6 @@
 package sep.via.dk.sep3JPA.controller;
 
 import java.rmi.RemoteException;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -34,7 +33,7 @@ public class CustomerController {
 
 	@PostMapping("/customer")
 	public ResponseEntity<Void> addCustomer(@RequestBody Customer customer) throws RemoteException {
-		boolean exist = customerService.addCustomer(customer);
+		boolean exist = customerService.setExpiryDate(customer);
 		if (!exist)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
 		HttpHeaders headers = new HttpHeaders();
@@ -44,11 +43,11 @@ public class CustomerController {
 	}
 
 	@GetMapping("/customer/username")
-	public ResponseEntity<List<Customer>> getMovieByTitle(@RequestParam("username") String username) {
+	public ResponseEntity<Customer> getMovieByTitle(@RequestParam("username") String username) {
 
-		List<Customer> list = customerService.getCustomerByUsername(username);
+		Customer customer = customerService.getCustomerByUsername(username);
 		
-		return new ResponseEntity<List<Customer>>(list, HttpStatus.OK);
+		return new ResponseEntity<Customer>(customer, HttpStatus.OK);
 	}
 
 }

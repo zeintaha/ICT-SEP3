@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.dao.customer;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -10,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import sep.via.dk.sep3JPA.domain.Customer;
-import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 // for update data it will be needed in movie 
 @Transactional
@@ -46,9 +43,12 @@ public class CustomerDAOImplementation implements CustomerDAO {
 	}
 
 	@Override
-	public List<Customer> getCustomerByUsername(String username) {
-		String jpql = "select * from Customer as a WHERE a.username = ?0 ";
-		return (List<Customer>) entityManager.createNativeQuery(jpql).setParameter(0, username).getResultList();
+	public Customer getCustomerByUsername(String username) {
+		Customer customer = (Customer) entityManager
+				.createNativeQuery("select * from Customer as a WHERE a.username = ?0", Customer.class)
+				.setParameter(0, username).getSingleResult();
+		return customer;
 	}
+
 
 }
