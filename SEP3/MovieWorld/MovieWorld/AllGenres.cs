@@ -265,8 +265,6 @@ namespace MovieWorld
             }
 
 
-
-
         }
 
         private void Movies_Load(object sender, EventArgs e)

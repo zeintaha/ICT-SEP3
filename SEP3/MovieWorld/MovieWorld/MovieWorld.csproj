@@ -68,12 +68,6 @@
     <Compile Include="Action.Designer.cs">
       <DependentUpon>Action.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMovie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddMovie.Designer.cs">
-      <DependentUpon>AddMovie.cs</DependentUpon>
-    </Compile>
     <Compile Include="Adventure.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,12 +152,6 @@
     <Compile Include="PlayMovie.Designer.cs">
       <DependentUpon>PlayMovie.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveMovie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RemoveMovie.Designer.cs">
-      <DependentUpon>RemoveMovie.cs</DependentUpon>
-    </Compile>
     <Compile Include="Session.cs" />
     <Compile Include="Subscribe.cs">
       <SubType>Form</SubType>
@@ -176,9 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Action.resx">
       <DependentUpon>Action.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddMovie.resx">
-      <DependentUpon>AddMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Adventure.resx">
       <DependentUpon>Adventure.cs</DependentUpon>
@@ -217,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayMovie.resx">
       <DependentUpon>PlayMovie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemoveMovie.resx">
-      <DependentUpon>RemoveMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subscribe.resx">
       <DependentUpon>Subscribe.cs</DependentUpon>

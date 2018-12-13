@@ -36,7 +36,6 @@ C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\Ax
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csproj.ResolveComReference.cache
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.About.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.Action.resources
-C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.AddMovie.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.Adventure.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.BuyTicket.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.Comedy.resources
@@ -49,7 +48,6 @@ C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\Mo
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.MovieDetail.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.Properties.Resources.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.PlayMovie.resources
-C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.RemoveMovie.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.Subscribe.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csproj.GenerateResource.cache
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csproj.CoreCompileInputs.cache
