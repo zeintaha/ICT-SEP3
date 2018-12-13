@@ -137,11 +137,6 @@ public class Movie implements Serializable {
 		this.id = id;
 	}
 
-	@Override
-	public String toString() {
-		return "AbstractMovie [id=" + id + ", title=" + title + ", director=" + director + ", description="
-				+ description + ", duration=" + duration + ", urlTrailer=" + urlTrailer + ", urlFullMovie="
-				+ urlFullMovie + ", urlImage=" + urlImage + ", category=" + category + "]";
-	}
+	
 
 }
