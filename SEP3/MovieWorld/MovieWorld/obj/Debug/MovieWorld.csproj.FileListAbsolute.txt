@@ -55,8 +55,7 @@ C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\Mo
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csproj.CoreCompileInputs.cache
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.exe
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.pdb
-C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csprojAssemblyReference.cache
-C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.User.resources
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\bin\Debug\RestSharp.dll
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\bin\Debug\RestSharp.xml
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csproj.CopyComplete
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csprojAssemblyReference.cache

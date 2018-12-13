@@ -44,10 +44,6 @@
             this.buttonCrime = new System.Windows.Forms.Button();
             this.buttonHorror = new System.Windows.Forms.Button();
             this.buttonAdventure = new System.Windows.Forms.Button();
-            this.buttonRemoveMovie = new System.Windows.Forms.Button();
-            this.buttonAddMovie = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label_hi = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,10 +76,6 @@
             this.panel1.Controls.Add(this.labellogging);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.buttonRemoveMovie);
-            this.panel1.Controls.Add(this.buttonAddMovie);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label_hi);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -166,7 +158,7 @@
             this.panel5.Controls.Add(this.buttonCrime);
             this.panel5.Controls.Add(this.buttonHorror);
             this.panel5.Controls.Add(this.buttonAdventure);
-            this.panel5.Location = new System.Drawing.Point(0, 261);
+            this.panel5.Location = new System.Drawing.Point(0, 218);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(228, 285);
             this.panel5.TabIndex = 2;
@@ -291,54 +283,6 @@
             this.buttonAdventure.Text = "Adventure";
             this.buttonAdventure.UseVisualStyleBackColor = true;
             this.buttonAdventure.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // buttonRemoveMovie
-            // 
-            this.buttonRemoveMovie.FlatAppearance.BorderSize = 0;
-            this.buttonRemoveMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRemoveMovie.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveMovie.Image = global::MovieWorld.Properties.Resources.video_remove_24;
-            this.buttonRemoveMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRemoveMovie.Location = new System.Drawing.Point(1, 205);
-            this.buttonRemoveMovie.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonRemoveMovie.Name = "buttonRemoveMovie";
-            this.buttonRemoveMovie.Size = new System.Drawing.Size(227, 39);
-            this.buttonRemoveMovie.TabIndex = 17;
-            this.buttonRemoveMovie.Text = "Remove Movie";
-            this.buttonRemoveMovie.UseVisualStyleBackColor = true;
-            this.buttonRemoveMovie.Click += new System.EventHandler(this.button8_Click_1);
-            // 
-            // buttonAddMovie
-            // 
-            this.buttonAddMovie.FlatAppearance.BorderSize = 0;
-            this.buttonAddMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddMovie.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddMovie.Image = global::MovieWorld.Properties.Resources.video_add_241;
-            this.buttonAddMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAddMovie.Location = new System.Drawing.Point(1, 165);
-            this.buttonAddMovie.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonAddMovie.Name = "buttonAddMovie";
-            this.buttonAddMovie.Size = new System.Drawing.Size(227, 39);
-            this.buttonAddMovie.TabIndex = 16;
-            this.buttonAddMovie.Text = "Add Movie";
-            this.buttonAddMovie.UseVisualStyleBackColor = true;
-            this.buttonAddMovie.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(12, 555);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(205, 2);
-            this.panel4.TabIndex = 15;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(12, 253);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 2);
-            this.panel2.TabIndex = 14;
             // 
             // label_hi
             // 
@@ -526,17 +470,13 @@
         public System.Windows.Forms.PictureBox pictureBoxLogging;
         private AllGenres allGenres1;
         public System.Windows.Forms.Label label_hi;
-        public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Button buttonRemoveMovie;
-        public System.Windows.Forms.Button buttonAddMovie;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label labellogging;
         private Adventure adventure1;
         private Action action1;
-        private Comedy comedy1;
+        private Comedy comedy1  ;
         private Crime crime1;
         private Drama drama1;
         private Horror horror1;

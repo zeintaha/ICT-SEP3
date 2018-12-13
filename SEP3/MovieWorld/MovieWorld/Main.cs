@@ -17,8 +17,8 @@ namespace MovieWorld
         public Main()
         {
             InitializeComponent();
-            guestlayout();
-
+            this.labellogging.Text = "Login";
+            label_hi.Hide();
             about1.Hide();
             allGenres1.Show();
             allGenres1.BringToFront();
@@ -44,9 +44,8 @@ namespace MovieWorld
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.Show();
-            //Close();
+
+            Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -77,8 +76,6 @@ namespace MovieWorld
             adventure1.Show();
             adventure1.BringToFront();
             
-           
-
         }
 
 
@@ -150,9 +147,7 @@ namespace MovieWorld
             }
             else if (Session.IsSession == true) {
 
-                guestlayout();
-                Session.IsSession = false;
-                
+             Session.IsSession = false;
 
             }
         }
@@ -190,60 +185,50 @@ namespace MovieWorld
             _dragging = true;
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            
-
-            AddMovie addMovie = new AddMovie();
-            addMovie.RefToMain = this;
-            this.Visible = false;
-            addMovie.Show();
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        public void guestlayout()
-        {
-            this.buttonRemoveMovie.Hide();
-            this.buttonAddMovie.Hide();
-            this.label_hi.Hide();
-            this.panel2.Hide();
-            this.panel4.Hide();
-            panel5.Location = new Point(0, 160);
-            this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.login_241;
-            this.labellogging.Text = "Login";
+        //public void guestlayout()
+        //{
+        //    this.buttonRemoveMovie.Hide();
+        //    this.buttonAddMovie.Hide();
+        //    this.label_hi.Hide();
+        //    this.panel2.Hide();
+        //    this.panel4.Hide();
+        //    panel5.Location = new Point(0, 160);
+        //    this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.login_241;
+        //    this.labellogging.Text = "Login";
            
-        }
-        public void customerlayout()
-        {
-            this.buttonRemoveMovie.Hide();
-            this.buttonAddMovie.Hide();
-            this.label_hi.Text = "Hi Customer!";
-            this.label_hi.Show();
-            this.panel2.Hide();
-            this.panel4.Hide();
-            panel5.Location = new Point(0, 160);
-            this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.logout_24;
-            this.labellogging.Text = "Logout";
-        }
+        //}
+        //public void customerlayout()
+        //{
+        //    this.buttonRemoveMovie.Hide();
+        //    this.buttonAddMovie.Hide();
+        //    this.label_hi.Text = "Hi Customer!";
+        //    this.label_hi.Show();
+        //    this.panel2.Hide();
+        //    this.panel4.Hide();
+        //    panel5.Location = new Point(0, 160);
+        //    this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.logout_24;
+        //    this.labellogging.Text = "Logout";
+        //}
 
-        public void userlayout()
-        {
-            this.buttonRemoveMovie.Show();
-            this.buttonAddMovie.Show();
-            this.label_hi.Text = "Hi User!";
-            this.label_hi.Show();
-            this.panel2.Show();
-            this.panel4.Show();
-            this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.logout_24;
-            panel5.Location = new Point(0, 210);
-            this.labellogging.Text = "Logout";
+        //public void userlayout()
+        //{
+        //    this.buttonRemoveMovie.Show();
+        //    this.buttonAddMovie.Show();
+        //    this.label_hi.Text = "Hi User!";
+        //    this.label_hi.Show();
+        //    this.panel2.Show();
+        //    this.panel4.Show();
+        //    this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.logout_24;
+        //    panel5.Location = new Point(0, 210);
+        //    this.labellogging.Text = "Logout";
 
-        }
+        //}
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -255,15 +240,5 @@ namespace MovieWorld
 
         }
 
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-            
-
-            RemoveMovie removeMovie = new RemoveMovie();
-            removeMovie.RefToMain = this;
-            this.Visible = false;
-            removeMovie.Show();
-
-        }
     }
 }

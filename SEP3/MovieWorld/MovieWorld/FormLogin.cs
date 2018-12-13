@@ -49,6 +49,7 @@ namespace MovieWorld
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.RefToMain.Show();
+            
             Close();
         }
 
@@ -68,28 +69,16 @@ namespace MovieWorld
             if (login.IsLoggedIn(user, pass))
             {
                 //MessageBox.Show("You are logged in successfully");
-                Main main = new Main();
-                login.Isuser = true;
-                if (login.Isuser == true) {
-                    Session.IsSession = true;
-                    
-                    main.userlayout();
-                }
-                else if (login.Isuser == false)
-                {
-                    Session.IsSession = true;
-                    
-                    main.customerlayout();
-                }
 
-
-
-                main.Show();
+                Session.IsSession = true;
+                
+                this.RefToMain.Show();
+                
                 this.Hide();
             }
             else
             {
-                //show default login error message 
+             
                 MessageBox.Show("Login Error!");
             }
         }
