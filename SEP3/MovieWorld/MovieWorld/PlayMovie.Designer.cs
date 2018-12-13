@@ -105,6 +105,7 @@
             this.Controls.Add(this.button_fullScreen);
             this.Controls.Add(this.axWindowsMediaPlayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayMovie";
             this.Load += new System.EventHandler(this.Trailer_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Trailer_MouseDown);

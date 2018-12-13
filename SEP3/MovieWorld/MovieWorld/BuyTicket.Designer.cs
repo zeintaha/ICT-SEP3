@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyTicket));
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(373, 303);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 22);
+            this.label5.Size = new System.Drawing.Size(84, 22);
             this.label5.TabIndex = 18;
             this.label5.Text = "Last Title";
             // 
@@ -88,7 +89,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(373, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 22);
+            this.label4.Size = new System.Drawing.Size(80, 22);
             this.label4.TabIndex = 17;
             this.label4.Text = "First Title";
             // 
@@ -249,6 +250,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuyTicket";
             this.Text = "BuyTicket";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BuyTicket_MouseDown);

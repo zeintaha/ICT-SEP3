@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovieDetail));
             this.button_buy = new System.Windows.Forms.Button();
             this.button_watch = new System.Windows.Forms.Button();
             this.label_desc = new System.Windows.Forms.Label();
@@ -144,6 +145,7 @@
             this.Controls.Add(this.label_desc);
             this.Controls.Add(this.label_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MovieDetail";
             this.Text = " ";
             this.Load += new System.EventHandler(this.MovieDetail_Load);

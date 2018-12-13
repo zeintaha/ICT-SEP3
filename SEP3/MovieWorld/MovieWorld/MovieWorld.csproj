@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>video-5-24.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -335,6 +338,7 @@
     <None Include="Resources\play-24.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="video-5-24.ico" />
     <None Include="Resources\Taha.jpg" />
     <None Include="Resources\video-add-241.png" />
     <None Include="Resources\video-remove-24.png" />
