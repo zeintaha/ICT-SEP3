@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param title="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -79,7 +79,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 22);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Last Name";
+            this.label5.Text = "Last Title";
             // 
             // label4
             // 
@@ -90,7 +90,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 22);
             this.label4.TabIndex = 17;
-            this.label4.Text = "First Name";
+            this.label4.Text = "First Title";
             // 
             // label3
             // 
@@ -157,7 +157,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(365, 30);
             this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Last Name";
+            this.textBox4.Text = "Last Title";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             // 
             // textBox3
@@ -168,7 +168,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(365, 30);
             this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "First Name";
+            this.textBox3.Text = "First Title";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // label1

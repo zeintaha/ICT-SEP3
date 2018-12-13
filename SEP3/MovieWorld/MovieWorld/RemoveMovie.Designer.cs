@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param title="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -44,7 +44,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 22);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Select Genre";
+            this.label3.Text = "Select Category";
             // 
             // comboBoxSelectGenres
             // 
@@ -62,7 +62,7 @@
             this.comboBoxSelectGenres.Name = "comboBoxSelectGenres";
             this.comboBoxSelectGenres.Size = new System.Drawing.Size(365, 29);
             this.comboBoxSelectGenres.TabIndex = 8;
-            this.comboBoxSelectGenres.Text = "Select Genre";
+            this.comboBoxSelectGenres.Text = "Select Category";
             // 
             // label2
             // 

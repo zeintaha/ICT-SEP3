@@ -555,7 +555,7 @@ namespace MovieWorld {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columncpr = base.Columns["cpr"];
-                this.columnname = base.Columns["name"];
+                this.columnname = base.Columns["title"];
                 this.columnaddress = base.Columns["address"];
             }
             
@@ -564,7 +564,7 @@ namespace MovieWorld {
             private void InitClass() {
                 this.columncpr = new global::System.Data.DataColumn("cpr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncpr);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnname = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
                 this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnaddress);
@@ -900,7 +900,7 @@ namespace MovieWorld {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnname = base.Columns["name"];
+                this.columnname = base.Columns["title"];
                 this.columndirector = base.Columns["director"];
                 this.columndiscription = base.Columns["description"];
                 this.columncategory = base.Columns["category"];
@@ -913,7 +913,7 @@ namespace MovieWorld {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnname = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
                 this.columndirector = new global::System.Data.DataColumn("director", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndirector);
@@ -1488,7 +1488,7 @@ namespace MovieWorld {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columncpr = base.Columns["cpr"];
-                this.columnname = base.Columns["name"];
+                this.columnname = base.Columns["title"];
                 this.columnaddress = base.Columns["address"];
             }
             
@@ -1497,7 +1497,7 @@ namespace MovieWorld {
             private void InitClass() {
                 this.columncpr = new global::System.Data.DataColumn("cpr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncpr);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnname = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
                 this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnaddress);
@@ -1773,7 +1773,7 @@ namespace MovieWorld {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columncpr = base.Columns["cpr"];
-                this.columnname = base.Columns["name"];
+                this.columnname = base.Columns["title"];
                 this.columnaddress = base.Columns["address"];
             }
             
@@ -1782,7 +1782,7 @@ namespace MovieWorld {
             private void InitClass() {
                 this.columncpr = new global::System.Data.DataColumn("cpr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncpr);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnname = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
                 this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnaddress);
@@ -2207,7 +2207,7 @@ namespace MovieWorld {
                         return ((string)(this[this.tableUsers.nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'Users\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'title\' in table \'Users\' is DBNull.", e);
                     }
                 }
                 set {
@@ -2301,7 +2301,7 @@ namespace MovieWorld {
                         return ((string)(this[this.tableUserss.nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'Userss\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'title\' in table \'Userss\' is DBNull.", e);
                     }
                 }
                 set {
@@ -2646,36 +2646,36 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Customer";
             tableMapping.ColumnMappings.Add("cpr", "cpr");
-            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("title", "title");
             tableMapping.ColumnMappings.Add("address", "address");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Customer] WHERE (([cpr] = @Original_cpr) AND ([name] = @Origin" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Customer] WHERE (([cpr] = @Original_cpr) AND ([title] = @Origin" +
                 "al_name) AND ([address] = @Original_address))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cpr", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Customer] ([cpr], [name], [address]) VALUES (@cpr, @name, @add" +
-                "ress);\r\nSELECT cpr, name, address FROM Customer WHERE (cpr = @cpr)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Customer] ([cpr], [title], [address]) VALUES (@cpr, @title, @add" +
+                "ress);\r\nSELECT cpr, title, address FROM Customer WHERE (cpr = @cpr)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpr", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Customer] SET [cpr] = @cpr, [name] = @name, [address] = @address WH" +
-                "ERE (([cpr] = @Original_cpr) AND ([name] = @Original_name) AND ([address] = @Ori" +
-                "ginal_address));\r\nSELECT cpr, name, address FROM Customer WHERE (cpr = @cpr)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Customer] SET [cpr] = @cpr, [title] = @title, [address] = @address WH" +
+                "ERE (([cpr] = @Original_cpr) AND ([title] = @Original_name) AND ([address] = @Ori" +
+                "ginal_address));\r\nSELECT cpr, title, address FROM Customer WHERE (cpr = @cpr)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpr", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cpr", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -2692,7 +2692,7 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT cpr, name, address FROM dbo.Customer";
+            this._commandCollection[0].CommandText = "SELECT cpr, title, address FROM dbo.Customer";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2800,7 +2800,7 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(cpr));
             }
             if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+                throw new global::System.ArgumentNullException("title");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(name));
@@ -2839,7 +2839,7 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(cpr));
             }
             if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+                throw new global::System.ArgumentNullException("title");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(name));
@@ -3014,7 +3014,7 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Movie";
-            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("title", "title");
             tableMapping.ColumnMappings.Add("director", "director");
             tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("category", "category");
@@ -3025,9 +3025,9 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Movie] WHERE (([name] = @Original_name) AND ([director] = @Original_director) AND ([description] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Movie] WHERE (([title] = @Original_name) AND ([director] = @Original_director) AND ([description] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3037,10 +3037,10 @@ namespace MovieWorld.moviedbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_urlImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlImage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Movie] ([name], [director], [description], [category], [duration], [urlTrailer], [urlFullMovie], [urlImage]) VALUES (@name, @director, @description, @category, @duration, @urlTrailer, @urlFullMovie, @urlImage);
-SELECT name, director, description, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (name = @name)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Movie] ([title], [director], [description], [category], [duration], [urlTrailer], [urlFullMovie], [urlImage]) VALUES (@title, @director, @description, @category, @duration, @urlTrailer, @urlFullMovie, @urlImage);
+SELECT title, director, description, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (title = @title)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3050,10 +3050,10 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Movie] SET [name] = @name, [director] = @director, [description] = @description, [category] = @category, [duration] = @duration, [urlTrailer] = @urlTrailer, [urlFullMovie] = @urlFullMovie, [urlImage] = @urlImage WHERE (([name] = @Original_name) AND ([director] = @Original_director) AND ([description] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage));
-SELECT name, director, description, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (name = @name)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Movie] SET [title] = @title, [director] = @director, [description] = @description, [category] = @category, [duration] = @duration, [urlTrailer] = @urlTrailer, [urlFullMovie] = @urlFullMovie, [urlImage] = @urlImage WHERE (([title] = @Original_name) AND ([director] = @Original_director) AND ([description] = @Original_discription) AND ([category] = @Original_category) AND ([duration] = @Original_duration) AND ([urlTrailer] = @Original_urlTrailer) AND ([urlFullMovie] = @Original_urlFullMovie) AND ([urlImage] = @Original_urlImage));
+SELECT title, director, description, category, duration, urlTrailer, urlFullMovie, urlImage FROM Movie WHERE (title = @title)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3061,7 +3061,7 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlTrailer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlTrailer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlFullMovie", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlFullMovie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@urlImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "urlImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_discription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_category", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "category", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3084,7 +3084,7 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT name, director, description, category, duration, urlTrailer, urlFullMovie," +
+            this._commandCollection[0].CommandText = "SELECT title, director, description, category, duration, urlTrailer, urlFullMovie," +
                 " urlImage FROM dbo.Movie";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -3217,7 +3217,7 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string name, string director, string discription, string category, string duration, string urlTrailer, string urlFullMovie, string urlImage) {
             if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+                throw new global::System.ArgumentNullException("title");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name));
@@ -3302,7 +3302,7 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
                     string Original_urlFullMovie, 
                     string Original_urlImage) {
             if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+                throw new global::System.ArgumentNullException("title");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name));
@@ -3789,16 +3789,16 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Users";
             tableMapping.ColumnMappings.Add("cpr", "cpr");
-            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("title", "title");
             tableMapping.ColumnMappings.Add("address", "address");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Users] ([cpr], [name], [address]) VALUES (@cpr, @name, @addres" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Users] ([cpr], [title], [address]) VALUES (@cpr, @title, @addres" +
                 "s)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3815,7 +3815,7 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT cpr, name, address FROM dbo.Users";
+            this._commandCollection[0].CommandText = "SELECT cpr, title, address FROM dbo.Users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4034,39 +4034,39 @@ SELECT name, director, description, category, duration, urlTrailer, urlFullMovie
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Userss";
             tableMapping.ColumnMappings.Add("cpr", "cpr");
-            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("title", "title");
             tableMapping.ColumnMappings.Add("address", "address");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Userss] WHERE (([cpr] = @Original_cpr) AND ((@IsNull_name = 1 " +
-                "AND [name] IS NULL) OR ([name] = @Original_name)) AND ((@IsNull_address = 1 AND " +
+                "AND [title] IS NULL) OR ([title] = @Original_name)) AND ((@IsNull_address = 1 AND " +
                 "[address] IS NULL) OR ([address] = @Original_address)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cpr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_address", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Userss] ([cpr], [name], [address]) VALUES (@cpr, @name, @addre" +
-                "ss);\r\nSELECT cpr, name, address FROM Userss WHERE (cpr = @cpr)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Userss] ([cpr], [title], [address]) VALUES (@cpr, @title, @addre" +
+                "ss);\r\nSELECT cpr, title, address FROM Userss WHERE (cpr = @cpr)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Userss] SET [cpr] = @cpr, [name] = @name, [address] = @address WHERE (([cpr] = @Original_cpr) AND ((@IsNull_name = 1 AND [name] IS NULL) OR ([name] = @Original_name)) AND ((@IsNull_address = 1 AND [address] IS NULL) OR ([address] = @Original_address)));
-SELECT cpr, name, address FROM Userss WHERE (cpr = @cpr)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Userss] SET [cpr] = @cpr, [title] = @title, [address] = @address WHERE (([cpr] = @Original_cpr) AND ((@IsNull_name = 1 AND [title] IS NULL) OR ([title] = @Original_name)) AND ((@IsNull_address = 1 AND [address] IS NULL) OR ([address] = @Original_address)));
+SELECT cpr, title, address FROM Userss WHERE (cpr = @cpr)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cpr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_address", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -4084,7 +4084,7 @@ SELECT cpr, name, address FROM Userss WHERE (cpr = @cpr)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT cpr, name, address FROM dbo.Userss";
+            this._commandCollection[0].CommandText = "SELECT cpr, title, address FROM dbo.Userss";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

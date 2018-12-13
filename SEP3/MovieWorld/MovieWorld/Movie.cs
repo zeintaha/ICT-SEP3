@@ -8,9 +8,9 @@ namespace MovieWorld
 {
     public class Movie
     {
-        private string name;
-        private string movieId;
-        private string genre;
+        private string title;
+        private string id;
+        private string category;
         private string director;
         private string description;
         private string duration;
@@ -18,9 +18,9 @@ namespace MovieWorld
         private string urlFullMovie;
         private string urlImage;
 
-        public string Name { get => name; set => name = value; }
-        public string MovieId { get => movieId; set => movieId = value; }
-        public string Genre { get => genre; set => genre = value; }
+        public string Title { get => title; set => title = value; }
+        public string Id { get => id; set => id = value; }
+        public string Category { get => category; set => category = value; }
         public string Director { get => director; set => director = value; }
         public string Description { get => description; set => description = value; }
         public string Duration { get => duration; set => duration = value; }

@@ -67,26 +67,26 @@ namespace MovieWorld
         //method to check if eligible to be logged in 
         internal bool IsLoggedIn(string user, string pass)
         {
-            //check user name empty 
+            //check user title empty 
             if (string.IsNullOrEmpty(user))
             {
-                MessageBox.Show("Enter the user name!");
+                MessageBox.Show("Enter the user title!");
                 return false;
 
             }
-            //check user name is valid type 
+            //check user title is valid type 
             else if (StringValidator(user) == true)
             {
                 MessageBox.Show("Enter only text here");
                 ClearTexts(user, pass);
                 return false;
             }
-            //check user name is correct 
+            //check user title is correct 
             else
             {
                 if (Username != user)
                 {
-                    MessageBox.Show("User name is incorrect!");
+                    MessageBox.Show("User title is incorrect!");
                     ClearTexts(user, pass);
                     return false;
                 }

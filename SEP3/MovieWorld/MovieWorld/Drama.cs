@@ -45,11 +45,11 @@ namespace MovieWorld
 
             foreach (Movie m in MovieList.movies)
             {
-                if (m.Genre == "Drama")
+                if (m.Category == "Drama")
                 {
                     MoviePanel moviePanel = new MoviePanel();
 
-                    moviePanel.Title = m.Name;
+                    moviePanel.Title = m.Title;
                     moviePanel.Link = m.UrlFullMovie;
                     moviePanel.Image = m.UrlImage;
                     moviePanel.Height = 230;

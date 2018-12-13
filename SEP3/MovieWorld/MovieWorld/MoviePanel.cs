@@ -21,7 +21,7 @@ namespace MovieWorld
         private string MovieTitle;
         
 
-        MovieDetail movieDetail = new MovieDetail();
+       
         Label title = new Label();
         PictureBox image = new PictureBox();
 
@@ -83,8 +83,8 @@ namespace MovieWorld
         private void imClicked(object sender, EventArgs e)
         {
 
+            MovieDetail movieDetail = new MovieDetail();
 
-           
             string UrlImage = ((System.Windows.Forms.PictureBox)sender).ImageLocation.ToString();
 
             foreach (Movie m in MovieList.movies)
@@ -92,7 +92,7 @@ namespace MovieWorld
                 if (m.UrlImage == UrlImage) {
 
                     movieDetail.label_desc.Text = m.Description;
-                    movieDetail.label_title.Text = m.Name;
+                    movieDetail.label_title.Text = m.Title;
                     movieDetail.pictureBox_detailed.ImageLocation = m.UrlImage;
                     movieDetail.button_trailer.Click += new EventHandler(button_trailer);
                     movieDetail.button_buy.Click += new EventHandler(button_buy);
@@ -101,8 +101,8 @@ namespace MovieWorld
                     UrlTrailer = m.UrlTrailer;
                     UrlFullMovie = m.UrlFullMovie;
                     UrlImagelocation = m.UrlImage;
-                    MovieId = m.MovieId;
-                    MovieTitle = m.Name;
+                    MovieId = m.Id;
+                    MovieTitle = m.Title;
                     
                 }
             }
