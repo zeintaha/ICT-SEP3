@@ -43,3 +43,8 @@ C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\obj\Deb
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Newtonsoft.Json.dll
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\zeint\Documents\GitHub\ICT-SEP3\SEP3\MovieWorldAdmin\MovieWorld\bin\Debug\Microsoft.WindowsAzure.Storage.xml

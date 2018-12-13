@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,20 +27,13 @@ namespace MovieWorld
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AddMovie_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
 
-        private void AddMovie_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void AddMovie_MouseMove(object sender, MouseEventArgs e)
         {
@@ -64,94 +60,134 @@ namespace MovieWorld
             Close();
         }
 
-        private void AddMovie_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
 
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            textBox_MovieURL.Text = "";
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_Enter(object sender, EventArgs e)
-        {
-            textBox_Description.Text = "";
-        }
-
-        private void textBox4_Enter(object sender, EventArgs e)
-        {
-            textBox_Duration.Text = "";
-        }
-
-        private void textBox5_Enter(object sender, EventArgs e)
-        {
-            textBox_ImageURL.Text = "";
-        }
-
-        private void textBox6_Enter(object sender, EventArgs e)
-        {
-            textBox_TrailerURL.Text = "";
-        }
-
-        private void textBox7_Enter(object sender, EventArgs e)
-        {
-            textBox_Title.Text = "";
-        }
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            Movie movie = new Movie();
-            //movie.title = textBox_Title.Text;
-            //movie.director = textBox_Director.Text;
-            //movie.description = textBox_Description.Text;
-            //movie.duration = textBox_Duration.Text;
-            //movie.urlTrailer = textBox_TrailerURL.Text;
-            //movie.urlFullMovie = textBox_MovieURL.Text;
-            //movie.urlImage = textBox_ImageURL.Text;
-            //movie.category = comboBox_Genre.Text;
+            //if (
+            //textBox_Title.Text != "" &&
+            //textBox_Director.Text != "" &&
+            //textBox_Description.Text != "" &&
+            //textBox_Duration.Text != "" &&
+            //textBox_TrailerURL.Text != "" &&
+            //textBox_MovieURL.Text != "" &&
+            //textBox_ImageURL.Text != "" &&
+            //comboBox_Genre.Text != "Select Genres" &&
+            //comboBox_Genre.Text != "" ||
+            //comboBox_Genre.Text == "Action" ||
+            //comboBox_Genre.Text == "Adventure" ||
+            //comboBox_Genre.Text == "Comedy" ||
+            //comboBox_Genre.Text == "Crime" ||
+            //comboBox_Genre.Text == "Drama" ||
+            //comboBox_Genre.Text == "Horror" 
+            //)
 
-            movie.title = "Mission Impossible - Fallout 2018";
-            movie.director = "Christopher McQuarrie";
-            movie.description = "When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfill his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.";
-            movie.duration = "105 miutes";
-            movie.urlTrailer = "https://sep3.blob.core.windows.net/mediacontainer/Mission%20Impossible%20-%20Fallout%202018_trailer.mov?st=2018-12-13T16%3A37%3A06Z&se=2117-11-19T16%3A37%3A06Z&sr=c&sp=r&sig=YKd969bETlpJoQ8cjqzKrwL%2BC32cFZaJ%2Fg5onBeuEK8%3D&si=tempAccess";
-            movie.urlFullMovie = "https://sep3.blob.core.windows.net/mediacontainer/Mission%20Impossible%20-%20Fallout%202018.mov?st=2018-12-13T16%3A39%3A34Z&se=2117-11-19T16%3A39%3A34Z&sr=c&sp=r&sig=UCGQjkVzfxtyjkzknBl8GuRLqA4Pa1EuvZOxw79Y53A%3D&si=tempAccess";
-            movie.urlImage = "https://sep3.blob.core.windows.net/mediacontainer/Mission%20Impossible%20-%20Fallout%202018.jpg?st=2018-12-13T16%3A38%3A19Z&se=2117-11-19T16%3A38%3A19Z&sr=c&sp=r&sig=%2FKchUQ6L7Llv%2FdSC3p9fgJCcUqePKVNyY0bAvaa%2Fi9M%3D&si=tempAccess";
-            movie.category = "Action";
+            //{
+
+                Movie movie = new Movie();
+                movie.title = textBox_Title.Text;
+                movie.director = textBox_Director.Text;
+                movie.description = textBox_Description.Text;
+                movie.duration = textBox_Duration.Text;
+                movie.urlTrailer = GetContainerSASToken(textBox_TrailerURL.Text);
+                movie.urlFullMovie = GetContainerSASToken(textBox_MovieURL.Text);
+                movie.urlImage = GetContainerSASToken(textBox_ImageURL.Text);
+                movie.category = comboBox_Genre.Text;
+
+                var json = JsonConvert.SerializeObject(movie);
+
+                var restClient = new RestClient("http://localhost:8080/sep3");
+                var restRequest = new RestRequest("movie", Method.POST);
+
+                restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
+
+                var response = restClient.Execute(restRequest);
+
+                if (response.IsSuccessful)
+                {
+                    MessageBox.Show("The Movie is added succsefully");
+
+                    textBox_Title.Text = "";
+                    textBox_Director.Text = "";
+                    textBox_Description.Text = "";
+                    textBox_Duration.Text = "";
+                    textBox_TrailerURL.Text = "";
+                    textBox_MovieURL.Text = "";
+                    textBox_ImageURL.Text = "";
+                    comboBox_Genre.Text = "Select Genres";
+                }
+
+                else
+                {
+                    MessageBox.Show("Error!");
+                }
 
 
-            var json = JsonConvert.SerializeObject(movie);
 
-            var restClient = new RestClient("http://localhost:8080/sep3");
-            var restRequest = new RestRequest("movie", Method.POST);
-           
-            restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
-            
-            var response = restClient.Execute(restRequest);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Some fields are empty!");
+            //}
 
-            if (response.IsSuccessful)
-            {
-                MessageBox.Show("The Movie is added succsefully");
-            }
-               
-            else
-            {
-                MessageBox.Show("Error!");
-            }
+
 
         }
 
+        private static string GetContainerSASToken(string xURL)
+        {
+            string containerName = "mediacontainer";
+            string azureStorageSharedKey = "gGzDkZqtx3T++aAeF7pvT3XqN3F2ZqMPsg9icOEHnURBUqpogrspFzd/JBiDRZ4VfmgGVn4k9sfXhBc9eR4qBQ==";
+            string canonicalPathToResource = string.Empty;
+            string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=sep3;AccountKey=gGzDkZqtx3T++aAeF7pvT3XqN3F2ZqMPsg9icOEHnURBUqpogrspFzd/JBiDRZ4VfmgGVn4k9sfXhBc9eR4qBQ==;EndpointSuffix=core.windows.net";
+            string[] tokens = storageConnectionString.Split(';');
+            string storageAccountName = tokens[1].Remove(0, 12);
+            string permissions = "r";
+            DateTime startTime = DateTime.UtcNow;
+            DateTime expiryTime = startTime.AddHours(867240);
+            string policyIdentifer = "tempAccess";
+            string signature = string.Empty;
 
+            //Parse the connection string and return a reference to the storage account.
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(storageConnectionString);
+            //Create the blob client object.
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            //Get a reference to a container to use for the sample code, and create it if it does not exist.
+            CloudBlobContainer container = null;
+
+            container = blobClient.GetContainerReference(containerName);
+            canonicalPathToResource = ("/" + storageAccountName.Trim() + "/" + containerName).Trim();
+            //Get a reference to a blob within the container.
+            byte[] keyForSigning = System.Convert.FromBase64String(azureStorageSharedKey.Trim());
+
+            string sStartTime = startTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+            string sExpiryTime = expiryTime.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+            string stringtosign = permissions + "\n" +
+                   sStartTime + "\n" +
+                   sExpiryTime + "\n" +
+                   canonicalPathToResource + "\n" +
+                   policyIdentifer;
+
+            using (var hmac = new HMACSHA256(keyForSigning))
+            {
+                signature = System.Convert.ToBase64String(
+                   hmac.ComputeHash(Encoding.UTF8.GetBytes(stringtosign))
+                );
+            }
+
+            BlobContainerPermissions bcPermissions = new BlobContainerPermissions();
+            bcPermissions.SharedAccessPolicies.Add(policyIdentifer, new SharedAccessBlobPolicy { });
+            container.SetPermissionsAsync(bcPermissions);
+
+            string sharedAccessSignature = string.Format("st={0}&se={1}&sr=c&sp=r&sig={2}&si={3}",
+                Uri.EscapeDataString(sStartTime),
+                Uri.EscapeDataString(sExpiryTime),
+                Uri.EscapeDataString(signature),
+                Uri.EscapeDataString(policyIdentifer));
+            string url = xURL+"?" + string.Format(sharedAccessSignature);
+
+            return url;
+        }
     }
 }

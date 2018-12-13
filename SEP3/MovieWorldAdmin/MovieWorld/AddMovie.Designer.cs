@@ -55,8 +55,6 @@
             this.textBox_MovieURL.Name = "textBox_MovieURL";
             this.textBox_MovieURL.Size = new System.Drawing.Size(365, 30);
             this.textBox_MovieURL.TabIndex = 8;
-            this.textBox_MovieURL.Text = "Movie URL";
-            this.textBox_MovieURL.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // textBox_Description
             // 
@@ -66,8 +64,6 @@
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(365, 30);
             this.textBox_Description.TabIndex = 3;
-            this.textBox_Description.Text = "Description";
-            this.textBox_Description.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // textBox_Duration
             // 
@@ -77,8 +73,6 @@
             this.textBox_Duration.Name = "textBox_Duration";
             this.textBox_Duration.Size = new System.Drawing.Size(365, 30);
             this.textBox_Duration.TabIndex = 5;
-            this.textBox_Duration.Text = "Duration";
-            this.textBox_Duration.Enter += new System.EventHandler(this.textBox4_Enter);
             // 
             // textBox_ImageURL
             // 
@@ -88,8 +82,6 @@
             this.textBox_ImageURL.Name = "textBox_ImageURL";
             this.textBox_ImageURL.Size = new System.Drawing.Size(365, 30);
             this.textBox_ImageURL.TabIndex = 6;
-            this.textBox_ImageURL.Text = "Image URL";
-            this.textBox_ImageURL.Enter += new System.EventHandler(this.textBox5_Enter);
             // 
             // textBox_TrailerURL
             // 
@@ -99,8 +91,6 @@
             this.textBox_TrailerURL.Name = "textBox_TrailerURL";
             this.textBox_TrailerURL.Size = new System.Drawing.Size(365, 30);
             this.textBox_TrailerURL.TabIndex = 7;
-            this.textBox_TrailerURL.Text = "Trailer URL";
-            this.textBox_TrailerURL.Enter += new System.EventHandler(this.textBox6_Enter);
             // 
             // textBox_Title
             // 
@@ -110,8 +100,6 @@
             this.textBox_Title.Name = "textBox_Title";
             this.textBox_Title.Size = new System.Drawing.Size(365, 30);
             this.textBox_Title.TabIndex = 1;
-            this.textBox_Title.Text = "Movie Title";
-            this.textBox_Title.Enter += new System.EventHandler(this.textBox7_Enter);
             // 
             // button_Save
             // 
@@ -143,7 +131,6 @@
             this.comboBox_Genre.Size = new System.Drawing.Size(365, 29);
             this.comboBox_Genre.TabIndex = 2;
             this.comboBox_Genre.Text = "Select Genres";
-            this.comboBox_Genre.Enter += new System.EventHandler(this.comboBox1_Enter);
             // 
             // label2
             // 
@@ -166,7 +153,7 @@
             this.label3.Size = new System.Drawing.Size(136, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Select Genres";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            
             // 
             // label4
             // 
@@ -242,7 +229,6 @@
             this.textBox_Director.Name = "textBox_Director";
             this.textBox_Director.Size = new System.Drawing.Size(365, 30);
             this.textBox_Director.TabIndex = 4;
-            this.textBox_Director.Text = "Director";
             // 
             // AddMovie
             // 
@@ -275,8 +261,8 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMovie";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddMovie_FormClosed);
-            this.Load += new System.EventHandler(this.AddMovie_Load);
+            
+            
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddMovie_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddMovie_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddMovie_MouseUp);
