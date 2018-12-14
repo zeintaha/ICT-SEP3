@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,7 @@ namespace MovieWorld
             InitializeComponent();
         }
 
-        Login login = new Login("Taha", "1234");
+    
 
         private void FormLogin_MouseDown(object sender, MouseEventArgs e)
         {
@@ -48,44 +49,35 @@ namespace MovieWorld
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.RefToMain.Show();
+            
             Close();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
 
             //define local variables from the user inputs 
             string user = textBox_Username.Text;
             string pass = textBox_Password.Text;
-            //check if eligible to be logged in 
-            if (login.IsLoggedIn(user, pass))
+
+
+            var restClient = new RestClient("http://localhost:8080/sep3/login");
+            var restRequest = new RestRequest("owner", Method.POST);
+            restRequest.AddParameter("username", user);
+            restRequest.AddParameter("password", pass);
+
+            var response = restClient.Execute(restRequest);
+
+            if (response.IsSuccessful)
             {
-                //MessageBox.Show("You are logged in successfully");
                 User userfrm = new User();
-                login.Isuser = true;
-                if (login.Isuser == true) {
-                    Session.IsSession = true;
-
-                }
-                else if (login.Isuser == false)
-                {
-                    Session.IsSession = true;
-
-                }
-
+                Session.IsSession = true;
                 userfrm.Show();
                 this.Hide();
             }
             else
             {
-                //show default login error message 
                 MessageBox.Show("Login Error!");
             }
         }

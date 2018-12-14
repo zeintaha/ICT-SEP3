@@ -87,7 +87,6 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="moviedbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

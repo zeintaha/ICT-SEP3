@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,25 +61,30 @@ namespace MovieWorld
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
 
-            //define local variables from the user inputs 
             string user = textBox_Username.Text;
             string pass = textBox_Password.Text;
-            //check if eligible to be logged in 
-            if (login.IsLoggedIn(user, pass))
-            {
-                //MessageBox.Show("You are logged in successfully");
 
+
+            var restClient = new RestClient("http://localhost:8080/sep3/login");
+            var restRequest = new RestRequest("customer", Method.POST);
+            restRequest.AddParameter("username", user);
+            restRequest.AddParameter("password", pass);
+
+            var response = restClient.Execute(restRequest);
+
+            if (response.IsSuccessful)
+            {
+             
                 Session.IsSession = true;
-                
                 this.RefToMain.Show();
-                
+
                 this.Hide();
+
+                MessageBox.Show("Hi "+ user + " you logged in successfully");
             }
             else
             {
-             
                 MessageBox.Show("Login Error!");
             }
         }
