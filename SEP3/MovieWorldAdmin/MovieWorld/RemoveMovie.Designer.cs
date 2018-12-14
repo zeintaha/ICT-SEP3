@@ -63,6 +63,7 @@
             this.comboBoxSelectGenres.Size = new System.Drawing.Size(365, 29);
             this.comboBoxSelectGenres.TabIndex = 8;
             this.comboBoxSelectGenres.Text = "Select Genre";
+            this.comboBoxSelectGenres.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectGenres_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -91,12 +92,13 @@
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(417, 359);
+            this.buttonDelete.Location = new System.Drawing.Point(439, 355);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(150, 42);
             this.buttonDelete.TabIndex = 12;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // RemoveMovie
             // 
@@ -112,6 +114,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RemoveMovie";
             this.Text = "RemoveMovie";
+            this.Load += new System.EventHandler(this.RemoveMovie_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RemoveMovie_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RemoveMovie_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RemoveMovie_MouseUp);

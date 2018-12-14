@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MovieWorld
 {
-    class Movie
+    public class Movie
     {
-       // public string id { get; set; }
+        public string id { get; set; }
         public string title { get; set; }
         public string director { get; set; }
         public string description { get; set; }

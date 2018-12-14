@@ -64,25 +64,7 @@ namespace MovieWorld
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            //if (
-            //textBox_Title.Text != "" &&
-            //textBox_Director.Text != "" &&
-            //textBox_Description.Text != "" &&
-            //textBox_Duration.Text != "" &&
-            //textBox_TrailerURL.Text != "" &&
-            //textBox_MovieURL.Text != "" &&
-            //textBox_ImageURL.Text != "" &&
-            //comboBox_Genre.Text != "Select Genres" &&
-            //comboBox_Genre.Text != "" ||
-            //comboBox_Genre.Text == "Action" ||
-            //comboBox_Genre.Text == "Adventure" ||
-            //comboBox_Genre.Text == "Comedy" ||
-            //comboBox_Genre.Text == "Crime" ||
-            //comboBox_Genre.Text == "Drama" ||
-            //comboBox_Genre.Text == "Horror" 
-            //)
 
-            //{
 
                 Movie movie = new Movie();
                 movie.title = textBox_Title.Text;
@@ -102,7 +84,7 @@ namespace MovieWorld
                 restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
 
                 var response = restClient.Execute(restRequest);
-
+            
                 if (response.IsSuccessful)
                 {
                     MessageBox.Show("The Movie is added succsefully");
@@ -121,15 +103,6 @@ namespace MovieWorld
                 {
                     MessageBox.Show("Error!");
                 }
-
-
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Some fields are empty!");
-            //}
-
 
 
         }
