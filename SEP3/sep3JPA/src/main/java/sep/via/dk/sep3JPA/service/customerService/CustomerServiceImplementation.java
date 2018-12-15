@@ -29,7 +29,7 @@ public class CustomerServiceImplementation implements CustomerService {
 			return false;
 		}
 			
-		if (rmiClient.customerExist(customer.getUsername())) {
+		if (rmiClient.customerExist(customer.getUsername())&& (checkPayment==true) ) {
 			return false;
 		} else {
 			rmiClient.addCustomer(customer);

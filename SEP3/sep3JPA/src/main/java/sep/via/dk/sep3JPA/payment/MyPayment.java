@@ -106,7 +106,7 @@ public class MyPayment {
 
 //			 payment1 = payment.create(apiContext);
 
-			
+			if(payment1!=null) {
 			Iterator links = payment1.getLinks().iterator();
 
 			while (links.hasNext()) {
@@ -128,12 +128,13 @@ public class MyPayment {
 			paymentExecution.setPayerId("DUSYFH5YB7NC8");
 
 			Payment payment2 = payment1.execute(apiContext, paymentExecution);
-
+			
 			String str2 = payment2.getState();
 			if (str2 != null) {
 //				System.out.println(" customer has payed ");
 // the string returned "approved";
 				return str2;
+			}
 			}
 		} catch (PayPalRESTException e) {
 			System.out.println("payment failed ");
@@ -145,6 +146,7 @@ public class MyPayment {
 //			System.out.println("not payed third ");
 //		e.printStackTrace();
 //		}
+		
 		return "no payment";
 
 	}
