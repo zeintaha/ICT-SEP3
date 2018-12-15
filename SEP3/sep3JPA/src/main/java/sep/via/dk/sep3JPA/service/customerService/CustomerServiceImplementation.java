@@ -58,11 +58,11 @@ public class CustomerServiceImplementation implements CustomerService {
 			case "1 Month":
 				expireAfter = 1;
 				break;
-			case "3 Month":
+			case "3 Months":
 				expireAfter = 3;
 				break;
 
-			case "12 Month":
+			case "12 Months":
 				expireAfter = 12;
 				break;
 
