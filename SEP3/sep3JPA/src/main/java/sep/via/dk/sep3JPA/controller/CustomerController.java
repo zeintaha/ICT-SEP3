@@ -43,11 +43,24 @@ public class CustomerController {
 	}
 
 	@GetMapping("/customer/username")
-	public ResponseEntity<Customer> getMovieByTitle(@RequestParam("username") String username) {
+	public ResponseEntity<Customer> getCustomerByUsername(@RequestParam("username") String username)
+			throws RemoteException {
 
 		Customer customer = customerService.getCustomerByUsername(username);
-		
+
 		return new ResponseEntity<Customer>(customer, HttpStatus.OK);
+	}
+
+	@GetMapping("/customer/link")
+	public ResponseEntity<String> getPaymentLink(@RequestParam("username") String username) throws RemoteException {
+		boolean customerExist = customerService.customerExist(username);
+		if(customerExist) {
+			String text = "customer is already there ";
+			return new ResponseEntity<String>(text,HttpStatus.CONFLICT);
+		}
+		String link = customerService.getPaymentLink();
+
+		return new ResponseEntity<String>(link, HttpStatus.OK);
 	}
 
 }

@@ -10,6 +10,8 @@
 //
 //
 //
+//
+//
 //public class ServerMain {
 //	@SuppressWarnings("unchecked")
 //	private static<T extends Remote> T bind(Registry registry, String URI, T remoteObject) throws RemoteException {
@@ -27,7 +29,8 @@
 //		Registry reg = LocateRegistry.createRegistry(1099);
 //		@SuppressWarnings("unused")
 //		RemoteServer sr=bind(reg,"SR",new RmiServer());
-//		System.out.println("the server is ready and waiting for the client");
+//		System.out.println("the server is ready");
+//	
 //		@SuppressWarnings("unused")
 //		RmiClient client = new RmiClient();
 //		

@@ -12,14 +12,14 @@ import sep.via.dk.sep3JPA.domain.Owner;
 public class OwnerServiceImplementation implements OwnerService {
 
 	@Autowired
-	private OwnerDAO ownerDAO;
+	private OwnerDAO rmiClient;
 
 	@Override
-	public boolean addOwner(Owner owner) {
-		if (ownerDAO.ownerExist(owner.getUsername())) {
+	public boolean addOwner(Owner owner) throws RemoteException{
+		if (rmiClient.ownerExist(owner.getUsername())) {
 			return false;
 		} else {
-			ownerDAO.addOwner(owner);
+			rmiClient.addOwner(owner);
 			return true;
 		}
 
@@ -27,7 +27,7 @@ public class OwnerServiceImplementation implements OwnerService {
 
 	@Override
 	public Owner getOwnerById(int id) throws RemoteException {
-		return ownerDAO.getOwnerById(id);
+		return rmiClient.getOwnerById(id);
 	}
 
 }

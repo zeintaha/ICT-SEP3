@@ -24,6 +24,10 @@ public class MovieFactory implements Serializable {
 			movie = new ActionMovie(title, director, description, duration, urlTrailer, urlFullMovie, urlImage,
 					"Action");
 			break;
+		case "Crime":
+			movie = new ActionMovie(title, director, description, duration, urlTrailer, urlFullMovie, urlImage,
+					"Crime");
+			break;
 		case "Adventure":
 			movie = new AdventureMovie(title, director, description, duration, urlTrailer, urlFullMovie, urlImage,
 					"Adventure");

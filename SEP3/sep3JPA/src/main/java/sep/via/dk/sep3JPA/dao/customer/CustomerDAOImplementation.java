@@ -1,5 +1,7 @@
 package sep.via.dk.sep3JPA.dao.customer;
 
+import java.rmi.RemoteException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -20,14 +22,14 @@ public class CustomerDAOImplementation implements CustomerDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public Customer getCustomerById(int id) {
+	public Customer getCustomerById(int id)throws RemoteException {
 
 		return entityManager.find(Customer.class, id);
 
 	}
 
 	@Override
-	public boolean customerExist(String username) {
+	public boolean customerExist(String username)throws RemoteException {
 
 		String jpql = "from Customer as a WHERE a.username = ?0 ";
 		int count = entityManager.createQuery(jpql).setParameter(0, username).getResultList().size();
@@ -36,14 +38,14 @@ public class CustomerDAOImplementation implements CustomerDAO {
 	}
 
 	@Override
-	public void addCustomer(Customer customer) {
+	public void addCustomer(Customer customer)throws RemoteException {
 
 		entityManager.persist(customer);
 
 	}
 
 	@Override
-	public Customer getCustomerByUsername(String username) {
+	public Customer getCustomerByUsername(String username)throws RemoteException {
 		Customer customer = (Customer) entityManager
 				.createNativeQuery("select * from Customer as a WHERE a.username = ?0", Customer.class)
 				.setParameter(0, username).getSingleResult();

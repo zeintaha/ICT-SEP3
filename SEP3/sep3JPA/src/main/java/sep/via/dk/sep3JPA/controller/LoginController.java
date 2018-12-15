@@ -1,5 +1,7 @@
 package sep.via.dk.sep3JPA.controller;
 
+import java.rmi.RemoteException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -20,7 +22,7 @@ public class LoginController {
 
 	@PostMapping("/customer")
 	public ResponseEntity<Void> getValidateCusotmer(@RequestParam("username") String username,
-			@RequestParam("password") String password) {
+			@RequestParam("password") String password)  throws RemoteException{
 		boolean valid = servic.customerAuthentication(username, password);
 		if (!valid)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
@@ -32,7 +34,7 @@ public class LoginController {
 	
 	@PostMapping("/owner")
 	public ResponseEntity<Void> getValidateOwner(@RequestParam("username") String username,
-			@RequestParam("password") String password) {
+			@RequestParam("password") String password) throws RemoteException {
 		boolean valid = servic.ownerAuthentication(username, password);
 		if (!valid)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);

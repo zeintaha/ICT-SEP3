@@ -1,5 +1,7 @@
 package sep.via.dk.sep3JPA.controller;
 
+import java.rmi.RemoteException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -20,7 +22,7 @@ public class TicketController {
 	private TicketService ticketService;
 
 	@PostMapping("/ticket")
-	public ResponseEntity<Void> addTicket(@RequestBody Ticket ticket) {
+	public ResponseEntity<Void> addTicket(@RequestBody Ticket ticket) throws RemoteException {
 		ticketService.addTicket(ticket);
 		HttpHeaders headers = new HttpHeaders();
 		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);

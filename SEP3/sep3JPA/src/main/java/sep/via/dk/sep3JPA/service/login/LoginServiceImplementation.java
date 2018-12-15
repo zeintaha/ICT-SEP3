@@ -1,5 +1,7 @@
 package sep.via.dk.sep3JPA.service.login;
 
+import java.rmi.RemoteException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,12 +10,13 @@ import sep.via.dk.sep3JPA.dao.login.LoginDao;
 @Service
 public class LoginServiceImplementation implements LoginService {
 
+	
 	@Autowired
-	private LoginDao login;
+	private LoginDao rmiClient;
 
 	@Override
-	public boolean customerAuthentication(String username, String password) {
-		 if (login.customerAuthentication(username,password) && login.AuthenticateSubscription(username) ){
+	public boolean customerAuthentication(String username, String password)throws RemoteException {
+		 if (rmiClient.customerAuthentication(username,password) && rmiClient.AuthenticateSubscription(username) ){
 		        return true;
 		    } 
 		        return false;
@@ -22,9 +25,9 @@ public class LoginServiceImplementation implements LoginService {
 	}
 
 	@Override
-	public boolean ownerAuthentication(String username, String password) {
+	public boolean ownerAuthentication(String username, String password)throws RemoteException {
 
-		 if (login.ownerAuthentication(username,password) ){
+		 if (rmiClient.ownerAuthentication(username,password) ){
 		        return true;
 		    } 
 		        return false;

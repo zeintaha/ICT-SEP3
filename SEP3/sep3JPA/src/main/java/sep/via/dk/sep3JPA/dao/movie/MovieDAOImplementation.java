@@ -1,5 +1,6 @@
 package sep.via.dk.sep3JPA.dao.movie;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -20,37 +21,33 @@ public class MovieDAOImplementation implements MovieDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public void addMovie(Movie movie) {
+	public void addMovie(Movie movie) throws RemoteException {
 		entityManager.persist(movie);
 
 	}
 
-	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Movie> getListOfMovies() {
+	public List<Movie> getListOfMovies() throws RemoteException {
 		String query = "select m from Movie m order by m.title";
-		
+
 		return (List<Movie>) entityManager.createQuery(query).getResultList();
 	}
 
-
 	@Override
-	public Movie getMovieById(int id) {
+	public Movie getMovieById(int id) throws RemoteException {
 		return entityManager.find(Movie.class, id);
 
 	}
 
-
 	@Override
-	public void deletMovie(int movieId) {
+	public void deletMovie(int movieId) throws RemoteException {
 		entityManager.remove(getMovieById(movieId));
-		
+
 	}
 
-
 	@Override
-	public void updateMovie(Movie movie) {
+	public void updateMovie(Movie movie) throws RemoteException {
 		Movie selectedMovie = getMovieById(movie.getId());
 		selectedMovie.setTitle(movie.getTitle());
 		selectedMovie.setDirector(movie.getDirector());
@@ -63,15 +60,12 @@ public class MovieDAOImplementation implements MovieDAO {
 		entityManager.flush();
 	}
 
-
-	
-
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Movie> getMovieByTitle(String title) {
+	public List<Movie> getMovieByTitle(String title) throws RemoteException {
 		String jpql = "select * from Movie as a WHERE a.title = ?0 ";
 		return (List<Movie>) entityManager.createNativeQuery(jpql).setParameter(0, title).getResultList();
-		
+
 	}
 
 }

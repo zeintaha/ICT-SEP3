@@ -42,32 +42,33 @@ public class MovieController {
 	}
 
 	@GetMapping("/movies")
-	public ResponseEntity<List<Movie>> getAllMovies() {
+	public ResponseEntity<List<Movie>> getAllMovies() throws RemoteException {
+		
 		List<Movie> list = movieService.getListOfMovies();
 		return new ResponseEntity<List<Movie>>(list, HttpStatus.OK);
 	}
 
 	@GetMapping("/movie/{id}")
-	public ResponseEntity<Movie> getMovieById(@PathVariable("id") int id) {
+	public ResponseEntity<Movie> getMovieById(@PathVariable("id") int id) throws RemoteException {
 
 		Movie movie = movieService.getMovieById(id);
 		return new ResponseEntity<Movie>(movie, HttpStatus.OK);
 	}
 
 	@DeleteMapping("/movie/{id}")
-	public ResponseEntity<Void> deleteMovie(@PathVariable("id") Integer id) {
+	public ResponseEntity<Void> deleteMovie(@PathVariable("id") Integer id) throws RemoteException {
 		movieService.deletMovie(id);
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 	}
 
 	@PutMapping("/movie")
-	public ResponseEntity<Movie> updateMovie(@RequestBody Movie movie) {
+	public ResponseEntity<Movie> updateMovie(@RequestBody Movie movie) throws RemoteException {
 		movieService.updateMovie(movie);
 		return new ResponseEntity<Movie>(movie, HttpStatus.OK);
 	}
 	
 	@GetMapping("/movie/title")
-	public ResponseEntity<List<Movie>> getMovieByTitle(@RequestParam("title") String title) {
+	public ResponseEntity<List<Movie>> getMovieByTitle(@RequestParam("title") String title)  throws RemoteException{
 
 		List<Movie> list = movieService.getMovieByTitle(title);
 		return new ResponseEntity<List<Movie>>(list,HttpStatus.OK);

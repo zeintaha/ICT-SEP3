@@ -1,9 +1,11 @@
 package sep.via.dk.sep3JPA.service.movieService;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import sep.via.dk.sep3JPA.dao.movie.MovieDAO;
 import sep.via.dk.sep3JPA.domain.movie.Movie;
 
@@ -11,42 +13,46 @@ import sep.via.dk.sep3JPA.domain.movie.Movie;
 public class MovieServiceImplementation implements MovieService {
 
 	@Autowired
-	private MovieDAO movieDAO;
+	private MovieDAO rmiClient;
 
-	@Override
-	public void AddMovie(Movie movie) {
-		movieDAO.addMovie(movie);
+	public MovieServiceImplementation() {
 
 	}
 
 	@Override
-	public List<Movie> getListOfMovies() {
-
-		return movieDAO.getListOfMovies();
-
-	}
-
-	@Override
-	public Movie getMovieById(int id) {
-		return movieDAO.getMovieById(id);
-	}
-
-	@Override
-	public void deletMovie(int movieId) {
-		movieDAO.deletMovie(movieId);
+	public void AddMovie(Movie movie) throws RemoteException {
+		rmiClient.addMovie(movie);
 
 	}
 
 	@Override
-	public void updateMovie(Movie movie) {
-		movieDAO.updateMovie(movie);
+	public List<Movie> getListOfMovies() throws RemoteException {
+
+		return rmiClient.getListOfMovies();
 
 	}
 
 	@Override
-	public List<Movie> getMovieByTitle(String title) {
+	public Movie getMovieById(int id) throws RemoteException {
+		return rmiClient.getMovieById(id);
+	}
 
-		return movieDAO.getMovieByTitle(title);
+	@Override
+	public void deletMovie(int movieId) throws RemoteException {
+		rmiClient.deletMovie(movieId);
+
+	}
+
+	@Override
+	public void updateMovie(Movie movie) throws RemoteException {
+		rmiClient.updateMovie(movie);
+
+	}
+
+	@Override
+	public List<Movie> getMovieByTitle(String title) throws RemoteException {
+
+		return rmiClient.getMovieByTitle(title);
 	}
 
 }

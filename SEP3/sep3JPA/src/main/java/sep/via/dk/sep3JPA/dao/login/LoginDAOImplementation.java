@@ -1,5 +1,6 @@
 package sep.via.dk.sep3JPA.dao.login;
 
+import java.rmi.RemoteException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -24,7 +25,7 @@ public class LoginDAOImplementation implements LoginDao {
 	private CustomerDAO customerDao;
 
 	@Override
-	public boolean customerAuthentication(String username, String password) {
+	public boolean customerAuthentication(String username, String password) throws RemoteException{
 
 		String jpql = "from Customer as a WHERE a.username = ?0  and a.password = ?1";
 		int count = entityManager.createQuery(jpql).setParameter(0, username).setParameter(1, password).getResultList()
@@ -35,7 +36,7 @@ public class LoginDAOImplementation implements LoginDao {
 	}
 
 	@Override
-	public boolean ownerAuthentication(String username, String password) {
+	public boolean ownerAuthentication(String username, String password) throws RemoteException{
 
 		String jpql = "from Owner as a WHERE a.username = ?0  and a.password = ?1";
 		int count = entityManager.createQuery(jpql).setParameter(0, username).setParameter(1, password).getResultList()
@@ -44,7 +45,7 @@ public class LoginDAOImplementation implements LoginDao {
 	}
 
 	@Override
-	public boolean AuthenticateSubscription(String username) {
+	public boolean AuthenticateSubscription(String username)throws RemoteException {
 		Customer updatedCustomer = customerDao.getCustomerByUsername(username);
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MM dd");

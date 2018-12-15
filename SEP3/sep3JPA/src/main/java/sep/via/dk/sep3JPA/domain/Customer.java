@@ -28,7 +28,7 @@ public class Customer implements Serializable {
 	@Column(name = "expiryDate")
 	private String expiryDate;
 
-	@Column(name = "password", length = 2000, nullable = false)
+	@Column(name = "password", length = 200, nullable = false)
 	private String password;
 
 	@Column(name = "email", length = 2000)

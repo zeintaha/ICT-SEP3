@@ -10,10 +10,12 @@ public interface CustomerService {
 
 	Customer getCustomerById(int id) throws RemoteException;
 
-	Customer getCustomerByUsername(String username);
-	
-	public boolean setExpiryDate(Customer customer);
+	Customer getCustomerByUsername(String username) throws RemoteException;
 
-	
+	public boolean setExpiryDate(Customer customer) throws RemoteException;
+
+	public String getPaymentLink();
+
+	public boolean customerExist(String username) throws RemoteException;
 
 }

@@ -1,5 +1,6 @@
 package sep.via.dk.sep3JPA.dao.ticket;
 
+import java.rmi.RemoteException;
 import java.time.LocalDate;
 
 import javax.persistence.EntityManager;
@@ -20,7 +21,7 @@ public class TicketDAOImplementation implements TicketDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public void addTicket(Ticket ticket) {
+	public void addTicket(Ticket ticket)throws RemoteException  {
 		ticket.setIssuingDate(LocalDate.now());
 		entityManager.persist(ticket);
 	}
