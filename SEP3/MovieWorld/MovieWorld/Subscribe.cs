@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,33 +57,73 @@ namespace MovieWorld
                 MessageBox.Show("Invalid Email.");
             }
             else {
-                System.Diagnostics.Process.Start("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6JG39662DR639245T");
+                //System.Diagnostics.Process.Start("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-2FB350249M1648013");
+
+
+
+
+                var restClient = new RestClient("http://localhost:8080/sep3/customer");
+                var restRequest = new RestRequest("link", Method.GET);
+                restRequest.AddParameter("username", textBox_Username.Text);
+
+                var response = restClient.Execute(restRequest);
+
+                if (response.IsSuccessful)
+                {
+                    System.Diagnostics.Process.Start(response.Content);
+
+                    comboBox_Subscription.Enabled = false;
+                    textBox_Username.Enabled = false;
+                    textBox_Password.Enabled = false;
+                    textBox_Email.Enabled = false;
+
+
+                }
+                else
+                 {
+
+                    MessageBox.Show("The username is already exist");
+                 }
+
+
             }
-            
-        }
 
-        private void Subscribe_Load(object sender, EventArgs e)
+        }
+        private void button_Subscribe_Click(object sender, EventArgs e)
         {
+            Customer customer = new Customer();
+            customer.expiryDate = comboBox_Subscription.Text;
+            customer.username = textBox_Username.Text;
+            customer.password = textBox_Password.Text;
+            customer.email = textBox_Email.Text;
+
+            var json = JsonConvert.SerializeObject(customer);
+
+            var restClient = new RestClient("http://localhost:8080/sep3");
+            var restRequest = new RestRequest("customer", Method.POST);
+
+            restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
+
+            var response = restClient.Execute(restRequest);
+
+            if (response.IsSuccessful)
+            {
+                MessageBox.Show("the subscription has been created");
+                Session.IsSession = true;
+            }
+            else
+            {
+                MessageBox.Show("please pay and try again");
+            }
+
 
         }
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void textBox_FirstName_Enter(object sender, EventArgs e)
-        {
-            textBox_FirstName.Text = "";
-        }
-
-
-
-
-
-        private void textBox_Email_Enter(object sender, EventArgs e)
-        {
-            textBox_Email.Text = "";
         }
 
 

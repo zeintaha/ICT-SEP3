@@ -92,6 +92,7 @@
     <Compile Include="Crime.Designer.cs">
       <DependentUpon>Crime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Drama.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,7 +117,6 @@
     <Compile Include="Horror.Designer.cs">
       <DependentUpon>Horror.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="moviedbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -22,7 +22,7 @@ namespace MovieWorld
             InitializeComponent();
         }
 
-        Login login = new Login("Taha", "1234");
+        
 
         private void FormLogin_MouseDown(object sender, MouseEventArgs e)
         {
