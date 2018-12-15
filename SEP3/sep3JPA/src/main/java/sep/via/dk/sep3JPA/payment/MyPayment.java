@@ -29,6 +29,7 @@ public class MyPayment {
 	public static final String mode = "sandbox";
 
 	public static Payment payment = new Payment();
+	public Payment payment1 = null;
 
 	public static APIContext apiContext = new APIContext(clientID, clientSecret, "sandbox");
 	public static RedirectUrls redirectUrls = new RedirectUrls();
@@ -77,7 +78,7 @@ public class MyPayment {
 			// Handle errors
 		}
 
-		Payment payment1;
+		
 		try {
 			payment1 = payment.create(apiContext);
 			Iterator links = payment1.getLinks().iterator();
@@ -103,9 +104,9 @@ public class MyPayment {
 
 			// this call should return the payment id and the payer id
 
-			Payment payment1 = payment.create(apiContext);
+//			 payment1 = payment.create(apiContext);
 
-			;
+			
 			Iterator links = payment1.getLinks().iterator();
 
 			while (links.hasNext()) {
@@ -117,10 +118,10 @@ public class MyPayment {
 				}
 			}
 
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("Go to " + href + " to complete transaction.\nPress enter when ready");
-			Desktop.getDesktop().browse(new URI(href));
-			scanner.nextLine();
+//			Scanner scanner = new Scanner(System.in);
+//			System.out.println("Go to " + href + " to complete transaction.\nPress enter when ready");
+//			Desktop.getDesktop().browse(new URI(href));
+//			scanner.nextLine();
 
 			PaymentExecution paymentExecution = new PaymentExecution();
 
@@ -136,13 +137,14 @@ public class MyPayment {
 			}
 		} catch (PayPalRESTException e) {
 			System.out.println("payment failed ");
-		} catch (IOException e) {
-			System.out.println("not payed second ");
+		} 
+//		catch (IOException e) {
+//			System.out.println("not payed second ");
+////		e.printStackTrace();
+//		} catch (URISyntaxException e) {
+//			System.out.println("not payed third ");
 //		e.printStackTrace();
-		} catch (URISyntaxException e) {
-			System.out.println("not payed third ");
-//		e.printStackTrace();
-		}
+//		}
 		return "no payment";
 
 	}

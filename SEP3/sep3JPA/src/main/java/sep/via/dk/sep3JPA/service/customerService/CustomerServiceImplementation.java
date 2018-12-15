@@ -24,6 +24,10 @@ public class CustomerServiceImplementation implements CustomerService {
 
 	@Override
 	public boolean addCustomer(Customer customer) throws RemoteException {
+		boolean checkPayment = checkPayment();
+		if(checkPayment!=true) {
+			return false;
+		}
 			
 		if (rmiClient.customerExist(customer.getUsername())) {
 			return false;
@@ -92,6 +96,17 @@ public class CustomerServiceImplementation implements CustomerService {
 	public boolean customerExist(String username) throws RemoteException {
 	
 		return rmiClient.customerExist(username);
+	}
+
+	@Override
+	public boolean checkPayment() {
+		String paymentString = myPayment.ExecutePayment();
+		if (paymentString.equalsIgnoreCase("approved")){
+			return true;
+		}
+		else
+		
+		return false;
 	}
 
 }

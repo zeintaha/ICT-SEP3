@@ -17,5 +17,6 @@ public interface CustomerService {
 	public String getPaymentLink();
 
 	public boolean customerExist(String username) throws RemoteException;
+	public boolean checkPayment() ;
 
 }
