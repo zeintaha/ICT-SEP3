@@ -39,9 +39,9 @@ public class Ticket implements Serializable {
 	@Column(name = "lastName")
 	private String lastName;
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	
 	@Column(name = "movieDate")
-	private LocalDate movieDate;
+	private String movieDate;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	@Column(name = "issuingDate")
@@ -57,7 +57,7 @@ public class Ticket implements Serializable {
 
 	}
 
-	public Ticket(Integer id, String firstName, String lastName, LocalDate movieDate, String time, String dateOfBirth,
+	public Ticket(Integer id, String firstName, String lastName, String movieDate, String time, String dateOfBirth,
 			Movie movie) {
 		this.issuingDate = LocalDate.now();
 		this.id = id;
@@ -93,11 +93,11 @@ public class Ticket implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public LocalDate getMovieDate() {
+	public String getMovieDate() {
 		return movieDate;
 	}
 
-	public void setMovieDate(LocalDate movieDate) {
+	public void setMovieDate(String movieDate) {
 		this.movieDate = movieDate;
 	}
 
