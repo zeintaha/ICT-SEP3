@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,12 @@ namespace MovieWorld
 
         private bool _dragging;
         private Point _offset;
+
+        Movie movie = new Movie();
+
+        private string movieId;
+
+        public string MovieId { get => movieId; set => movieId = value; }
 
         public BuyTicket()
         {
@@ -68,17 +76,70 @@ namespace MovieWorld
 
         private void textBox3_Enter(object sender, EventArgs e)
         {
-            textBox3.Text = "";
+            textBox_FirstName.Text = "";
         }
 
         private void textBox4_Enter(object sender, EventArgs e)
         {
-            textBox4.Text = "";
+            textBox_LastName.Text = "";
         }
 
         private void textBox5_Enter(object sender, EventArgs e)
         {
-            textBox5.Text = "";
+           
+        }
+
+        private void button_GoToPayment_Click(object sender, EventArgs e)
+        {
+            var restClient = new RestClient("http://localhost:8080/sep3");
+            var restRequest = new RestRequest("ticket", Method.GET);
+            //restRequest.AddParameter("username", textBox_Username.Text);
+
+            var response = restClient.Execute(restRequest);
+
+            System.Diagnostics.Process.Start(response.Content);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Movie m in MovieList.movies)
+            {
+                if (m.Id == this.movieId)
+                {
+                    this.movie = m;
+
+                }
+            }
+
+            Ticket ticket = new Ticket();
+            ticket.firstName = textBox_FirstName.Text;
+            ticket.lastName = textBox_LastName.Text;
+            ticket.time = comboBox_SelectTime.Text;
+            ticket.movieDate = Convert.ToDateTime(dateTimePicker_SelectDate.Text);
+            ticket.dateOfBirth = dateTimePicker_DOB.Text;
+            ticket.movie = this.movie;
+            
+
+
+
+            var json = JsonConvert.SerializeObject(ticket);
+
+            var restClient = new RestClient("http://localhost:8080/sep3");
+            var restRequest = new RestRequest("ticket", Method.POST);
+
+            restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
+
+            var response = restClient.Execute(restRequest);
+
+            if (response.IsSuccessful)
+            {
+                MessageBox.Show("the subscription has been created");
+                Session.IsSession = true;
+            }
+            else
+            {
+                MessageBox.Show("please pay and try again");
+            }
         }
     }
 }

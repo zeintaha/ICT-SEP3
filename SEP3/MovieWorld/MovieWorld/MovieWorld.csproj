@@ -159,6 +159,7 @@
     <Compile Include="Subscribe.Designer.cs">
       <DependentUpon>Subscribe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>

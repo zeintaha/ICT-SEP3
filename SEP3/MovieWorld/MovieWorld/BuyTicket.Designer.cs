@@ -30,21 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyTicket));
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_SelectTime = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button_GoToPayment = new System.Windows.Forms.Button();
+            this.textBox_LastName = new System.Windows.Forms.TextBox();
+            this.textBox_FirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
             this.pictureBox_buy = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker_SelectDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_buy)).BeginInit();
             this.SuspendLayout();
@@ -54,22 +53,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(373, 427);
+            this.label7.Location = new System.Drawing.Point(373, 365);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 22);
             this.label7.TabIndex = 21;
             this.label7.Text = "Date of Birth";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(373, 365);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 22);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Mobile Number";
             // 
             // label5
             // 
@@ -78,9 +66,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(373, 303);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 22);
+            this.label5.Size = new System.Drawing.Size(107, 22);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Last Title";
+            this.label5.Text = "Last Name";
             // 
             // label4
             // 
@@ -89,9 +77,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(373, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 22);
+            this.label4.Size = new System.Drawing.Size(103, 22);
             this.label4.TabIndex = 17;
-            this.label4.Text = "First Title";
+            this.label4.Text = "First Name";
             // 
             // label3
             // 
@@ -104,16 +92,16 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Select Time";
             // 
-            // comboBox1
+            // comboBox_SelectTime
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(536, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 29);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Select Time";
+            this.comboBox_SelectTime.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_SelectTime.ForeColor = System.Drawing.Color.Black;
+            this.comboBox_SelectTime.FormattingEnabled = true;
+            this.comboBox_SelectTime.Location = new System.Drawing.Point(536, 176);
+            this.comboBox_SelectTime.Name = "comboBox_SelectTime";
+            this.comboBox_SelectTime.Size = new System.Drawing.Size(365, 29);
+            this.comboBox_SelectTime.TabIndex = 2;
+            this.comboBox_SelectTime.Text = "Select Time";
             // 
             // pictureBox1
             // 
@@ -126,51 +114,38 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // button_GoToPayment
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(725, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 42);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Go To Payment";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_GoToPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_GoToPayment.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_GoToPayment.ForeColor = System.Drawing.Color.White;
+            this.button_GoToPayment.Location = new System.Drawing.Point(645, 419);
+            this.button_GoToPayment.Name = "button_GoToPayment";
+            this.button_GoToPayment.Size = new System.Drawing.Size(156, 42);
+            this.button_GoToPayment.TabIndex = 7;
+            this.button_GoToPayment.Text = "Go To Payment";
+            this.button_GoToPayment.UseVisualStyleBackColor = true;
+            this.button_GoToPayment.Click += new System.EventHandler(this.button_GoToPayment_Click);
             // 
-            // textBox5
+            // textBox_LastName
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(536, 361);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(365, 30);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Text = "Mobile Number";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox_LastName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_LastName.ForeColor = System.Drawing.Color.Black;
+            this.textBox_LastName.Location = new System.Drawing.Point(536, 299);
+            this.textBox_LastName.Name = "textBox_LastName";
+            this.textBox_LastName.Size = new System.Drawing.Size(365, 30);
+            this.textBox_LastName.TabIndex = 4;
+            this.textBox_LastName.Enter += new System.EventHandler(this.textBox4_Enter);
             // 
-            // textBox4
+            // textBox_FirstName
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(536, 299);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(365, 30);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Last Title";
-            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(536, 237);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(365, 30);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "First Title";
-            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox_FirstName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_FirstName.ForeColor = System.Drawing.Color.Black;
+            this.textBox_FirstName.Location = new System.Drawing.Point(536, 237);
+            this.textBox_FirstName.Name = "textBox_FirstName";
+            this.textBox_FirstName.Size = new System.Drawing.Size(365, 30);
+            this.textBox_FirstName.TabIndex = 3;
+            this.textBox_FirstName.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // label1
             // 
@@ -194,26 +169,14 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Select Date";
             // 
-            // comboBox2
+            // dateTimePicker_DOB
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(536, 115);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(365, 29);
-            this.comboBox2.TabIndex = 1;
-            this.comboBox2.Text = "Select Date";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(536, 423);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 30);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePicker_DOB.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(536, 361);
+            this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
+            this.dateTimePicker_DOB.Size = new System.Drawing.Size(365, 30);
+            this.dateTimePicker_DOB.TabIndex = 6;
+            this.dateTimePicker_DOB.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // pictureBox_buy
             // 
@@ -227,27 +190,47 @@
             this.pictureBox_buy.TabIndex = 29;
             this.pictureBox_buy.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(645, 490);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 42);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Get Ticket";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dateTimePicker_SelectDate
+            // 
+            this.dateTimePicker_SelectDate.Font = new System.Drawing.Font("Century Gothic", 10.8F);
+            this.dateTimePicker_SelectDate.Location = new System.Drawing.Point(536, 117);
+            this.dateTimePicker_SelectDate.Name = "dateTimePicker_SelectDate";
+            this.dateTimePicker_SelectDate.Size = new System.Drawing.Size(365, 30);
+            this.dateTimePicker_SelectDate.TabIndex = 31;
+            // 
             // BuyTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(964, 556);
+            this.Controls.Add(this.dateTimePicker_SelectDate);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox_buy);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker_DOB);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_SelectTime);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button_GoToPayment);
+            this.Controls.Add(this.textBox_LastName);
+            this.Controls.Add(this.textBox_FirstName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -266,20 +249,19 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_SelectTime;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button_GoToPayment;
+        private System.Windows.Forms.TextBox textBox_LastName;
+        private System.Windows.Forms.TextBox textBox_FirstName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
         public System.Windows.Forms.PictureBox pictureBox_buy;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_SelectDate;
     }
 }

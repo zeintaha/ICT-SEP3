@@ -117,6 +117,7 @@ namespace MovieWorld
             BuyTicket buyTicket  = new BuyTicket();
 
             buyTicket.pictureBox_buy.ImageLocation = UrlImagelocation;
+            buyTicket.MovieId = this.MovieId;
             buyTicket.Show();
         }
 

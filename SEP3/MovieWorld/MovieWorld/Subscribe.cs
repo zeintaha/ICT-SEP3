@@ -57,7 +57,7 @@ namespace MovieWorld
                 MessageBox.Show("Invalid Email.");
             }
             else {
-                //System.Diagnostics.Process.Start("https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-2FB350249M1648013");
+                
 
 
 
