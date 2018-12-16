@@ -255,9 +255,9 @@ namespace MovieWorld
 
                 MoviePanel moviePanel = new MoviePanel();
 
-                moviePanel.Title = m.Title;
-                moviePanel.Link = m.UrlFullMovie;
-                moviePanel.Image = m.UrlImage;
+                moviePanel.Title = m.title;
+                moviePanel.Link = m.urlFullMovie;
+                moviePanel.Image = m.urlImage;
                 moviePanel.Height = 230;
                 moviePanel.Width = 150;
                 flowLayoutPanel1.Controls.Add(moviePanel);

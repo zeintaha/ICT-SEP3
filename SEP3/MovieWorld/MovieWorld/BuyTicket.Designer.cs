@@ -119,9 +119,9 @@
             this.button_GoToPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_GoToPayment.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_GoToPayment.ForeColor = System.Drawing.Color.White;
-            this.button_GoToPayment.Location = new System.Drawing.Point(645, 419);
+            this.button_GoToPayment.Location = new System.Drawing.Point(626, 419);
             this.button_GoToPayment.Name = "button_GoToPayment";
-            this.button_GoToPayment.Size = new System.Drawing.Size(156, 42);
+            this.button_GoToPayment.Size = new System.Drawing.Size(175, 42);
             this.button_GoToPayment.TabIndex = 7;
             this.button_GoToPayment.Text = "Go To Payment";
             this.button_GoToPayment.UseVisualStyleBackColor = true;
@@ -195,9 +195,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(645, 490);
+            this.button2.Location = new System.Drawing.Point(626, 490);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 42);
+            this.button2.Size = new System.Drawing.Size(175, 42);
             this.button2.TabIndex = 30;
             this.button2.Text = "Get Ticket";
             this.button2.UseVisualStyleBackColor = true;
@@ -261,7 +261,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
         public System.Windows.Forms.PictureBox pictureBox_buy;
-        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker_SelectDate;
     }
 }

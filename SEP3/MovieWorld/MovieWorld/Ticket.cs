@@ -11,7 +11,7 @@ namespace MovieWorld
         public Movie movie { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
-        public DateTime movieDate { get; set; }
+        public string movieDate { get; set; }
         public string time { get; set; }
         public string dateOfBirth { get; set; }
 

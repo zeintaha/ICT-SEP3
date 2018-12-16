@@ -91,20 +91,21 @@ namespace MovieWorld
 
         private void button_GoToPayment_Click(object sender, EventArgs e)
         {
-            var restClient = new RestClient("http://localhost:8080/sep3");
-            var restRequest = new RestRequest("ticket", Method.GET);
-            //restRequest.AddParameter("username", textBox_Username.Text);
+            var restClient = new RestClient("http://localhost:8080/sep3/ticket");
+            var restRequest = new RestRequest("link", Method.GET);
+          
 
             var response = restClient.Execute(restRequest);
 
             System.Diagnostics.Process.Start(response.Content);
+            button2.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (Movie m in MovieList.movies)
             {
-                if (m.Id == this.movieId)
+                if (m.id == this.movieId)
                 {
                     this.movie = m;
 
@@ -115,11 +116,10 @@ namespace MovieWorld
             ticket.firstName = textBox_FirstName.Text;
             ticket.lastName = textBox_LastName.Text;
             ticket.time = comboBox_SelectTime.Text;
-            ticket.movieDate = Convert.ToDateTime(dateTimePicker_SelectDate.Text);
+            ticket.movieDate =dateTimePicker_SelectDate.Text;
+            //ticket.movieDate = Convert.ToDateTime(dateTimePicker_SelectDate.Text);
             ticket.dateOfBirth = dateTimePicker_DOB.Text;
             ticket.movie = this.movie;
-            
-
 
 
             var json = JsonConvert.SerializeObject(ticket);
@@ -133,8 +133,9 @@ namespace MovieWorld
 
             if (response.IsSuccessful)
             {
-                MessageBox.Show("the subscription has been created");
-                Session.IsSession = true;
+                MessageBox.Show(response.Content);
+                this.Close();
+               
             }
             else
             {
