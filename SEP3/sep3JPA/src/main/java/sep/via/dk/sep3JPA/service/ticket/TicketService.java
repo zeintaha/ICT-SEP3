@@ -5,6 +5,9 @@ import java.rmi.RemoteException;
 import sep.via.dk.sep3JPA.domain.Ticket;
 
 public interface TicketService {
-	void addTicket(Ticket ticket)throws RemoteException;
+	boolean addTicket(Ticket ticket)throws RemoteException;
+	public boolean checkPayment();
+	
+	public String getPaymentLink();
 
 }

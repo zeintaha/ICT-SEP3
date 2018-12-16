@@ -78,7 +78,6 @@ public class MyPayment {
 			// Handle errors
 		}
 
-		
 		try {
 			payment1 = payment.create(apiContext);
 			Iterator links = payment1.getLinks().iterator();
@@ -100,23 +99,9 @@ public class MyPayment {
 
 	public String ExecutePayment() {
 
+//		ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
+
 		try {
-
-			// this call should return the payment id and the payer id
-
-//			 payment1 = payment.create(apiContext);
-
-			if(payment1!=null) {
-			Iterator links = payment1.getLinks().iterator();
-
-			while (links.hasNext()) {
-				Links link = (Links) links.next();
-				System.out.println();
-				System.out.println(link.toString());
-				if (link.getRel().equalsIgnoreCase("approval_url")) {
-					href = link.getHref();
-				}
-			}
 
 //			Scanner scanner = new Scanner(System.in);
 //			System.out.println("Go to " + href + " to complete transaction.\nPress enter when ready");
@@ -124,29 +109,29 @@ public class MyPayment {
 //			scanner.nextLine();
 
 			PaymentExecution paymentExecution = new PaymentExecution();
-
+//			String payerID = context.getRequestParameterMap().get("PayerID");
+//			paymentExecution.setPayerId(payerID);
 			paymentExecution.setPayerId("DUSYFH5YB7NC8");
 
 			Payment payment2 = payment1.execute(apiContext, paymentExecution);
-			
+
 			String str2 = payment2.getState();
 			if (str2 != null) {
-//				System.out.println(" customer has payed ");
-// the string returned "approved";
+
 				return str2;
 			}
-			}
+
 		} catch (PayPalRESTException e) {
 			System.out.println("payment failed ");
-		} 
+		}
 //		catch (IOException e) {
 //			System.out.println("not payed second ");
-////		e.printStackTrace();
+//
 //		} catch (URISyntaxException e) {
 //			System.out.println("not payed third ");
-//		e.printStackTrace();
+//			e.printStackTrace();
 //		}
-		
+
 		return "no payment";
 
 	}

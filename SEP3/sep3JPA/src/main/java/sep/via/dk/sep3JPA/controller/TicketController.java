@@ -3,9 +3,9 @@ package sep.via.dk.sep3JPA.controller;
 import java.rmi.RemoteException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +22,23 @@ public class TicketController {
 	private TicketService ticketService;
 
 	@PostMapping("/ticket")
-	public ResponseEntity<Void> addTicket(@RequestBody Ticket ticket) throws RemoteException {
+	public ResponseEntity<Ticket> addTicket(@RequestBody Ticket ticket) throws RemoteException {
+		
+		
+		boolean valid = ticketService.checkPayment();
+		if (!valid)
+			return new ResponseEntity<Ticket>(HttpStatus.NOT_ACCEPTABLE);
 		ticketService.addTicket(ticket);
-		HttpHeaders headers = new HttpHeaders();
-		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+		return new ResponseEntity<Ticket>(ticket, HttpStatus.CREATED);
 
+	}
+
+	@GetMapping("/ticket/link")
+	public ResponseEntity<String> getPaymentLink() throws RemoteException {
+
+		String link = ticketService.getPaymentLink();
+
+		return new ResponseEntity<String>(link, HttpStatus.OK);
 	}
 
 }
