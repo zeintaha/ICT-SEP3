@@ -87,6 +87,7 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Message.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="moviedbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,6 +101,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadMessage.Designer.cs">
+      <DependentUpon>ReadMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="RemoveMovie.cs">
       <SubType>Form</SubType>
@@ -124,6 +131,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadMessage.resx">
+      <DependentUpon>ReadMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveMovie.resx">
       <DependentUpon>RemoveMovie.cs</DependentUpon>
