@@ -11,7 +11,6 @@ import ch.qos.logback.core.net.server.Client;
 import sep.via.dk.sep3JPA.dao.customer.CustomerDAO;
 import sep.via.dk.sep3JPA.domain.Customer;
 import sep.via.dk.sep3JPA.payment.MyPayment;
-import sep.via.dk.sep3JPA.rmiClient.RmiClient;
 
 @Service
 public class CustomerServiceImplementation implements CustomerService {

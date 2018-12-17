@@ -64,7 +64,7 @@ public class MyPayment {
 
 		redirectUrls.setCancelUrl("https://example.com/cancel");
 		// redirectUrls.setReturnUrl("https://example.com/return");
-		redirectUrls.setReturnUrl("http://www.google.com");
+		redirectUrls.setReturnUrl("https://localhost:8443/sep3/ticket/link/thanks");
 
 		payment.setRedirectUrls(redirectUrls);
 
