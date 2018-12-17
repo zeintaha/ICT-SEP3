@@ -40,5 +40,14 @@ public class TicketController {
 
 		return new ResponseEntity<String>(link, HttpStatus.OK);
 	}
+	
+	
+	@GetMapping("/ticket/link/thanks")
+    public ResponseEntity<String> getPaymentThanks() throws RemoteException {
+
+        String thankslink = "Thank you, you have paied";
+
+        return new ResponseEntity<String>(thankslink, HttpStatus.OK);
+    }
 
 }

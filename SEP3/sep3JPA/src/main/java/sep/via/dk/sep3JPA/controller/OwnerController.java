@@ -24,7 +24,7 @@ public class OwnerController {
 	private OwnerService ownerService;
 
 	@GetMapping("/owner/{id}")
-	public ResponseEntity<Owner> getCustomerById(@PathVariable("id") Integer id) throws RemoteException {
+	public ResponseEntity<Owner> getOwnerById(@PathVariable("id") Integer id) throws RemoteException {
 		Owner owner = ownerService.getOwnerById(id);
 		return new ResponseEntity<Owner>(owner, HttpStatus.OK);
 

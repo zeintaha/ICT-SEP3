@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.button_Subscribe = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_ConfirmPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.button_GoToPayment.Location = new System.Drawing.Point(727, 407);
             this.button_GoToPayment.Name = "button_GoToPayment";
             this.button_GoToPayment.Size = new System.Drawing.Size(173, 42);
-            this.button_GoToPayment.TabIndex = 9;
+            this.button_GoToPayment.TabIndex = 6;
             this.button_GoToPayment.Text = "Go To Payment";
             this.button_GoToPayment.UseVisualStyleBackColor = true;
             this.button_GoToPayment.Click += new System.EventHandler(this.button1_Click);
@@ -99,7 +101,7 @@
             "1 Month",
             "3 Months",
             "12 Months"});
-            this.comboBox_Subscription.Location = new System.Drawing.Point(303, 139);
+            this.comboBox_Subscription.Location = new System.Drawing.Point(329, 136);
             this.comboBox_Subscription.Name = "comboBox_Subscription";
             this.comboBox_Subscription.Size = new System.Drawing.Size(365, 29);
             this.comboBox_Subscription.TabIndex = 1;
@@ -109,7 +111,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(126, 207);
+            this.label4.Location = new System.Drawing.Point(126, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 22);
             this.label4.TabIndex = 34;
@@ -119,17 +121,17 @@
             // 
             this.textBox_Username.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Username.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Username.Location = new System.Drawing.Point(303, 205);
+            this.textBox_Username.Location = new System.Drawing.Point(329, 191);
             this.textBox_Username.Name = "textBox_Username";
             this.textBox_Username.Size = new System.Drawing.Size(365, 30);
-            this.textBox_Username.TabIndex = 3;
+            this.textBox_Username.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(126, 343);
+            this.label2.Location = new System.Drawing.Point(126, 367);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 22);
             this.label2.TabIndex = 39;
@@ -139,17 +141,17 @@
             // 
             this.textBox_Email.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Email.Location = new System.Drawing.Point(303, 339);
+            this.textBox_Email.Location = new System.Drawing.Point(329, 359);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(365, 30);
-            this.textBox_Email.TabIndex = 7;
+            this.textBox_Email.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(126, 275);
+            this.label3.Location = new System.Drawing.Point(126, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 22);
             this.label3.TabIndex = 41;
@@ -159,10 +161,11 @@
             // 
             this.textBox_Password.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Password.ForeColor = System.Drawing.Color.Black;
-            this.textBox_Password.Location = new System.Drawing.Point(303, 272);
+            this.textBox_Password.Location = new System.Drawing.Point(329, 247);
             this.textBox_Password.Name = "textBox_Password";
+            this.textBox_Password.PasswordChar = '●';
             this.textBox_Password.Size = new System.Drawing.Size(365, 30);
-            this.textBox_Password.TabIndex = 40;
+            this.textBox_Password.TabIndex = 3;
             // 
             // button_Subscribe
             // 
@@ -172,10 +175,31 @@
             this.button_Subscribe.Location = new System.Drawing.Point(727, 470);
             this.button_Subscribe.Name = "button_Subscribe";
             this.button_Subscribe.Size = new System.Drawing.Size(173, 42);
-            this.button_Subscribe.TabIndex = 42;
+            this.button_Subscribe.TabIndex = 7;
             this.button_Subscribe.Text = "Subscribe";
             this.button_Subscribe.UseVisualStyleBackColor = true;
             this.button_Subscribe.Click += new System.EventHandler(this.button_Subscribe_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(126, 310);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 22);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Confirm Password";
+            // 
+            // textBox_ConfirmPassword
+            // 
+            this.textBox_ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ConfirmPassword.ForeColor = System.Drawing.Color.Black;
+            this.textBox_ConfirmPassword.Location = new System.Drawing.Point(329, 303);
+            this.textBox_ConfirmPassword.Name = "textBox_ConfirmPassword";
+            this.textBox_ConfirmPassword.PasswordChar = '●';
+            this.textBox_ConfirmPassword.Size = new System.Drawing.Size(365, 30);
+            this.textBox_ConfirmPassword.TabIndex = 4;
             // 
             // Subscribe
             // 
@@ -183,6 +207,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(964, 556);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_ConfirmPassword);
             this.Controls.Add(this.button_Subscribe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_Password);
@@ -198,7 +224,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Subscribe";
-            this.Text = "Subscribe";
+            this.Text = " ";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Subscribe_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Subscribe_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Subscribe_MouseUp);
@@ -221,5 +247,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.Button button_Subscribe;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_ConfirmPassword;
     }
 }

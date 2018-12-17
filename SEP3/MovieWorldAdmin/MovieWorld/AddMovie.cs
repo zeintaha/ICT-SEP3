@@ -78,7 +78,7 @@ namespace MovieWorld
 
                 var json = JsonConvert.SerializeObject(movie);
 
-                var restClient = new RestClient("http://localhost:8080/sep3");
+                var restClient = new RestClient("https://localhost:8443/sep3");
                 var restRequest = new RestRequest("movie", Method.POST);
 
                 restRequest.AddParameter("application/json", json, ParameterType.RequestBody);

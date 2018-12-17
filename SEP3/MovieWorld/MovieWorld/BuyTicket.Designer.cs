@@ -44,6 +44,8 @@
             this.pictureBox_buy = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker_SelectDate = new System.Windows.Forms.DateTimePicker();
+            this.textBox_email = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_buy)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(373, 365);
+            this.label7.Location = new System.Drawing.Point(382, 352);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 22);
             this.label7.TabIndex = 21;
@@ -64,7 +66,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(373, 303);
+            this.label5.Location = new System.Drawing.Point(382, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 22);
             this.label5.TabIndex = 18;
@@ -75,7 +77,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(373, 241);
+            this.label4.Location = new System.Drawing.Point(382, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 22);
             this.label4.TabIndex = 17;
@@ -86,7 +88,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(373, 179);
+            this.label3.Location = new System.Drawing.Point(382, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 22);
             this.label3.TabIndex = 22;
@@ -97,11 +99,16 @@
             this.comboBox_SelectTime.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_SelectTime.ForeColor = System.Drawing.Color.Black;
             this.comboBox_SelectTime.FormattingEnabled = true;
-            this.comboBox_SelectTime.Location = new System.Drawing.Point(536, 176);
+            this.comboBox_SelectTime.Items.AddRange(new object[] {
+            "13:30",
+            "15:30",
+            "17:30",
+            "19:30",
+            "21:30"});
+            this.comboBox_SelectTime.Location = new System.Drawing.Point(536, 163);
             this.comboBox_SelectTime.Name = "comboBox_SelectTime";
             this.comboBox_SelectTime.Size = new System.Drawing.Size(365, 29);
             this.comboBox_SelectTime.TabIndex = 2;
-            this.comboBox_SelectTime.Text = "Select Time";
             // 
             // pictureBox1
             // 
@@ -131,7 +138,7 @@
             // 
             this.textBox_LastName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_LastName.ForeColor = System.Drawing.Color.Black;
-            this.textBox_LastName.Location = new System.Drawing.Point(536, 299);
+            this.textBox_LastName.Location = new System.Drawing.Point(536, 254);
             this.textBox_LastName.Name = "textBox_LastName";
             this.textBox_LastName.Size = new System.Drawing.Size(365, 30);
             this.textBox_LastName.TabIndex = 4;
@@ -141,7 +148,7 @@
             // 
             this.textBox_FirstName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_FirstName.ForeColor = System.Drawing.Color.Black;
-            this.textBox_FirstName.Location = new System.Drawing.Point(536, 237);
+            this.textBox_FirstName.Location = new System.Drawing.Point(536, 208);
             this.textBox_FirstName.Name = "textBox_FirstName";
             this.textBox_FirstName.Size = new System.Drawing.Size(365, 30);
             this.textBox_FirstName.TabIndex = 3;
@@ -163,7 +170,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(373, 117);
+            this.label9.Location = new System.Drawing.Point(382, 117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 22);
             this.label9.TabIndex = 27;
@@ -172,7 +179,7 @@
             // dateTimePicker_DOB
             // 
             this.dateTimePicker_DOB.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.dateTimePicker_DOB.Location = new System.Drawing.Point(536, 361);
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(536, 346);
             this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
             this.dateTimePicker_DOB.Size = new System.Drawing.Size(365, 30);
             this.dateTimePicker_DOB.TabIndex = 6;
@@ -209,7 +216,27 @@
             this.dateTimePicker_SelectDate.Location = new System.Drawing.Point(536, 117);
             this.dateTimePicker_SelectDate.Name = "dateTimePicker_SelectDate";
             this.dateTimePicker_SelectDate.Size = new System.Drawing.Size(365, 30);
-            this.dateTimePicker_SelectDate.TabIndex = 31;
+            this.dateTimePicker_SelectDate.TabIndex = 1;
+            // 
+            // textBox_email
+            // 
+            this.textBox_email.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_email.ForeColor = System.Drawing.Color.Black;
+            this.textBox_email.Location = new System.Drawing.Point(536, 300);
+            this.textBox_email.Name = "textBox_email";
+            this.textBox_email.Size = new System.Drawing.Size(365, 30);
+            this.textBox_email.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(382, 305);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 22);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Email";
             // 
             // BuyTicket
             // 
@@ -217,6 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(964, 556);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox_email);
             this.Controls.Add(this.dateTimePicker_SelectDate);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox_buy);
@@ -263,5 +292,7 @@
         public System.Windows.Forms.PictureBox pictureBox_buy;
         public System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker_SelectDate;
+        private System.Windows.Forms.TextBox textBox_email;
+        private System.Windows.Forms.Label label2;
     }
 }
