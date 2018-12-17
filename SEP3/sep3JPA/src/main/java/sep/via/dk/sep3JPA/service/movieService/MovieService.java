@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.service.movieService;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 import sep.via.dk.sep3JPA.domain.movie.Movie;

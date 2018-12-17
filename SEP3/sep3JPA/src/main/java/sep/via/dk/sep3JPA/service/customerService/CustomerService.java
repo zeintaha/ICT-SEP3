@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.service.customerService;
 
-import java.rmi.RemoteException;
-
 import sep.via.dk.sep3JPA.domain.Customer;
 
 public interface CustomerService {

@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.service.ticket;
 
-import java.rmi.RemoteException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +10,7 @@ import sep.via.dk.sep3JPA.payment.MyPayment;
 @Service
 public class TicketServiceImplementation implements TicketService {
 	@Autowired
-	private TicketDAO rmiClient;
+	private TicketDAO ticketDAO;
 	
 	@Autowired
 	public MyPayment myPayment;
@@ -21,7 +19,7 @@ public class TicketServiceImplementation implements TicketService {
 	@Override
 	public boolean addTicket(Ticket ticket) {
 		
-		rmiClient.addTicket(ticket);
+		ticketDAO.addTicket(ticket);
 		return true;
 
 	}

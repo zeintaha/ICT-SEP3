@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.service.ownerService;
 
-import java.rmi.RemoteException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,14 +10,14 @@ import sep.via.dk.sep3JPA.domain.Owner;
 public class OwnerServiceImplementation implements OwnerService {
 
 	@Autowired
-	private OwnerDAO rmiClient;
+	private OwnerDAO ownerDAO;
 
 	@Override
 	public boolean addOwner(Owner owner) {
-		if (rmiClient.ownerExist(owner.getUsername())) {
+		if (ownerDAO.ownerExist(owner.getUsername())) {
 			return false;
 		} else {
-			rmiClient.addOwner(owner);
+			ownerDAO.addOwner(owner);
 			return true;
 		}
 
@@ -27,7 +25,7 @@ public class OwnerServiceImplementation implements OwnerService {
 
 	@Override
 	public Owner getOwnerById(int id)  {
-		return rmiClient.getOwnerById(id);
+		return ownerDAO.getOwnerById(id);
 	}
 
 }

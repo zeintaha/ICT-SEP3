@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.dao.login;
 
-import java.rmi.RemoteException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 

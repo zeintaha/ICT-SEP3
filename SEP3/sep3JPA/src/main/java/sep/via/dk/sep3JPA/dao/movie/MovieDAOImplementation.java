@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.dao.movie;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 import javax.persistence.EntityManager;
