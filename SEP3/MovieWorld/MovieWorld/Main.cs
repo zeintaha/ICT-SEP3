@@ -17,7 +17,7 @@ namespace MovieWorld
         public Main()
         {
             InitializeComponent();
-            this.labellogging.Text = "Login";
+           
             label_hi.Hide();
             about1.Hide();
             allGenres1.Show();
@@ -148,6 +148,7 @@ namespace MovieWorld
             else if (Session.IsSession == true) {
 
              Session.IsSession = false;
+                MessageBox.Show("You logged out successfully");
 
             }
         }

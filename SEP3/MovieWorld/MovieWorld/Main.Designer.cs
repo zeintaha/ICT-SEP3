@@ -102,7 +102,7 @@
             // pictureBoxInfo
             // 
             this.pictureBoxInfo.Image = global::MovieWorld.Properties.Resources.info_2_241;
-            this.pictureBoxInfo.Location = new System.Drawing.Point(21, 582);
+            this.pictureBoxInfo.Location = new System.Drawing.Point(14, 582);
             this.pictureBoxInfo.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxInfo.Name = "pictureBoxInfo";
             this.pictureBoxInfo.Size = new System.Drawing.Size(39, 38);
@@ -113,7 +113,7 @@
             // pictureBoxPowerOff
             // 
             this.pictureBoxPowerOff.Image = global::MovieWorld.Properties.Resources.power_241;
-            this.pictureBoxPowerOff.Location = new System.Drawing.Point(168, 582);
+            this.pictureBoxPowerOff.Location = new System.Drawing.Point(174, 582);
             this.pictureBoxPowerOff.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxPowerOff.Name = "pictureBoxPowerOff";
             this.pictureBoxPowerOff.Size = new System.Drawing.Size(39, 38);
@@ -124,7 +124,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(150, 619);
+            this.label5.Location = new System.Drawing.Point(157, 619);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 20;
@@ -133,16 +133,17 @@
             // labellogging
             // 
             this.labellogging.AutoSize = true;
-            this.labellogging.Location = new System.Drawing.Point(85, 619);
+            this.labellogging.Location = new System.Drawing.Point(61, 619);
             this.labellogging.Name = "labellogging";
-            this.labellogging.Size = new System.Drawing.Size(0, 17);
+            this.labellogging.Size = new System.Drawing.Size(91, 17);
             this.labellogging.TabIndex = 19;
+            this.labellogging.Text = "Login/Logout";
             this.labellogging.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 619);
+            this.label3.Location = new System.Drawing.Point(9, 619);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 17);
             this.label3.TabIndex = 18;
