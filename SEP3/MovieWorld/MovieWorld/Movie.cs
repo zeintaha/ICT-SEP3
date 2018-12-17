@@ -19,14 +19,5 @@ namespace MovieWorld
         public string urlImage { get; set; }
 
 
-        //public string Title { get => title; set => title = value; }
-        //public string Id { get => id; set => id = value; }
-        //public string Category { get => category; set => category = value; }
-        //public string Director { get => director; set => director = value; }
-        //public string Description { get => description; set => description = value; }
-        //public string Duration { get => duration; set => duration = value; }
-        //public string UrlTrailer { get => urlTrailer; set => urlTrailer = value; }
-        //public string UrlFullMovie { get => urlFullMovie; set => urlFullMovie = value; }
-        //public string UrlImage { get => urlImage; set => urlImage = value; }
     }
 }
