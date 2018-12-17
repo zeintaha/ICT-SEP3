@@ -79,7 +79,7 @@ namespace MovieWorld
             horrorMoviesList.Clear();
 
 
-            var client = new RestClient("http://localhost:8443/sep3");
+            var client = new RestClient("https://localhost:8443/sep3");
 
             var request = new RestRequest("movies", Method.GET);
 
