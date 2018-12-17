@@ -45,7 +45,6 @@
             this.buttonCrime = new System.Windows.Forms.Button();
             this.buttonHorror = new System.Windows.Forms.Button();
             this.buttonAdventure = new System.Windows.Forms.Button();
-            this.label_hi = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,7 +76,6 @@
             this.panel1.Controls.Add(this.labellogging);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.label_hi);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -286,17 +284,6 @@
             this.buttonAdventure.UseVisualStyleBackColor = true;
             this.buttonAdventure.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label_hi
-            // 
-            this.label_hi.AutoSize = true;
-            this.label_hi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_hi.ForeColor = System.Drawing.Color.Gold;
-            this.label_hi.Location = new System.Drawing.Point(8, 137);
-            this.label_hi.Name = "label_hi";
-            this.label_hi.Size = new System.Drawing.Size(69, 21);
-            this.label_hi.TabIndex = 12;
-            this.label_hi.Text = "Hi User!";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -472,7 +459,6 @@
         private System.Windows.Forms.PictureBox pictureBoxInfo;
         public System.Windows.Forms.PictureBox pictureBoxLogging;
         private AllGenres allGenres1;
-        public System.Windows.Forms.Label label_hi;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;

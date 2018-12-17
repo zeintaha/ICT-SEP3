@@ -18,7 +18,7 @@ namespace MovieWorld
         {
             InitializeComponent();
            
-            label_hi.Hide();
+            
             about1.Hide();
             allGenres1.Show();
             allGenres1.BringToFront();
