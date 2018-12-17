@@ -118,11 +118,6 @@
       <DependentUpon>Horror.cs</DependentUpon>
     </Compile>
     <Compile Include="Movie.cs" />
-    <Compile Include="moviedbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>moviedbDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MovieDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +134,11 @@
       <DependentUpon>AllGenres.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieList.cs" />
+    <Compile Include="movieworlddbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>movieworlddbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PrintableTicket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,16 +208,16 @@
     <EmbeddedResource Include="Subscribe.resx">
       <DependentUpon>Subscribe.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="moviedbDataSet.xsc">
-      <DependentUpon>moviedbDataSet.xsd</DependentUpon>
+    <None Include="movieworlddbDataSet.xsc">
+      <DependentUpon>movieworlddbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="moviedbDataSet.xsd">
+    <None Include="movieworlddbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>moviedbDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>movieworlddbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="moviedbDataSet.xss">
-      <DependentUpon>moviedbDataSet.xsd</DependentUpon>
+    <None Include="movieworlddbDataSet.xss">
+      <DependentUpon>movieworlddbDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -360,6 +360,9 @@
     <Content Include="Resources\play-4-24 %281%29.png" />
     <Content Include="Resources\play-4-24.png" />
     <Content Include="Resources\play-5-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

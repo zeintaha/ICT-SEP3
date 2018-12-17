@@ -33,5 +33,16 @@ namespace MovieWorld.Properties {
                 return ((string)(this["moviedbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=dbserversep3.database.windows.net;Initial Catalog=movieworlddb;Persis" +
+            "t Security Info=True;User ID=dbserveradmin@dbserversep3;Password=n5*SFSVSSG&1!x")]
+        public string movieworlddbConnectionString {
+            get {
+                return ((string)(this["movieworlddbConnectionString"]));
+            }
+        }
     }
 }
