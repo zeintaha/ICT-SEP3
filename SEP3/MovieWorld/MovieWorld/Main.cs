@@ -192,44 +192,6 @@ namespace MovieWorld
 
         }
 
-        //public void guestlayout()
-        //{
-        //    this.buttonRemoveMovie.Hide();
-        //    this.buttonAddMovie.Hide();
-        //    this.label_hi.Hide();
-        //    this.panel2.Hide();
-        //    this.panel4.Hide();
-        //    panel5.Location = new Point(0, 160);
-        //    this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.login_241;
-        //    this.labellogging.Text = "Login";
-           
-        //}
-        //public void customerlayout()
-        //{
-        //    this.buttonRemoveMovie.Hide();
-        //    this.buttonAddMovie.Hide();
-        //    this.label_hi.Text = "Hi Customer!";
-        //    this.label_hi.Show();
-        //    this.panel2.Hide();
-        //    this.panel4.Hide();
-        //    panel5.Location = new Point(0, 160);
-        //    this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.logout_24;
-        //    this.labellogging.Text = "Logout";
-        //}
-
-        //public void userlayout()
-        //{
-        //    this.buttonRemoveMovie.Show();
-        //    this.buttonAddMovie.Show();
-        //    this.label_hi.Text = "Hi User!";
-        //    this.label_hi.Show();
-        //    this.panel2.Show();
-        //    this.panel4.Show();
-        //    this.pictureBoxLogging.Image = MovieWorld.Properties.Resources.logout_24;
-        //    panel5.Location = new Point(0, 210);
-        //    this.labellogging.Text = "Logout";
-
-        //}
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -241,5 +203,11 @@ namespace MovieWorld
 
         }
 
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            MessageUs messageUs = new MessageUs();
+
+            messageUs.Show();
+        }
     }
 }
