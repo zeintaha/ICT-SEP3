@@ -89,20 +89,20 @@ namespace MovieWorld
 
             foreach (Movie m in MovieList.movies)
             {
-                if (m.UrlImage == UrlImage) {
+                if (m.urlImage == UrlImage) {
 
-                    movieDetail.label_desc.Text = m.Description;
-                    movieDetail.label_title.Text = m.Title;
-                    movieDetail.pictureBox_detailed.ImageLocation = m.UrlImage;
+                    movieDetail.label_desc.Text = m.description;
+                    movieDetail.label_title.Text = m.title;
+                    movieDetail.pictureBox_detailed.ImageLocation = m.urlImage;
                     movieDetail.button_trailer.Click += new EventHandler(button_trailer);
                     movieDetail.button_buy.Click += new EventHandler(button_buy);
                     movieDetail.button_watch.Click += new EventHandler(button_watch);
 
-                    UrlTrailer = m.UrlTrailer;
-                    UrlFullMovie = m.UrlFullMovie;
-                    UrlImagelocation = m.UrlImage;
-                    MovieId = m.Id;
-                    MovieTitle = m.Title;
+                    UrlTrailer = m.urlTrailer;
+                    UrlFullMovie = m.urlFullMovie;
+                    UrlImagelocation = m.urlImage;
+                    MovieId = m.id;
+                    MovieTitle = m.title;
                     
                 }
             }
@@ -118,6 +118,7 @@ namespace MovieWorld
 
             buyTicket.pictureBox_buy.ImageLocation = UrlImagelocation;
             buyTicket.MovieId = this.MovieId;
+            buyTicket.button2.Enabled = false;
             buyTicket.Show();
         }
 

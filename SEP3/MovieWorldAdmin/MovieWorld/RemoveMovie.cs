@@ -79,7 +79,7 @@ namespace MovieWorld
             horrorMoviesList.Clear();
 
 
-            var client = new RestClient("http://localhost:8080/sep3");
+            var client = new RestClient("http://localhost:8443/sep3");
 
             var request = new RestRequest("movies", Method.GET);
 
@@ -229,7 +229,7 @@ namespace MovieWorld
             string title = (comboBoxSelectMovie.SelectedItem as ComboboxItem).Text;
 
 
-            var restClient = new RestClient("http://localhost:8080/sep3");
+            var restClient = new RestClient("https://localhost:8443/sep3");
             var restRequest = new RestRequest("movie/"+ id, Method.DELETE);
 
             var response = restClient.Execute(restRequest);

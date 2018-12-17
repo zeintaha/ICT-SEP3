@@ -6,7 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -91,20 +93,31 @@ namespace MovieWorld
 
         private void button_GoToPayment_Click(object sender, EventArgs e)
         {
-            var restClient = new RestClient("http://localhost:8080/sep3");
-            var restRequest = new RestRequest("ticket", Method.GET);
-            //restRequest.AddParameter("username", textBox_Username.Text);
+            Regex regex = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+            bool isValid = regex.IsMatch(textBox_email.Text.Trim());
+            if (!isValid)
+            {
+                MessageBox.Show("Invalid Email.");
+            }
+            else
+            {
+                var restClient = new RestClient("https://localhost:8443/sep3/ticket");
+                var restRequest = new RestRequest("link", Method.GET);
 
-            var response = restClient.Execute(restRequest);
 
-            System.Diagnostics.Process.Start(response.Content);
+                var response = restClient.Execute(restRequest);
+
+                System.Diagnostics.Process.Start(response.Content);
+                button2.Enabled = true;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (Movie m in MovieList.movies)
             {
-                if (m.Id == this.movieId)
+                if (m.id == this.movieId)
                 {
                     this.movie = m;
 
@@ -115,26 +128,67 @@ namespace MovieWorld
             ticket.firstName = textBox_FirstName.Text;
             ticket.lastName = textBox_LastName.Text;
             ticket.time = comboBox_SelectTime.Text;
-            ticket.movieDate = Convert.ToDateTime(dateTimePicker_SelectDate.Text);
+            ticket.movieDate =dateTimePicker_SelectDate.Text;
+            //ticket.movieDate = Convert.ToDateTime(dateTimePicker_SelectDate.Text);
             ticket.dateOfBirth = dateTimePicker_DOB.Text;
             ticket.movie = this.movie;
-            
-
 
 
             var json = JsonConvert.SerializeObject(ticket);
 
-            var restClient = new RestClient("http://localhost:8080/sep3");
+            var restClient = new RestClient("https://localhost:8443/sep3");
             var restRequest = new RestRequest("ticket", Method.POST);
 
             restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
 
             var response = restClient.Execute(restRequest);
 
+            Ticket Ticketobj = JsonConvert.DeserializeObject<Ticket>(response.Content);
+            //Movie json = JsonConvert.DeserializeObject<Movie>(list);
+
+            PrintableTicket printableTicket = new PrintableTicket();
+
+            printableTicket.FirstName = Ticketobj.firstName;
+            printableTicket.LastName = Ticketobj.lastName;
+            printableTicket.MovieDate = Ticketobj.movieDate;
+            printableTicket.Time = Ticketobj.time;
+            printableTicket.MovieTitle = Ticketobj.movie.title;
+            printableTicket.Category= Ticketobj.movie.category;
+            printableTicket.Director = Ticketobj.movie.director;
+            printableTicket.Description = Ticketobj.movie.description;
+            printableTicket.Duration = Ticketobj.movie.duration;
+
+
             if (response.IsSuccessful)
             {
-                MessageBox.Show("the subscription has been created");
-                Session.IsSession = true;
+
+                //---------------------------------------------------------------------
+                string from = "movieworldvia@gmail.com";
+                string to = textBox_email.Text;
+                string subject = "Ticket";
+                string body = JsonConvert.SerializeObject(printableTicket);
+                string password = "&2Qc8Dj6K689IW";
+
+                try
+                {
+                    MailMessage mail = new MailMessage(from, to, subject, body);
+                    SmtpClient client = new SmtpClient();
+                    client.Port = 587;
+                    client.Host = "smtp.gmail.com";
+                    client.Credentials = new System.Net.NetworkCredential(from, password);
+                    client.EnableSsl = true;
+                    client.Send(mail);
+                    MessageBox.Show("The Ticket has been sent to: " + to);
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+
+                //---------------------------------------------------------------------
+                MessageBox.Show(body);
+                
+                this.Close();
             }
             else
             {

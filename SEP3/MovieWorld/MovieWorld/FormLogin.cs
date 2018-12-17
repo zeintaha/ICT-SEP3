@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -63,10 +64,10 @@ namespace MovieWorld
         {
 
             string user = textBox_Username.Text;
-            string pass = textBox_Password.Text;
+            string pass = MD5Hash(textBox_Password.Text);
 
 
-            var restClient = new RestClient("http://localhost:8080/sep3/login");
+            var restClient = new RestClient("https://localhost:8443/sep3/login");
             var restRequest = new RestRequest("customer", Method.POST);
             restRequest.AddParameter("username", user);
             restRequest.AddParameter("password", pass);
@@ -89,6 +90,26 @@ namespace MovieWorld
             }
         }
 
+        public static string MD5Hash(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+
+            //compute hash from the bytes of text  
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+
+            //get hash result after compute it  
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits  
+                //for each byte  
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
+        }
 
     }
 }

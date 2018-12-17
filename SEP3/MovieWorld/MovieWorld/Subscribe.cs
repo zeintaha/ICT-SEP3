@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -55,14 +56,15 @@ namespace MovieWorld
             if (!isValid)
             {
                 MessageBox.Show("Invalid Email.");
+            } else if(textBox_Password.Text != textBox_ConfirmPassword.Text)
+            {
+                MessageBox.Show("The password doesn't matchs the confirmation");
+
             }
             else {
-                
 
 
-
-
-                var restClient = new RestClient("http://localhost:8080/sep3/customer");
+                var restClient = new RestClient("https://localhost:8443/sep3/customer");
                 var restRequest = new RestRequest("link", Method.GET);
                 restRequest.AddParameter("username", textBox_Username.Text);
 
@@ -75,6 +77,7 @@ namespace MovieWorld
                     comboBox_Subscription.Enabled = false;
                     textBox_Username.Enabled = false;
                     textBox_Password.Enabled = false;
+                    textBox_ConfirmPassword.Enabled = false;
                     textBox_Email.Enabled = false;
 
 
@@ -94,12 +97,12 @@ namespace MovieWorld
             Customer customer = new Customer();
             customer.expiryDate = comboBox_Subscription.Text;
             customer.username = textBox_Username.Text;
-            customer.password = textBox_Password.Text;
+            customer.password = MD5Hash(textBox_Password.Text);
             customer.email = textBox_Email.Text;
 
             var json = JsonConvert.SerializeObject(customer);
 
-            var restClient = new RestClient("http://localhost:8080/sep3");
+            var restClient = new RestClient("https://localhost:8443/sep3");
             var restRequest = new RestRequest("customer", Method.POST);
 
             restRequest.AddParameter("application/json", json, ParameterType.RequestBody);
@@ -124,6 +127,27 @@ namespace MovieWorld
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public static string MD5Hash(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+
+            //compute hash from the bytes of text  
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+
+            //get hash result after compute it  
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits  
+                //for each byte  
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
         }
 
 
