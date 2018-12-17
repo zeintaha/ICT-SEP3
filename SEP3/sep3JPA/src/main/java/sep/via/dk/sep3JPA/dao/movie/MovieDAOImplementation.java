@@ -21,33 +21,33 @@ public class MovieDAOImplementation implements MovieDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public void addMovie(Movie movie) throws RemoteException {
+	public void addMovie(Movie movie)  {
 		entityManager.persist(movie);
 
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Movie> getListOfMovies() throws RemoteException {
+	public List<Movie> getListOfMovies() {
 		String query = "select m from Movie m order by m.title";
 
 		return (List<Movie>) entityManager.createQuery(query).getResultList();
 	}
 
 	@Override
-	public Movie getMovieById(int id) throws RemoteException {
+	public Movie getMovieById(int id)  {
 		return entityManager.find(Movie.class, id);
 
 	}
 
 	@Override
-	public void deletMovie(int movieId) throws RemoteException {
+	public void deletMovie(int movieId)  {
 		entityManager.remove(getMovieById(movieId));
 
 	}
 
 	@Override
-	public void updateMovie(Movie movie) throws RemoteException {
+	public void updateMovie(Movie movie) {
 		Movie selectedMovie = getMovieById(movie.getId());
 		selectedMovie.setTitle(movie.getTitle());
 		selectedMovie.setDirector(movie.getDirector());
@@ -62,7 +62,7 @@ public class MovieDAOImplementation implements MovieDAO {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Movie> getMovieByTitle(String title) throws RemoteException {
+	public List<Movie> getMovieByTitle(String title) {
 		String jpql = "select * from Movie as a WHERE a.title = ?0 ";
 		return (List<Movie>) entityManager.createNativeQuery(jpql).setParameter(0, title).getResultList();
 

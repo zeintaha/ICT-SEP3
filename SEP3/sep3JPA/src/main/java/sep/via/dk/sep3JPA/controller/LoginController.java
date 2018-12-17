@@ -22,7 +22,7 @@ public class LoginController {
 
 	@PostMapping("/customer")
 	public ResponseEntity<Void> getValidateCusotmer(@RequestParam("username") String username,
-			@RequestParam("password") String password)  throws RemoteException{
+			@RequestParam("password") String password) {
 		boolean valid = servic.customerAuthentication(username, password);
 		if (!valid)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
@@ -34,7 +34,7 @@ public class LoginController {
 	
 	@PostMapping("/owner")
 	public ResponseEntity<Void> getValidateOwner(@RequestParam("username") String username,
-			@RequestParam("password") String password) throws RemoteException {
+			@RequestParam("password") String password) {
 		boolean valid = servic.ownerAuthentication(username, password);
 		if (!valid)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);

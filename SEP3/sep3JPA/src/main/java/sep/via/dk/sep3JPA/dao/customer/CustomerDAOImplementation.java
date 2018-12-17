@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import sep.via.dk.sep3JPA.domain.Customer;
 
-// for update data it will be needed in movie 
+
 @Transactional
 @Repository
 
@@ -22,14 +22,14 @@ public class CustomerDAOImplementation implements CustomerDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public Customer getCustomerById(int id)throws RemoteException {
+	public Customer getCustomerById(int id) {
 
 		return entityManager.find(Customer.class, id);
 
 	}
 
 	@Override
-	public boolean customerExist(String username)throws RemoteException {
+	public boolean customerExist(String username) {
 
 		String jpql = "from Customer as a WHERE a.username = ?0 ";
 		int count = entityManager.createQuery(jpql).setParameter(0, username).getResultList().size();
@@ -38,14 +38,14 @@ public class CustomerDAOImplementation implements CustomerDAO {
 	}
 
 	@Override
-	public void addCustomer(Customer customer)throws RemoteException {
+	public void addCustomer(Customer customer) {
 
 		entityManager.persist(customer);
 
 	}
 
 	@Override
-	public Customer getCustomerByUsername(String username)throws RemoteException {
+	public Customer getCustomerByUsername(String username) {
 		Customer customer = (Customer) entityManager
 				.createNativeQuery("select * from Customer as a WHERE a.username = ?0", Customer.class)
 				.setParameter(0, username).getSingleResult();

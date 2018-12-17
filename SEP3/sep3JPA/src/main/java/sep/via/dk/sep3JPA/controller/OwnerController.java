@@ -24,14 +24,14 @@ public class OwnerController {
 	private OwnerService ownerService;
 
 	@GetMapping("/owner/{id}")
-	public ResponseEntity<Owner> getOwnerById(@PathVariable("id") Integer id) throws RemoteException {
+	public ResponseEntity<Owner> getOwnerById(@PathVariable("id") Integer id) {
 		Owner owner = ownerService.getOwnerById(id);
 		return new ResponseEntity<Owner>(owner, HttpStatus.OK);
 
 	}
 
 	@PostMapping("/owner")
-	public ResponseEntity<Void> addOwner(@RequestBody Owner owner) throws RemoteException {
+	public ResponseEntity<Void> addOwner(@RequestBody Owner owner) {
 		boolean exist = ownerService.addOwner(owner);
 		if (!exist)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);

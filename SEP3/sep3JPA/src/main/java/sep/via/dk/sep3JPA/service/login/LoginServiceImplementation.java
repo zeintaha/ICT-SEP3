@@ -15,7 +15,7 @@ public class LoginServiceImplementation implements LoginService {
 	private LoginDao rmiClient;
 
 	@Override
-	public boolean customerAuthentication(String username, String password)throws RemoteException {
+	public boolean customerAuthentication(String username, String password) {
 		 if (rmiClient.customerAuthentication(username,password) && rmiClient.AuthenticateSubscription(username) ){
 		        return true;
 		    } 
@@ -25,7 +25,7 @@ public class LoginServiceImplementation implements LoginService {
 	}
 
 	@Override
-	public boolean ownerAuthentication(String username, String password)throws RemoteException {
+	public boolean ownerAuthentication(String username, String password) {
 
 		 if (rmiClient.ownerAuthentication(username,password) ){
 		        return true;

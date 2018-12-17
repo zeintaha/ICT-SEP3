@@ -29,7 +29,7 @@ public class MovieController {
 	private MovieService movieService;
 
 	@PostMapping("/movie")
-	public ResponseEntity<Void> addMovie(@RequestBody Movie movie) throws RemoteException {
+	public ResponseEntity<Void> addMovie(@RequestBody Movie movie) {
 		Movie createdMovie = MovieFactory.create(movie.getTitle(), movie.getDirector(), movie.getDescription(),
 				movie.getCategory(), movie.getDuration(), movie.getUrlTrailer(), movie.getUrlFullMovie(),
 				movie.getUrlImage());
@@ -42,33 +42,33 @@ public class MovieController {
 	}
 
 	@GetMapping("/movies")
-	public ResponseEntity<List<Movie>> getAllMovies() throws RemoteException {
+	public ResponseEntity<List<Movie>> getAllMovies()  {
 		
 		List<Movie> list = movieService.getListOfMovies();
 		return new ResponseEntity<List<Movie>>(list, HttpStatus.OK);
 	}
 
 	@GetMapping("/movie/{id}")
-	public ResponseEntity<Movie> getMovieById(@PathVariable("id") int id) throws RemoteException {
+	public ResponseEntity<Movie> getMovieById(@PathVariable("id") int id)  {
 
 		Movie movie = movieService.getMovieById(id);
 		return new ResponseEntity<Movie>(movie, HttpStatus.OK);
 	}
 
 	@DeleteMapping("/movie/{id}")
-	public ResponseEntity<Void> deleteMovie(@PathVariable("id") Integer id) throws RemoteException {
+	public ResponseEntity<Void> deleteMovie(@PathVariable("id") Integer id)  {
 		movieService.deletMovie(id);
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 	}
 
 	@PutMapping("/movie")
-	public ResponseEntity<Movie> updateMovie(@RequestBody Movie movie) throws RemoteException {
+	public ResponseEntity<Movie> updateMovie(@RequestBody Movie movie)  {
 		movieService.updateMovie(movie);
 		return new ResponseEntity<Movie>(movie, HttpStatus.OK);
 	}
 	
 	@GetMapping("/movie/title")
-	public ResponseEntity<List<Movie>> getMovieByTitle(@RequestParam("title") String title)  throws RemoteException{
+	public ResponseEntity<List<Movie>> getMovieByTitle(@RequestParam("title") String title)  {
 
 		List<Movie> list = movieService.getMovieByTitle(title);
 		return new ResponseEntity<List<Movie>>(list,HttpStatus.OK);

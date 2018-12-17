@@ -22,7 +22,7 @@ public class CustomerServiceImplementation implements CustomerService {
 	public MyPayment myPayment;
 
 	@Override
-	public boolean addCustomer(Customer customer) throws RemoteException {
+	public boolean addCustomer(Customer customer)  {
 		boolean checkPayment = checkPayment();
 		if(checkPayment!=true) {
 			return false;
@@ -38,18 +38,18 @@ public class CustomerServiceImplementation implements CustomerService {
 	}
 
 	@Override
-	public Customer getCustomerById(int id) throws RemoteException {
+	public Customer getCustomerById(int id) {
 		return rmiClient.getCustomerById(id);
 	}
 
 	@Override
-	public Customer getCustomerByUsername(String username) throws RemoteException {
+	public Customer getCustomerByUsername(String username)  {
 
 		return rmiClient.getCustomerByUsername(username);
 	}
 
 	@Override
-	public boolean setExpiryDate(Customer customer) throws RemoteException {
+	public boolean setExpiryDate(Customer customer) {
 		String expiryDate = customer.getExpiryDate();
 		int expireAfter = 0;
 		if (expiryDate != null) {
@@ -92,7 +92,7 @@ public class CustomerServiceImplementation implements CustomerService {
 	}
 
 	@Override
-	public boolean customerExist(String username) throws RemoteException {
+	public boolean customerExist(String username)  {
 	
 		return rmiClient.customerExist(username);
 	}
