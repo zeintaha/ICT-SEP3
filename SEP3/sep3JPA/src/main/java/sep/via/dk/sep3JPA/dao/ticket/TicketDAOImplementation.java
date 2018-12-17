@@ -21,7 +21,7 @@ public class TicketDAOImplementation implements TicketDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public void addTicket(Ticket ticket)throws RemoteException  {
+	public void addTicket(Ticket ticket)  {
 		ticket.setIssuingDate(LocalDate.now());
 		entityManager.persist(ticket);
 	}

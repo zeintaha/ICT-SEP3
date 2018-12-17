@@ -22,7 +22,7 @@ public class TicketController {
 	private TicketService ticketService;
 
 	@PostMapping("/ticket")
-	public ResponseEntity<Ticket> addTicket(@RequestBody Ticket ticket) throws RemoteException {
+	public ResponseEntity<Ticket> addTicket(@RequestBody Ticket ticket)  {
 		
 		
 		boolean valid = ticketService.checkPayment();
@@ -34,7 +34,7 @@ public class TicketController {
 	}
 
 	@GetMapping("/ticket/link")
-	public ResponseEntity<String> getPaymentLink() throws RemoteException {
+	public ResponseEntity<String> getPaymentLink()  {
 
 		String link = ticketService.getPaymentLink();
 
@@ -43,7 +43,7 @@ public class TicketController {
 	
 	
 	@GetMapping("/ticket/link/thanks")
-    public ResponseEntity<String> getPaymentThanks() throws RemoteException {
+    public ResponseEntity<String> getPaymentThanks()  {
 
         String thankslink = "Thank you, you have paied";
 

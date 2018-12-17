@@ -4,10 +4,10 @@ import java.rmi.RemoteException;
 
 public interface LoginDao {
 
-	boolean customerAuthentication(String username, String password)throws RemoteException;
+	boolean customerAuthentication(String username, String password);
 
-	boolean AuthenticateSubscription(String username)throws RemoteException;
+	boolean AuthenticateSubscription(String username);
 
-	boolean ownerAuthentication(String username, String password)throws RemoteException;
+	boolean ownerAuthentication(String username, String password);
 
 }

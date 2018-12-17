@@ -6,8 +6,8 @@ import sep.via.dk.sep3JPA.domain.Owner;
 
 public interface OwnerService {
 
-	boolean addOwner(Owner owner) throws RemoteException;
+	boolean addOwner(Owner owner);
 
-	Owner getOwnerById(int id) throws RemoteException;
+	Owner getOwnerById(int id) ;
 
 }

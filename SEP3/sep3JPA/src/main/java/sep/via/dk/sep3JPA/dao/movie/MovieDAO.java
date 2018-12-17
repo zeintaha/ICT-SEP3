@@ -6,15 +6,15 @@ import java.util.List;
 import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 public interface MovieDAO {
-	void addMovie(Movie movie)throws RemoteException;
+	void addMovie(Movie movie);
 
-	List<Movie> getListOfMovies()throws RemoteException;
+	List<Movie> getListOfMovies();
 
-	Movie getMovieById(int id)throws RemoteException;
+	Movie getMovieById(int id);
 
-	void deletMovie(int movieId)throws RemoteException;
+	void deletMovie(int movieId);
 
-	void updateMovie(Movie movie)throws RemoteException;
+	void updateMovie(Movie movie);
 
-	public List<Movie> getMovieByTitle(String titleS)throws RemoteException;
+	public List<Movie> getMovieByTitle(String titleS);
 }

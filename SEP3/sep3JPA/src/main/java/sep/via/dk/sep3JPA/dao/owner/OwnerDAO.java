@@ -5,10 +5,10 @@ import java.rmi.RemoteException;
 import sep.via.dk.sep3JPA.domain.Owner;
 
 public interface OwnerDAO{
-	boolean ownerExist(String username)throws RemoteException;
+	boolean ownerExist(String username);
 
-	void addOwner(Owner owner)throws RemoteException;
+	void addOwner(Owner owner);
 
-	Owner getOwnerById(int id)throws RemoteException;
+	Owner getOwnerById(int id);
 
 }

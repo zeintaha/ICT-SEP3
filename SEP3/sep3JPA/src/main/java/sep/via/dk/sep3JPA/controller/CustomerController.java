@@ -25,14 +25,14 @@ public class CustomerController {
 	private CustomerService customerService;
 
 	@GetMapping("/customer/{id}")
-	public ResponseEntity<Customer> getCustomerById(@PathVariable("id") Integer id) throws RemoteException {
+	public ResponseEntity<Customer> getCustomerById(@PathVariable("id") Integer id) {
 		Customer customer = customerService.getCustomerById(id);
 		return new ResponseEntity<Customer>(customer, HttpStatus.OK);
 
 	}
 
 	@PostMapping("/customer")
-	public ResponseEntity<Void> addCustomer(@RequestBody Customer customer) throws RemoteException {
+	public ResponseEntity<Void> addCustomer(@RequestBody Customer customer)  {
 		boolean exist = customerService.setExpiryDate(customer);
 		if (!exist)
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
@@ -44,7 +44,7 @@ public class CustomerController {
 
 	@GetMapping("/customer/username")
 	public ResponseEntity<Customer> getCustomerByUsername(@RequestParam("username") String username)
-			throws RemoteException {
+			 {
 
 		Customer customer = customerService.getCustomerByUsername(username);
 
@@ -52,7 +52,7 @@ public class CustomerController {
 	}
 
 	@GetMapping("/customer/link")
-	public ResponseEntity<String> getPaymentLink(@RequestParam("username") String username) throws RemoteException {
+	public ResponseEntity<String> getPaymentLink(@RequestParam("username") String username){
 		boolean customerExist = customerService.customerExist(username);
 		if(customerExist) {
 			String text = "customer is already there ";

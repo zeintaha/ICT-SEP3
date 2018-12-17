@@ -15,7 +15,7 @@ public class OwnerServiceImplementation implements OwnerService {
 	private OwnerDAO rmiClient;
 
 	@Override
-	public boolean addOwner(Owner owner) throws RemoteException{
+	public boolean addOwner(Owner owner) {
 		if (rmiClient.ownerExist(owner.getUsername())) {
 			return false;
 		} else {
@@ -26,7 +26,7 @@ public class OwnerServiceImplementation implements OwnerService {
 	}
 
 	@Override
-	public Owner getOwnerById(int id) throws RemoteException {
+	public Owner getOwnerById(int id)  {
 		return rmiClient.getOwnerById(id);
 	}
 

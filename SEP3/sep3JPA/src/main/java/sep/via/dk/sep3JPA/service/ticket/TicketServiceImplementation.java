@@ -19,7 +19,7 @@ public class TicketServiceImplementation implements TicketService {
 	
 
 	@Override
-	public boolean addTicket(Ticket ticket)throws RemoteException {
+	public boolean addTicket(Ticket ticket) {
 		
 		rmiClient.addTicket(ticket);
 		return true;

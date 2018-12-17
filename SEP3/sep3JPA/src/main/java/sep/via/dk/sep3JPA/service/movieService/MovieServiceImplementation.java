@@ -20,37 +20,37 @@ public class MovieServiceImplementation implements MovieService {
 	}
 
 	@Override
-	public void AddMovie(Movie movie) throws RemoteException {
+	public void AddMovie(Movie movie)  {
 		rmiClient.addMovie(movie);
 
 	}
 
 	@Override
-	public List<Movie> getListOfMovies() throws RemoteException {
+	public List<Movie> getListOfMovies()  {
 
 		return rmiClient.getListOfMovies();
 
 	}
 
 	@Override
-	public Movie getMovieById(int id) throws RemoteException {
+	public Movie getMovieById(int id)  {
 		return rmiClient.getMovieById(id);
 	}
 
 	@Override
-	public void deletMovie(int movieId) throws RemoteException {
+	public void deletMovie(int movieId)  {
 		rmiClient.deletMovie(movieId);
 
 	}
 
 	@Override
-	public void updateMovie(Movie movie) throws RemoteException {
+	public void updateMovie(Movie movie)  {
 		rmiClient.updateMovie(movie);
 
 	}
 
 	@Override
-	public List<Movie> getMovieByTitle(String title) throws RemoteException {
+	public List<Movie> getMovieByTitle(String title)  {
 
 		return rmiClient.getMovieByTitle(title);
 	}
