@@ -1,8 +1,5 @@
 package sep.via.dk.sep3JPA.dao.customer;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-
 import sep.via.dk.sep3JPA.domain.Customer;
 
 public interface CustomerDAO  {

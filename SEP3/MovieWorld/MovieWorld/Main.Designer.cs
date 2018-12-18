@@ -30,25 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxLogging = new System.Windows.Forms.PictureBox();
-            this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPowerOff = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labellogging = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.buttonAllGenres = new System.Windows.Forms.Button();
-            this.buttonDrama = new System.Windows.Forms.Button();
             this.MenuPanel = new System.Windows.Forms.Panel();
-            this.buttonComedy = new System.Windows.Forms.Button();
-            this.buttonAction = new System.Windows.Forms.Button();
-            this.buttonCrime = new System.Windows.Forms.Button();
-            this.buttonHorror = new System.Windows.Forms.Button();
-            this.buttonAdventure = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.about1 = new MovieWorld.About();
             this.horror1 = new MovieWorld.Horror();
             this.drama1 = new MovieWorld.Drama();
@@ -57,18 +46,34 @@
             this.action1 = new MovieWorld.Action();
             this.adventure1 = new MovieWorld.Adventure();
             this.allGenres1 = new MovieWorld.AllGenres();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogging = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPowerOff = new System.Windows.Forms.PictureBox();
+            this.buttonAllGenres = new System.Windows.Forms.Button();
+            this.buttonDrama = new System.Windows.Forms.Button();
+            this.buttonComedy = new System.Windows.Forms.Button();
+            this.buttonAction = new System.Windows.Forms.Button();
+            this.buttonCrime = new System.Windows.Forms.Button();
+            this.buttonHorror = new System.Windows.Forms.Button();
+            this.buttonAdventure = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogging)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerOff)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBoxLogging);
             this.panel1.Controls.Add(this.pictureBoxInfo);
             this.panel1.Controls.Add(this.pictureBoxPowerOff);
@@ -86,39 +91,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBoxLogging
-            // 
-            this.pictureBoxLogging.Image = global::MovieWorld.Properties.Resources.login_241;
-            this.pictureBoxLogging.Location = new System.Drawing.Point(93, 582);
-            this.pictureBoxLogging.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxLogging.Name = "pictureBoxLogging";
-            this.pictureBoxLogging.Size = new System.Drawing.Size(39, 38);
-            this.pictureBoxLogging.TabIndex = 11;
-            this.pictureBoxLogging.TabStop = false;
-            this.pictureBoxLogging.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBoxInfo
-            // 
-            this.pictureBoxInfo.Image = global::MovieWorld.Properties.Resources.info_2_241;
-            this.pictureBoxInfo.Location = new System.Drawing.Point(14, 582);
-            this.pictureBoxInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxInfo.Name = "pictureBoxInfo";
-            this.pictureBoxInfo.Size = new System.Drawing.Size(39, 38);
-            this.pictureBoxInfo.TabIndex = 10;
-            this.pictureBoxInfo.TabStop = false;
-            this.pictureBoxInfo.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBoxPowerOff
-            // 
-            this.pictureBoxPowerOff.Image = global::MovieWorld.Properties.Resources.power_241;
-            this.pictureBoxPowerOff.Location = new System.Drawing.Point(174, 582);
-            this.pictureBoxPowerOff.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxPowerOff.Name = "pictureBoxPowerOff";
-            this.pictureBoxPowerOff.Size = new System.Drawing.Size(39, 38);
-            this.pictureBoxPowerOff.TabIndex = 2;
-            this.pictureBoxPowerOff.TabStop = false;
-            this.pictureBoxPowerOff.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -131,7 +103,7 @@
             // labellogging
             // 
             this.labellogging.AutoSize = true;
-            this.labellogging.Location = new System.Drawing.Point(61, 619);
+            this.labellogging.Location = new System.Drawing.Point(58, 619);
             this.labellogging.Name = "labellogging";
             this.labellogging.Size = new System.Drawing.Size(91, 17);
             this.labellogging.TabIndex = 19;
@@ -162,6 +134,167 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(228, 285);
             this.panel5.TabIndex = 2;
+            // 
+            // MenuPanel
+            // 
+            this.MenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.MenuPanel.Location = new System.Drawing.Point(1, 9);
+            this.MenuPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(5, 39);
+            this.MenuPanel.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(225, 128);
+            this.panel3.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(16, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Bringing the world inside!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(56, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Movie World";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // about1
+            // 
+            this.about1.BackColor = System.Drawing.Color.White;
+            this.about1.Location = new System.Drawing.Point(226, 3);
+            this.about1.Name = "about1";
+            this.about1.Size = new System.Drawing.Size(1067, 649);
+            this.about1.TabIndex = 8;
+            // 
+            // horror1
+            // 
+            this.horror1.AutoScroll = true;
+            this.horror1.BackColor = System.Drawing.SystemColors.Control;
+            this.horror1.Location = new System.Drawing.Point(226, 25);
+            this.horror1.Name = "horror1";
+            this.horror1.Size = new System.Drawing.Size(1067, 627);
+            this.horror1.TabIndex = 7;
+            // 
+            // drama1
+            // 
+            this.drama1.AutoScroll = true;
+            this.drama1.BackColor = System.Drawing.SystemColors.Control;
+            this.drama1.Location = new System.Drawing.Point(226, 25);
+            this.drama1.Name = "drama1";
+            this.drama1.Size = new System.Drawing.Size(1067, 627);
+            this.drama1.TabIndex = 6;
+            // 
+            // crime1
+            // 
+            this.crime1.AutoScroll = true;
+            this.crime1.BackColor = System.Drawing.SystemColors.Control;
+            this.crime1.Location = new System.Drawing.Point(226, 25);
+            this.crime1.Name = "crime1";
+            this.crime1.Size = new System.Drawing.Size(1067, 627);
+            this.crime1.TabIndex = 5;
+            // 
+            // comedy1
+            // 
+            this.comedy1.AutoScroll = true;
+            this.comedy1.BackColor = System.Drawing.SystemColors.Control;
+            this.comedy1.Location = new System.Drawing.Point(226, 25);
+            this.comedy1.Name = "comedy1";
+            this.comedy1.Size = new System.Drawing.Size(1067, 627);
+            this.comedy1.TabIndex = 4;
+            // 
+            // action1
+            // 
+            this.action1.AutoScroll = true;
+            this.action1.BackColor = System.Drawing.SystemColors.Control;
+            this.action1.Location = new System.Drawing.Point(226, 25);
+            this.action1.Name = "action1";
+            this.action1.Size = new System.Drawing.Size(1067, 627);
+            this.action1.TabIndex = 3;
+            // 
+            // adventure1
+            // 
+            this.adventure1.AutoScroll = true;
+            this.adventure1.BackColor = System.Drawing.SystemColors.Control;
+            this.adventure1.Location = new System.Drawing.Point(226, 25);
+            this.adventure1.Name = "adventure1";
+            this.adventure1.Size = new System.Drawing.Size(1067, 627);
+            this.adventure1.TabIndex = 2;
+            // 
+            // allGenres1
+            // 
+            this.allGenres1.AutoScroll = true;
+            this.allGenres1.BackColor = System.Drawing.SystemColors.Control;
+            this.allGenres1.Location = new System.Drawing.Point(226, 25);
+            this.allGenres1.Name = "allGenres1";
+            this.allGenres1.Size = new System.Drawing.Size(1067, 627);
+            this.allGenres1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MovieWorld.Properties.Resources.message_2_24;
+            this.pictureBox2.Location = new System.Drawing.Point(90, 146);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 38);
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // pictureBoxLogging
+            // 
+            this.pictureBoxLogging.Image = global::MovieWorld.Properties.Resources.login_241;
+            this.pictureBoxLogging.Location = new System.Drawing.Point(90, 582);
+            this.pictureBoxLogging.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxLogging.Name = "pictureBoxLogging";
+            this.pictureBoxLogging.Size = new System.Drawing.Size(39, 38);
+            this.pictureBoxLogging.TabIndex = 11;
+            this.pictureBoxLogging.TabStop = false;
+            this.pictureBoxLogging.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBoxInfo
+            // 
+            this.pictureBoxInfo.Image = global::MovieWorld.Properties.Resources.info_2_241;
+            this.pictureBoxInfo.Location = new System.Drawing.Point(14, 582);
+            this.pictureBoxInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxInfo.Name = "pictureBoxInfo";
+            this.pictureBoxInfo.Size = new System.Drawing.Size(39, 38);
+            this.pictureBoxInfo.TabIndex = 10;
+            this.pictureBoxInfo.TabStop = false;
+            this.pictureBoxInfo.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBoxPowerOff
+            // 
+            this.pictureBoxPowerOff.Image = global::MovieWorld.Properties.Resources.power_241;
+            this.pictureBoxPowerOff.Location = new System.Drawing.Point(174, 582);
+            this.pictureBoxPowerOff.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxPowerOff.Name = "pictureBoxPowerOff";
+            this.pictureBoxPowerOff.Size = new System.Drawing.Size(39, 38);
+            this.pictureBoxPowerOff.TabIndex = 2;
+            this.pictureBoxPowerOff.TabStop = false;
+            this.pictureBoxPowerOff.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // buttonAllGenres
             // 
@@ -194,15 +327,6 @@
             this.buttonDrama.Text = "Drama";
             this.buttonDrama.UseVisualStyleBackColor = true;
             this.buttonDrama.Click += new System.EventHandler(this.button6_Click_1);
-            // 
-            // MenuPanel
-            // 
-            this.MenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.MenuPanel.Location = new System.Drawing.Point(1, 9);
-            this.MenuPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(5, 39);
-            this.MenuPanel.TabIndex = 2;
             // 
             // buttonComedy
             // 
@@ -284,43 +408,6 @@
             this.buttonAdventure.UseVisualStyleBackColor = true;
             this.buttonAdventure.Click += new System.EventHandler(this.button3_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(1, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(225, 128);
-            this.panel3.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Bringing the world inside!";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Movie World";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MovieWorld.Properties.Resources.popcorn_576599_960_7201;
@@ -332,76 +419,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // about1
+            // label4
             // 
-            this.about1.BackColor = System.Drawing.Color.White;
-            this.about1.Location = new System.Drawing.Point(226, 3);
-            this.about1.Name = "about1";
-            this.about1.Size = new System.Drawing.Size(1067, 649);
-            this.about1.TabIndex = 8;
-            // 
-            // horror1
-            // 
-            this.horror1.AutoScroll = true;
-            this.horror1.BackColor = System.Drawing.SystemColors.Control;
-            this.horror1.Location = new System.Drawing.Point(226, 25);
-            this.horror1.Name = "horror1";
-            this.horror1.Size = new System.Drawing.Size(1067, 627);
-            this.horror1.TabIndex = 7;
-            // 
-            // drama1
-            // 
-            this.drama1.AutoScroll = true;
-            this.drama1.BackColor = System.Drawing.SystemColors.Control;
-            this.drama1.Location = new System.Drawing.Point(226, 25);
-            this.drama1.Name = "drama1";
-            this.drama1.Size = new System.Drawing.Size(1067, 627);
-            this.drama1.TabIndex = 6;
-            // 
-            // crime1
-            // 
-            this.crime1.AutoScroll = true;
-            this.crime1.BackColor = System.Drawing.SystemColors.Control;
-            this.crime1.Location = new System.Drawing.Point(226, 25);
-            this.crime1.Name = "crime1";
-            this.crime1.Size = new System.Drawing.Size(1067, 627);
-            this.crime1.TabIndex = 5;
-            // 
-            // comedy1
-            // 
-            this.comedy1.AutoScroll = true;
-            this.comedy1.BackColor = System.Drawing.SystemColors.Control;
-            this.comedy1.Location = new System.Drawing.Point(226, 25);
-            this.comedy1.Name = "comedy1";
-            this.comedy1.Size = new System.Drawing.Size(1067, 627);
-            this.comedy1.TabIndex = 4;
-            // 
-            // action1
-            // 
-            this.action1.AutoScroll = true;
-            this.action1.BackColor = System.Drawing.SystemColors.Control;
-            this.action1.Location = new System.Drawing.Point(226, 25);
-            this.action1.Name = "action1";
-            this.action1.Size = new System.Drawing.Size(1067, 627);
-            this.action1.TabIndex = 3;
-            // 
-            // adventure1
-            // 
-            this.adventure1.AutoScroll = true;
-            this.adventure1.BackColor = System.Drawing.SystemColors.Control;
-            this.adventure1.Location = new System.Drawing.Point(226, 25);
-            this.adventure1.Name = "adventure1";
-            this.adventure1.Size = new System.Drawing.Size(1067, 627);
-            this.adventure1.TabIndex = 2;
-            // 
-            // allGenres1
-            // 
-            this.allGenres1.AutoScroll = true;
-            this.allGenres1.BackColor = System.Drawing.SystemColors.Control;
-            this.allGenres1.Location = new System.Drawing.Point(226, 25);
-            this.allGenres1.Name = "allGenres1";
-            this.allGenres1.Size = new System.Drawing.Size(1067, 627);
-            this.allGenres1.TabIndex = 1;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(64, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Message us";
             // 
             // Main
             // 
@@ -429,12 +454,13 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogging)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerOff)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogging)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerOff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -470,6 +496,8 @@
         private Drama drama1;
         private Horror horror1;
         private About about1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.dao.owner;
 
-import java.rmi.RemoteException;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 

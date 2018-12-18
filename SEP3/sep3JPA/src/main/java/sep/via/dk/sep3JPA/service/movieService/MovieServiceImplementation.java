@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.service.movieService;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import sep.via.dk.sep3JPA.domain.movie.Movie;
 public class MovieServiceImplementation implements MovieService {
 
 	@Autowired
-	private MovieDAO rmiClient;
+	private MovieDAO movieDAO;
 
 	public MovieServiceImplementation() {
 
@@ -21,38 +20,38 @@ public class MovieServiceImplementation implements MovieService {
 
 	@Override
 	public void AddMovie(Movie movie)  {
-		rmiClient.addMovie(movie);
+		movieDAO.addMovie(movie);
 
 	}
 
 	@Override
 	public List<Movie> getListOfMovies()  {
 
-		return rmiClient.getListOfMovies();
+		return movieDAO.getListOfMovies();
 
 	}
 
 	@Override
 	public Movie getMovieById(int id)  {
-		return rmiClient.getMovieById(id);
+		return movieDAO.getMovieById(id);
 	}
 
 	@Override
 	public void deletMovie(int movieId)  {
-		rmiClient.deletMovie(movieId);
+		movieDAO.deletMovie(movieId);
 
 	}
 
 	@Override
 	public void updateMovie(Movie movie)  {
-		rmiClient.updateMovie(movie);
+		movieDAO.updateMovie(movie);
 
 	}
 
 	@Override
 	public List<Movie> getMovieByTitle(String title)  {
 
-		return rmiClient.getMovieByTitle(title);
+		return movieDAO.getMovieByTitle(title);
 	}
 
 }

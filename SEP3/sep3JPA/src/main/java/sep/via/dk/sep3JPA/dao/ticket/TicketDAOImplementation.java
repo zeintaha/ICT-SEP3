@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.dao.ticket;
 
-import java.rmi.RemoteException;
 import java.time.LocalDate;
 
 import javax.persistence.EntityManager;

@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.controller;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

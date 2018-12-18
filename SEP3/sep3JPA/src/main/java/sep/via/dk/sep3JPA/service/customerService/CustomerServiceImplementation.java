@@ -1,13 +1,11 @@
 package sep.via.dk.sep3JPA.service.customerService;
 
-import java.rmi.RemoteException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ch.qos.logback.core.net.server.Client;
 import sep.via.dk.sep3JPA.dao.customer.CustomerDAO;
 import sep.via.dk.sep3JPA.domain.Customer;
 import sep.via.dk.sep3JPA.payment.MyPayment;
@@ -16,7 +14,7 @@ import sep.via.dk.sep3JPA.payment.MyPayment;
 public class CustomerServiceImplementation implements CustomerService {
 
 	@Autowired
-	public CustomerDAO rmiClient;
+	public CustomerDAO customerDAO;
 
 	@Autowired
 	public MyPayment myPayment;
@@ -28,10 +26,10 @@ public class CustomerServiceImplementation implements CustomerService {
 			return false;
 		}
 			
-		if (rmiClient.customerExist(customer.getUsername())&& (checkPayment==true) ) {
+		if (customerDAO.customerExist(customer.getUsername())&& (checkPayment==true) ) {
 			return false;
 		} else {
-			rmiClient.addCustomer(customer);
+			customerDAO.addCustomer(customer);
 			return true;
 		}
 
@@ -39,13 +37,13 @@ public class CustomerServiceImplementation implements CustomerService {
 
 	@Override
 	public Customer getCustomerById(int id) {
-		return rmiClient.getCustomerById(id);
+		return customerDAO.getCustomerById(id);
 	}
 
 	@Override
 	public Customer getCustomerByUsername(String username)  {
 
-		return rmiClient.getCustomerByUsername(username);
+		return customerDAO.getCustomerByUsername(username);
 	}
 
 	@Override
@@ -94,7 +92,7 @@ public class CustomerServiceImplementation implements CustomerService {
 	@Override
 	public boolean customerExist(String username)  {
 	
-		return rmiClient.customerExist(username);
+		return customerDAO.customerExist(username);
 	}
 
 	@Override

@@ -453,6 +453,16 @@ namespace MovieWorld.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap message_2_24 {
+            get {
+                object obj = ResourceManager.GetObject("message-2-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nadeem {
             get {
                 object obj = ResourceManager.GetObject("Nadeem", resourceCulture);
