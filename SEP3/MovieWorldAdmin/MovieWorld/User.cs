@@ -66,6 +66,14 @@ namespace MovieWorld
                 removeMovie.Dock = DockStyle.Fill;
                 removeMovie.Show();
             }
+            else if (tabControl1.SelectedTab == tabControl1.TabPages["tabPage3"])
+            {
+                ReadMessage readMessage = new ReadMessage();
+                readMessage.TopLevel = false;
+                tabPage3.Controls.Add(readMessage);
+                readMessage.Dock = DockStyle.Fill;
+                readMessage.Show();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -44,8 +44,6 @@ namespace MovieWorld
         public void CreateLayout()
         {
 
-            //Movie movie1 = new Movie();
-
 
 
             var client = new RestClient("https://localhost:8443/sep3");
