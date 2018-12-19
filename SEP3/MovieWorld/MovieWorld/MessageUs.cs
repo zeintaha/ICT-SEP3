@@ -73,7 +73,7 @@ namespace MovieWorld
                 }
             }
 
-            //runclient();
+            runclient();
             //----------------------------------------------------------
 
 
@@ -130,7 +130,7 @@ namespace MovieWorld
             byte[] rcvBytes = new byte[rcvLen];
             clientSocket.Receive(rcvBytes);
             String rcv = System.Text.Encoding.ASCII.GetString(rcvBytes);
-
+            MessageBox.Show(rcv);
             Console.WriteLine("Client received: " + rcv);
 
             clientSocket.Close();
