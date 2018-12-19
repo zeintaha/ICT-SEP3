@@ -12,34 +12,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import sep.via.dk.sep3JPA.domain.FeedBack;
-import sep.via.dk.sep3JPA.service.feedBackServic.FeedBackService;
+import sep.via.dk.sep3JPA.domain.Message;
+import sep.via.dk.sep3JPA.service.messageServic.MessageService;
+
 @RestController
 @RequestMapping("/sep3")
-public class FeedBackController {
-	
-	@Autowired
-	 FeedBackService  FeedBackService;
+public class MessageController {
 
-	
-	@PostMapping("/feedBack")
-	public ResponseEntity<Void> addFeedBack(@RequestBody FeedBack feedBack) {
-		
-		FeedBackService.addFeedBack(feedBack);
-		
+	@Autowired
+	MessageService MessageService;
+
+	@PostMapping("/message")
+	public ResponseEntity<Void> addFeedBack(@RequestBody Message feedBack) {
+
+		MessageService.addMessage(feedBack);
+
 		HttpHeaders headers = new HttpHeaders();
 
 		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
-}
-	@GetMapping("/feedBack")
-	public ResponseEntity<List<FeedBack>> getAllMovies()  {
-		
-		List<FeedBack> list = FeedBackService.getAllFeedBack();
-		return new ResponseEntity<List<FeedBack>>(list, HttpStatus.OK);
-		
-		
-		
-		
-		
+	}
+
+	@GetMapping("/message")
+	public ResponseEntity<List<Message>> getAllMovies() {
+
+		List<Message> list = MessageService.getAllMessage();
+		return new ResponseEntity<List<Message>>(list, HttpStatus.OK);
+
 	}
 }

@@ -1,4 +1,4 @@
-package sep.via.dk.sep3JPA.dao.feedBack;
+package sep.via.dk.sep3JPA.dao.message;
 
 import java.util.List;
 
@@ -14,19 +14,21 @@ import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 @Transactional
 @Repository
-public class FeedBackImplementation implements FeedBackDAO {
+public class MessageImplementation implements MessageDAO {
 	@PersistenceContext
 	@Autowired
 	public EntityManager entityManager;
 
-	@Override
-	public void addFeedBack(Message feedBack) {
-		entityManager.persist(feedBack);
+	
 
+	@Override
+	public void addMessage(Message feedBack) {
+		entityManager.persist(feedBack);
+		
 	}
 
 	@Override
-	public List<Message> getAllFeedBack() {
+	public List<Message> getAllMessages() {
 		String query = "select m from FeedBack m order by m.username";
 
 		return (List<Message>) entityManager.createQuery(query).getResultList();
