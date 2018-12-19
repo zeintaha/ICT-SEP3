@@ -29,7 +29,14 @@ public class FeedBack implements Serializable {
 
 	public FeedBack() {
 
+	}     
+	
+
+	@Override
+	public String toString() {
+		return "FeedBack [id=" + id + ", name=" + name + ", body=" + body + ", email=" + email + "]";
 	}
+
 
 	public FeedBack(Integer id, String name, String body, String email) {
 		super();
