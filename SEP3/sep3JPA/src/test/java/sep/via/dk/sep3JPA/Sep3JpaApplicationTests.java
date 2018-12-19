@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureMockRestServiceServer;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -28,7 +29,7 @@ public class Sep3JpaApplicationTests {
 	   
 	  @Test
 	    public void addMovie() throws Exception {
-	        String mockMovieJson = "{\"title\":\"Test movie\",\"description\":\"A test description.\",\"director\":\"fadi\",\"duration\":\"duration test\"}";
+	        String mockMovieJson = "{\"title\":\"Test movie\",\"description\":\"A test description.\",\"director\":\"fadi\",\"duration\":\"duration test\",\"urlTrailer\":\"urlTrailer test\",\"urlFullMovie\":\"urlFullMovie test\",\"urlImage\":\"urlImage test\",\"category\":\"category test\"}";
 
 	        //Create a post request with an accept header for application\json
 	        RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -42,7 +43,12 @@ public class Sep3JpaApplicationTests {
 
 	        //Assert that the return status is CREATED
 	        assertEquals(HttpStatus.CREATED.value(), response.getStatus());
-
-	      
+	        
+	        assertEquals("https://localhost/movie/1",
+	                response.getHeader(HttpHeaders.LOCATION));
+      
 	    }
+	  
+	  
+	  
 }

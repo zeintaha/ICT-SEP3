@@ -37,7 +37,7 @@ public class Server {
 			String received = new String(receivedBytes, 0, len);
 			
 			
-			os.writeUTF("hi from lukas");
+			os.writeUTF(received);
 			System.out.println("Server received: " + received);
 
 			// Sending
