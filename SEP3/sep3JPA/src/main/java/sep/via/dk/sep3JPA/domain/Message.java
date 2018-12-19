@@ -15,7 +15,7 @@ public class Message implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "feedBack_id")
+	@Column(name = "message_id")
 	private Integer id;
 
 	@Column(name = "name")
