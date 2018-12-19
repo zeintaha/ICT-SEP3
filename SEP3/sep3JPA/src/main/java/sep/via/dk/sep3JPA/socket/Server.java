@@ -39,11 +39,11 @@ public class Server {
 			String received = new String(receivedBytes, 0, len);
 			
 			
-			os.writeUTF(received);
+			
 			System.out.println("Server received: " + received);
 
 			// Sending
-			String toSend = "Echo: " + received;
+			String toSend = "Dear " + received ;
 			byte[] toSendBytes = toSend.getBytes();
 			int toSendLen = toSendBytes.length;
 			byte[] toSendLenBytes = new byte[4];
