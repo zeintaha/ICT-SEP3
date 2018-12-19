@@ -8,19 +8,13 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-import sep.via.dk.sep3JPA.dao.MessageDAO;
-
-//@Component
 public class Server {
 	private ServerSocket serverSocket = null;
 	private Socket socket = null;
 	private ObjectInputStream inStream = null;
 
-//	@Autowired
-//	MessageDAO messageDAO;
+
 
 	public Server() {
 
@@ -28,7 +22,7 @@ public class Server {
 
 	public void communicate() {
 		try {
-			ServerSocket serverSocket = new ServerSocket(4343, 10);
+			ServerSocket serverSocket = new ServerSocket(8443, 10);
 			Socket socket = serverSocket.accept();
 			InputStream is = socket.getInputStream();
 			OutputStream os = socket.getOutputStream();
@@ -41,8 +35,8 @@ public class Server {
 			byte[] receivedBytes = new byte[len];
 			is.read(receivedBytes, 0, len);
 			String received = new String(receivedBytes, 0, len);
-//			Message message = new Message(received);
-//			messageDAO.addMessage(message);
+			Message message = new Message(received);
+			
 			System.out.println("Server received: " + received);
 
 			// Sending
