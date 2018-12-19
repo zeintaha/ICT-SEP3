@@ -146,21 +146,22 @@ namespace MovieWorld
             Ticket Ticketobj = JsonConvert.DeserializeObject<Ticket>(response.Content);
             //Movie json = JsonConvert.DeserializeObject<Movie>(list);
 
-            PrintableTicket printableTicket = new PrintableTicket();
 
-            printableTicket.FirstName = Ticketobj.firstName;
-            printableTicket.LastName = Ticketobj.lastName;
-            printableTicket.MovieDate = Ticketobj.movieDate;
-            printableTicket.Time = Ticketobj.time;
-            printableTicket.MovieTitle = Ticketobj.movie.title;
-            printableTicket.Category= Ticketobj.movie.category;
-            printableTicket.Director = Ticketobj.movie.director;
-            printableTicket.Description = Ticketobj.movie.description;
-            printableTicket.Duration = Ticketobj.movie.duration;
 
 
             if (response.IsSuccessful)
             {
+                PrintableTicket printableTicket = new PrintableTicket();
+
+                printableTicket.FirstName = Ticketobj.firstName;
+                printableTicket.LastName = Ticketobj.lastName;
+                printableTicket.MovieDate = Ticketobj.movieDate;
+                printableTicket.Time = Ticketobj.time;
+                printableTicket.MovieTitle = Ticketobj.movie.title;
+                printableTicket.Category = Ticketobj.movie.category;
+                printableTicket.Director = Ticketobj.movie.director;
+                printableTicket.Description = Ticketobj.movie.description;
+                printableTicket.Duration = Ticketobj.movie.duration;
 
                 //---------------------------------------------------------------------
                 string from = "movieworldvia@gmail.com";
