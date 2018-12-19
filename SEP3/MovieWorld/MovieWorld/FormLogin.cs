@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -82,7 +84,8 @@ namespace MovieWorld
 
                 this.Hide();
 
-                MessageBox.Show("Hi "+ user + " you logged in successfully");
+
+                runSocketclient();
             }
             else
             {
@@ -109,6 +112,35 @@ namespace MovieWorld
             }
 
             return strBuilder.ToString();
+        }
+
+        private void runSocketclient()
+        {
+            string toSend = textBox_Username.Text;
+
+            IPEndPoint serverAddress = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 4343);
+
+            Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            clientSocket.Connect(serverAddress);
+
+            // Sending
+            int toSendLen = System.Text.Encoding.ASCII.GetByteCount(toSend);
+            byte[] toSendBytes = System.Text.Encoding.ASCII.GetBytes(toSend);
+            byte[] toSendLenBytes = System.BitConverter.GetBytes(toSendLen);
+            clientSocket.Send(toSendLenBytes);
+            clientSocket.Send(toSendBytes);
+
+            // Receiving
+            byte[] rcvLenBytes = new byte[4];
+            clientSocket.Receive(rcvLenBytes);
+            int rcvLen = System.BitConverter.ToInt32(rcvLenBytes, 0);
+            byte[] rcvBytes = new byte[rcvLen];
+            clientSocket.Receive(rcvBytes);
+            String rcv = System.Text.Encoding.ASCII.GetString(rcvBytes);
+            MessageBox.Show( rcv + " you logged in successfully");
+            Console.WriteLine("Client received: " + rcv);
+
+            clientSocket.Close();
         }
 
     }
