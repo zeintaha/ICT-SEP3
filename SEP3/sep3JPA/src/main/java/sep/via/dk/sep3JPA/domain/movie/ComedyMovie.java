@@ -1,12 +1,9 @@
 package sep.via.dk.sep3JPA.domain.movie;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 @Entity
-public class ComedyMovie extends Movie implements Serializable
+public class ComedyMovie extends Movie 
 {
-	private static final long serialVersionUID = 1L;
 	
 	public ComedyMovie() {
 

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import sep.via.dk.sep3JPA.domain.Message;
-import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 @Transactional
 @Repository

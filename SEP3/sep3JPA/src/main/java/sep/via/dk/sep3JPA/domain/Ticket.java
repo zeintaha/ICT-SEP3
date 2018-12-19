@@ -1,6 +1,5 @@
 package sep.via.dk.sep3JPA.domain;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -18,12 +17,9 @@ import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 @Entity
 @Table(name = "Ticket")
-public class Ticket implements Serializable {
+public class Ticket {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

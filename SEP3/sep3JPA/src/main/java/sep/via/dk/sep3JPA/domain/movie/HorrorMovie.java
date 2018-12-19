@@ -1,12 +1,10 @@
 package sep.via.dk.sep3JPA.domain.movie;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 @Entity
-public class HorrorMovie extends Movie implements Serializable
+public class HorrorMovie extends Movie 
 {
-	private static final long serialVersionUID = 1L;
+
 	
 	public HorrorMovie() {
 

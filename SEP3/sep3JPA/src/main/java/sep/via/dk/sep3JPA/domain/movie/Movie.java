@@ -1,6 +1,6 @@
 package sep.via.dk.sep3JPA.domain.movie;
 
-import java.io.Serializable;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,11 +15,8 @@ import javax.persistence.Table;
 @Table(name = "Movie")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 
-public class Movie implements Serializable {
-	/**
-	* 
-	*/
-	private static final long serialVersionUID = 1L;
+public class Movie{
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "user_id")

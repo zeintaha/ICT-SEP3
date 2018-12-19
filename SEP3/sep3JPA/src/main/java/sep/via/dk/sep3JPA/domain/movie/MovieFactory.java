@@ -1,15 +1,13 @@
 package sep.via.dk.sep3JPA.domain.movie;
 
-import java.io.Serializable;
 
 
 
-public class MovieFactory implements Serializable {
 
-	/**
-	* 
-	*/
-	private static final long serialVersionUID = 1L;
+public class MovieFactory {
+
+	
+
 	public MovieFactory() {
 		
 	}

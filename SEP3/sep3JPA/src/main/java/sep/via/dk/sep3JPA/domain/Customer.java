@@ -1,7 +1,5 @@
 package sep.via.dk.sep3JPA.domain;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,11 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Customer")
-public class Customer implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Customer {
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
