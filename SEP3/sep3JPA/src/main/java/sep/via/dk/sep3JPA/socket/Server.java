@@ -10,6 +10,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
+import org.springframework.stereotype.Component;
+
 public class Server {
 	private ServerSocket serverSocket = null;
 	private Socket socket = null;
