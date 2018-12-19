@@ -22,7 +22,7 @@
 //System.out.println("Connected");
 //isConnected = true;
 //outputStream = new ObjectOutputStream(socket.getOutputStream());
-//FeedBack msg = new FeedBack();
+//
 //System.out.println("Object to be written = " + msg.toString());
 //outputStream.writeObject(msg);
 //
