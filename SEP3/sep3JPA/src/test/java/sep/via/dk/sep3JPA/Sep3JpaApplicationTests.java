@@ -29,7 +29,7 @@ public class Sep3JpaApplicationTests {
 	   
 	  @Test
 	    public void addMovie() throws Exception {
-	        String mockMovieJson = "{\"title\":\"Test movie\",\"description\":\"A test description.\",\"director\":\"fadi\",\"duration\":\"duration test\",\"urlTrailer\":\"urlTrailer test\",\"urlFullMovie\":\"urlFullMovie test\",\"urlImage\":\"urlImage test\",\"category\":\"category test\"}";
+	        String mockMovieJson = "{\"title\":\"A Prayer Before Dawn 2018\",\"description\":\"The true story of Billy Moore, an English boxer incarcerated in Thailand's most notorious prison. Thrown into a world of drugs and violence, he finds his best chance to escape is to fight his way out in Muay Thai tournamen.\",\"director\":\"Jean-Stephane Sauvaire\",\"duration\":\"90 miutes\",\"urlTrailer\":\"https://sep3.blob.core.windows.net/mediacontainer/A%20Prayer%20Before%20Dawn%202018_trailer.mov?st=2018-12-16T22%3A02%3A04Z&se=2117-11-22T22%3A02%3A04Z&sr=c&sp=r&sig=J1BfDJ2DHaIOXGTSRGpOMG8cA8T9R%2F8teezVuMTvjiw%3D&si=tempAccess\",\"urlFullMovie\":\"https://sep3.blob.core.windows.net/mediacontainer/A%20Prayer%20Before%20Dawn%202018.mov?st=2018-12-16T22%3A02%3A04Z&se=2117-11-22T22%3A02%3A04Z&sr=c&sp=r&sig=J1BfDJ2DHaIOXGTSRGpOMG8cA8T9R%2F8teezVuMTvjiw%3D&si=tempAccess\",\"urlImage\":\"https://sep3.blob.core.windows.net/mediacontainer/A%20Prayer%20Before%20Dawn%202018.jpg?st=2018-12-19T04%3A50%3A34Z&se=2117-11-25T04%3A50%3A34Z&sr=c&sp=r&sig=rw41N9QPm6NBRHHcKJ5TqaS%2BedX3bGYqa9EPm8ANYJI%3D&si=tempAccess\",\"category\":\"Drama\"}";
 
 	        //Create a post request with an accept header for application\json
 	        RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -44,8 +44,7 @@ public class Sep3JpaApplicationTests {
 	        //Assert that the return status is CREATED
 	        assertEquals(HttpStatus.CREATED.value(), response.getStatus());
 	        
-	        assertEquals("https://localhost/movie/1",
-	                response.getHeader(HttpHeaders.LOCATION));
+	   
       
 	    }
 	  
