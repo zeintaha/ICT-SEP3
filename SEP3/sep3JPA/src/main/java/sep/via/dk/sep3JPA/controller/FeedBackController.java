@@ -36,5 +36,10 @@ public class FeedBackController {
 		
 		List<FeedBack> list = FeedBackService.getAllFeedBack();
 		return new ResponseEntity<List<FeedBack>>(list, HttpStatus.OK);
+		
+		
+		
+		
+		
 	}
 }
