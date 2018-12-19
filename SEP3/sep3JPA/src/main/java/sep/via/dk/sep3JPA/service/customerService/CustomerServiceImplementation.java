@@ -26,7 +26,7 @@ public class CustomerServiceImplementation implements CustomerService {
 			return false;
 		}
 			
-		if (customerDAO.customerExist(customer.getUsername())&& (checkPayment==true) ) {
+		if (customerDAO.customerExist(customer.getUsername())|| (checkPayment==false) ) {
 			return false;
 		} else {
 			customerDAO.addCustomer(customer);

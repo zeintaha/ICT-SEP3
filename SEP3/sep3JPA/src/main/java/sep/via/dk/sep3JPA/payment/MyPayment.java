@@ -98,7 +98,7 @@ public class MyPayment {
 			PaymentExecution paymentExecution = new PaymentExecution();
 
 			paymentExecution.setPayerId("DUSYFH5YB7NC8");
-
+if(payment1!=null) {
 			Payment payment2 = payment1.execute(apiContext, paymentExecution);
 
 			String str2 = payment2.getState();
@@ -106,7 +106,7 @@ public class MyPayment {
 
 				return str2;
 			}
-
+}
 		} catch (PayPalRESTException e) {
 			System.out.println("payment failed ");
 		}
