@@ -62,35 +62,11 @@ namespace MovieWorld
             }
 
 
-            //var client = new RestClient("https://localhost:8443/sep3");
-
-            //var request = new RestRequest("movies", Method.GET);
-
-            //var list = client.Execute(request).Content;
 
 
-            //List<Movie> mlist = JsonConvert.DeserializeObject<List<Movie>>(list);
-
-            //var from = new List<string>();
-            //var email = new List<string>();
-            //var message = new List<string>();
-
-
-            //foreach (Movie m in mlist)
-
-
-            //{
-
-            //    from.Add(m.title);
-            //    email.Add(m.description);
-            //    message.Add(m.director);
-
-            //}
-
-
-            //_dataArray.Add(from.ToArray());
-            //_dataArray.Add(email.ToArray());
-            //_dataArray.Add(message.ToArray());
+            _dataArray.Add(from.ToArray());
+            _dataArray.Add(email.ToArray());
+            _dataArray.Add(message.ToArray());
 
 
             // Create the output table.
