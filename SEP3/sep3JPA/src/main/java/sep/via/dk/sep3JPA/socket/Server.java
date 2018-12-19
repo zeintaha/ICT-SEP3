@@ -13,14 +13,14 @@ import org.springframework.stereotype.Component;
 
 import sep.via.dk.sep3JPA.dao.MessageDAO;
 
-@Component
+//@Component
 public class Server {
 	private ServerSocket serverSocket = null;
 	private Socket socket = null;
 	private ObjectInputStream inStream = null;
 
-	@Autowired
-	MessageDAO messageDAO;
+//	@Autowired
+//	MessageDAO messageDAO;
 
 	public Server() {
 
@@ -41,8 +41,8 @@ public class Server {
 			byte[] receivedBytes = new byte[len];
 			is.read(receivedBytes, 0, len);
 			String received = new String(receivedBytes, 0, len);
-			Message message = new Message(received);
-			messageDAO.addMessage(message);
+//			Message message = new Message(received);
+//			messageDAO.addMessage(message);
 			System.out.println("Server received: " + received);
 
 			// Sending
