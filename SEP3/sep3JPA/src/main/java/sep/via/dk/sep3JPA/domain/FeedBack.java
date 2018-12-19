@@ -18,8 +18,11 @@ public class FeedBack implements Serializable {
 	@Column(name = "feedBack_id")
 	private Integer id;
 
-	@Column(name = "username", nullable = false)
-	private String username;
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "body")
+	private String body;
 
 	@Column(name = "email", length = 2000)
 	private String email;
@@ -28,10 +31,11 @@ public class FeedBack implements Serializable {
 
 	}
 
-	public FeedBack(Integer id, String username, String email) {
-
+	public FeedBack(Integer id, String name, String body, String email) {
+		super();
 		this.id = id;
-		this.username = username;
+		this.name = name;
+		this.body = body;
 		this.email = email;
 	}
 
@@ -43,12 +47,20 @@ public class FeedBack implements Serializable {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getBody() {
+		return body;
+	}
+
+	public void setBody(String body) {
+		this.body = body;
 	}
 
 	public String getEmail() {
@@ -58,5 +70,7 @@ public class FeedBack implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	
 
 }
