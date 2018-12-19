@@ -11,7 +11,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Message")
-public class Message implements Serializable {
+public class Message {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

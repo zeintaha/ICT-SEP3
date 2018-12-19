@@ -93,19 +93,10 @@ public class MyPayment {
 	}
 
 	public String ExecutePayment() {
-
-//		ExternalContext context = FacesContext.getCurrentInstance().getExternalContext();
-
 		try {
 
-//			Scanner scanner = new Scanner(System.in);
-//			System.out.println("Go to " + href + " to complete transaction.\nPress enter when ready");
-//			Desktop.getDesktop().browse(new URI(href));
-//			scanner.nextLine();
-
 			PaymentExecution paymentExecution = new PaymentExecution();
-//			String payerID = context.getRequestParameterMap().get("PayerID");
-//			paymentExecution.setPayerId(payerID);
+
 			paymentExecution.setPayerId("DUSYFH5YB7NC8");
 
 			Payment payment2 = payment1.execute(apiContext, paymentExecution);
@@ -119,13 +110,6 @@ public class MyPayment {
 		} catch (PayPalRESTException e) {
 			System.out.println("payment failed ");
 		}
-//		catch (IOException e) {
-//			System.out.println("not payed second ");
-//
-//		} catch (URISyntaxException e) {
-//			System.out.println("not payed third ");
-//			e.printStackTrace();
-//		}
 
 		return "no payment";
 
