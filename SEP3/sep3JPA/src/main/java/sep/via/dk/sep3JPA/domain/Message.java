@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "FeedBack")
-public class FeedBack implements Serializable {
+@Table(name = "Message")
+public class Message implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +27,7 @@ public class FeedBack implements Serializable {
 	@Column(name = "email", length = 2000)
 	private String email;
 
-	public FeedBack() {
+	public Message() {
 
 	}     
 	
@@ -38,7 +38,7 @@ public class FeedBack implements Serializable {
 	}
 
 
-	public FeedBack(Integer id, String name, String body, String email) {
+	public Message(Integer id, String name, String body, String email) {
 		super();
 		this.id = id;
 		this.name = name;

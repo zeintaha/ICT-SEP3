@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import sep.via.dk.sep3JPA.dao.feedBack.FeedBackDAO;
-import sep.via.dk.sep3JPA.domain.FeedBack;
+import sep.via.dk.sep3JPA.domain.Message;
 
 @Service
 public class FeedBackServiceImplementation implements FeedBackService {
@@ -14,13 +14,13 @@ public class FeedBackServiceImplementation implements FeedBackService {
 	private FeedBackDAO feedBackDAO;
 
 	@Override
-	public void addFeedBack(FeedBack feedBack) {
+	public void addFeedBack(Message feedBack) {
 		feedBackDAO.addFeedBack(feedBack);
 
 	}
 
 	@Override
-	public List<FeedBack> getAllFeedBack() {
+	public List<Message> getAllFeedBack() {
 		return feedBackDAO.getAllFeedBack();
 	}
 	

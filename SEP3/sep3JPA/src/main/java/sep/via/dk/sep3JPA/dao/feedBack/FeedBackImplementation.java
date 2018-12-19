@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import sep.via.dk.sep3JPA.domain.FeedBack;
+import sep.via.dk.sep3JPA.domain.Message;
 import sep.via.dk.sep3JPA.domain.movie.Movie;
 
 @Transactional
@@ -20,16 +20,16 @@ public class FeedBackImplementation implements FeedBackDAO {
 	public EntityManager entityManager;
 
 	@Override
-	public void addFeedBack(FeedBack feedBack) {
+	public void addFeedBack(Message feedBack) {
 		entityManager.persist(feedBack);
 
 	}
 
 	@Override
-	public List<FeedBack> getAllFeedBack() {
+	public List<Message> getAllFeedBack() {
 		String query = "select m from FeedBack m order by m.username";
 
-		return (List<FeedBack>) entityManager.createQuery(query).getResultList();
+		return (List<Message>) entityManager.createQuery(query).getResultList();
 	}
 
 }
