@@ -3,15 +3,13 @@ package sep.via.dk.sep3JPA.socket;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
 import org.springframework.stereotype.Component;
-
+@Component
 public class Server {
 	private ServerSocket serverSocket = null;
 	private Socket socket = null;

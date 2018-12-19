@@ -20,6 +20,8 @@ public class Sep3JpaApplication {
 
 	public static void main(String[] args) throws AccessException, RemoteException, NotBoundException {
 		 SpringApplication.run(Sep3JpaApplication.class, args);
+		 Server server = new Server();
+			server.communicate();
 		
 	}
 }
