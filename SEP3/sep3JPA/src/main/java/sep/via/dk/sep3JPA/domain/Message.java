@@ -32,10 +32,6 @@ public class Message implements Serializable {
 	}     
 	
 
-	@Override
-	public String toString() {
-		return "FeedBack [id=" + id + ", name=" + name + ", body=" + body + ", email=" + email + "]";
-	}
 
 
 	public Message(Integer id, String name, String body, String email) {
