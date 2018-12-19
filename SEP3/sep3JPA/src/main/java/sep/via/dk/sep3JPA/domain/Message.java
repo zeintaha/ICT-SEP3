@@ -20,7 +20,7 @@ public class Message implements Serializable {
 
 	@Column(name = "name")
 	private String name;
-	
+
 	@Column(name = "body")
 	private String body;
 
@@ -29,10 +29,7 @@ public class Message implements Serializable {
 
 	public Message() {
 
-	}     
-	
-
-
+	}
 
 	public Message(Integer id, String name, String body, String email) {
 		super();
@@ -73,7 +70,5 @@ public class Message implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	
 
 }

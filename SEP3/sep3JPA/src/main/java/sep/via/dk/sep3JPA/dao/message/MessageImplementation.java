@@ -29,7 +29,7 @@ public class MessageImplementation implements MessageDAO {
 
 	@Override
 	public List<Message> getAllMessages() {
-		String query = "select m from FeedBack m order by m.username";
+		String query = "select m from Message m order by m.name";
 
 		return (List<Message>) entityManager.createQuery(query).getResultList();
 	}
