@@ -1,0 +1,40 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IT-DNP1X-A18</title>
+
+
+</head>
+<body id="home" class="no-js">
+    <div id="wrapper">
+        <header id="mainHeader">
+            <a href="/" title="home" class="logo">
+                <!-- I need this div because IE is an affront to mankind-->
+                <div>
+                    <h1>IT-DNP1X-A18</h1>
+                </div>
+            </a>
+            <nav id="siteNav">
+               
+                <ul>
+                    <li><a href="@Url.Action("Index", "Blog")" >Read Blogs</a></li>
+                    <li><a href="@Url.Action("Create", "Blog")">Create a Blog</a></li>
+               
+
+
+                </ul>
+            </nav>
+        </header>
+
+        <div id="contentWrapper">
+            <section id="mainContent">
+                @RenderBody()
+            </section>
+
+        </div>
+
+    </div>
+</body>
+</html>

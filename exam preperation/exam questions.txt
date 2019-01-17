@@ -1,0 +1,76 @@
+
+
+SDJ3
+------
+
+1. Distributed systems 
+Define distributed systems. Explain the different kinds of communicating entities and communication paradigms. Give an overview of different distributed system architectures. 
+[Coulouris et al. chapter 2]
+
+2. Three tier architecture 
+ Explain the three tier architecture. Give examples. 
+[Coulouris et al. 2.3.2]
+[Core J2EE patterns - data access object]
+
+3. Remote invocation/Java-RMI 
+Give an overview of Java-RMI. Describe parameter passing in Java-RMI. Discuss some of the issues with remote invocation including, but not limited to, parameter passing methods.
+[Coulouris et al. chapter 5]
+
+4. Web Services client/server architecture 
+Explain the ideas behind the Web Services client/server architecture. Describe some implementation details and how it works. 
+[Coulouris et al. chapter 9]
+
+5. Specifications of Web Services 
+Explain how service specifications are done in Web Services and the role of WSDL. Give examples. 
+[Coulouris et al. chapter 9]
+
+6. Parameters and parameter passing in Web Services 
+Explain how parameters are handled in Web Services and give examples of the implementation in Java.
+[Coulouris et al. chapter 9]
+
+7. Indirect Communication
+Explain how indirect communication is accomplished through techniques like group communication, publish-subscribe systems, message queues, and shared memory approaches.
+[Coulouris et al. chapter 6]
+
+8. SOAP and REST 
+Compare SOAP web services and RESTful web services. Describe the methods used in RESTful webservices and the common data formats. 
+[Coulouris et al. chapter 9] 
+[M. Vaqqas, RESTful web services, Dr.Dobb's, September 2014]
+
+9. Peer-to-peer Systems
+Describe peer-to-peer systems. Discuss some of the design issues in peer-to-peer systems.
+[Coulouris et al. chapter 10]
+
+10. Transactions
+Describe local and distributed ACID transactions Discuss some of the methods used in local and distributed transactions.
+[Coulouris et al. 16.1 – 16.2, 16.4 – 16.5, 17.2, 17.3.1]
+
+
+
+
+DNP1:
+-----
+1. C# language features
+	a. Properties, indexers
+	b. Extension methods
+	c. Delegates
+
+2. Consuming web services
+	a. Creating a REST client
+	b. Asynchronous programming
+	c. Web APIs
+3. Exposing web services
+	a. Web API design
+	b. Implementing Web APIs in ASP.NET Core
+
+4. Data access
+	a. Entity Framework Core
+	b. LINQ
+5. Web applications
+	a. ASP.NET Core MVC
+	b. Razor Syntax
+	c. Razor Pages
+6. Security
+	a. Common software vulnerabilities
+	b. Authentication in ASP.NET Core
+	c. Authorization in ASP.NET Core

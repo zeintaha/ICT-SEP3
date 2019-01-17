@@ -1,0 +1,26 @@
+﻿<h2>Home Page</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div>
+        <p>Hello, @User.Identity.Name</p>
+        <p>
+            <a asp-action="Manage">Manage your account</a>
+
+        </p>
+        <form method="post" asp-action="logout">
+            <button type="submit">log out</button>
+        </form>
+    </div>
+}
+else
+{
+    <div>
+        <p>Enter your name to log-in</p>
+        <form method="post" asp-action="login">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+}

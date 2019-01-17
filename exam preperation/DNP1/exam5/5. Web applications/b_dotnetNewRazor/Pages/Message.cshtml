@@ -1,0 +1,18 @@
+﻿@page
+@model dotnetNewRazor.Pages.MessageModel
+@{
+    ViewData["Title"] = "Message";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    var message = new MessageModel();
+    message.OnGet();
+    var msg = message._message;
+    var arrgMethod = message.arrgMethod("this is returend from method which has a string argument");
+
+
+}
+
+<h2>Message</h2>
+
+<p>@msg</p>
+<p>@arrgMethod</p>
+

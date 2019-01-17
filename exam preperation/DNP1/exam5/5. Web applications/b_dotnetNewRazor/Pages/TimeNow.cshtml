@@ -1,0 +1,34 @@
+﻿@page
+@model dotnetNewRazor.Pages.TimeNowModel
+@{
+    ViewData["Title"] = "TimeNow";
+    Layout = "~/Pages/Shared/_MyCustomizedLayout.cshtml";
+}
+
+@{
+    var greeting = "Welcome to our site!";
+    var weekDay = DateTime.Now.TimeOfDay;
+    var greetingMessage = greeting + " Here in Horsens it is: " + weekDay;
+}
+
+<p>The greeting is: @greetingMessage</p>
+
+
+
+<p> this string is from viewData: @ViewData["MyString"]</p>
+
+
+<p>this Number is from viewData:  @ViewData["MyNumber"]</p>
+
+@{
+    var book = (Book)ViewData["MyObject"];
+}
+<h2>this Book is an object from viewData:  @ViewData["MyObject"]</h2>
+<p>@book.Title</p>
+<p>@book.Author</p>
+<p>@book.Price</p>
+
+
+<h2>TimeNow</h2>
+
+

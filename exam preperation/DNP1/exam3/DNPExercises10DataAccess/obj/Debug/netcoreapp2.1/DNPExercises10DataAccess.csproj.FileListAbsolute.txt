@@ -1,0 +1,28 @@
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.deps.json
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.runtimeconfig.json
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.runtimeconfig.dev.json
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.dll
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.csprojAssemblyReference.cache
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.RazorAssemblyInfo.cache
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.RazorAssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.AssemblyInfoInputs.cache
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.AssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.RazorTargetAssemblyInfo.cache
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.pdb
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.dll
+C:\Users\zeint\Desktop\exam preperation\c#\4. Data access\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.pdb
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.deps.json
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.runtimeconfig.json
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.runtimeconfig.dev.json
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.dll
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\bin\Debug\netcoreapp2.1\DNPExercises10DataAccess.pdb
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.csprojAssemblyReference.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.RazorAssemblyInfo.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.RazorAssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.AssemblyInfoInputs.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.AssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.RazorTargetAssemblyInfo.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.dll
+C:\Users\zeint\Desktop\exam preperation\exam\exam3\DNPExercises10DataAccess\obj\Debug\netcoreapp2.1\DNPExercises10DataAccess.pdb

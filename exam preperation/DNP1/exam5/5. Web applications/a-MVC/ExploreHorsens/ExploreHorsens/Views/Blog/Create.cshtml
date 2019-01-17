@@ -1,0 +1,34 @@
+﻿@model ExploreHorsens.Models.Post
+@{  
+    Layout = "_Layout";
+}
+
+<h1>Create Blog Post</h1>
+
+<fieldset>
+
+    <form method="post" asp-action="create" asp-controller="blog" >
+        @Html.ValidationSummary()
+        <p>
+
+
+            <input type="text" name="Title" placeholder="Blog post title">
+            @Html.ValidationMessageFor(x => x.Title)
+        </p>
+
+        <p>
+            <textarea rows="4" name="Body" placeholder="Blog post content"></textarea>
+            @Html.ValidationMessageFor(x => x.Body)
+        </p>
+
+        <p>
+            <button type="submit">Create Post</button>
+        </p>
+    </form>
+
+
+
+
+
+
+</fieldset>

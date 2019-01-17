@@ -1,0 +1,57 @@
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.deps.json
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.runtimeconfig.json
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.runtimeconfig.dev.json
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.dll
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.pdb
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.Views.dll
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.Views.pdb
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.csproj.CoreCompileInputs.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorAssemblyInfo.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorAssemblyInfo.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.AssemblyInfoInputs.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.AssemblyInfo.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.TagHelpers.input.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.TagHelpers.output.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorCoreGenerate.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Blog\index.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Default\index.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorTargetAssemblyInfo.cache
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorTargetAssemblyInfo.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.Views.pdb
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.dll
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.pdb
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.csproj.CopyComplete
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Post.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Post.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Create.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\zeint\source\repos\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.deps.json
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.runtimeconfig.json
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.runtimeconfig.dev.json
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.dll
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.pdb
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.Views.dll
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\bin\Debug\netcoreapp2.1\ExploreHorsens.Views.pdb
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.csprojAssemblyReference.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.csproj.CoreCompileInputs.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorAssemblyInfo.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorAssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.AssemblyInfoInputs.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.AssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.TagHelpers.input.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.TagHelpers.output.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorCoreGenerate.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Create.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Index.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Post.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Default\index.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Post.g.cshtml.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorTargetAssemblyInfo.cache
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.RazorTargetAssemblyInfo.cs
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.Views.pdb
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.dll
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.pdb
+C:\Users\zeint\Desktop\exam preperation\exam\exam5\5. Web applications\a-MVC\ExploreHorsens\ExploreHorsens\obj\Debug\netcoreapp2.1\ExploreHorsens.csproj.CopyComplete
