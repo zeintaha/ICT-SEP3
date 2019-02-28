@@ -96,3 +96,5 @@ C:\Users\fadid\OneDrive\Dokumenter\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\ob
 C:\Users\fadid\OneDrive\Dokumenter\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.csproj.CopyComplete
 C:\Users\fadid\OneDrive\Dokumenter\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.exe
 C:\Users\fadid\OneDrive\Dokumenter\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.pdb
+C:\Users\Taha\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.exe
+C:\Users\Taha\Documents\GitHub\ICT-SEP3\SEP3\MovieWorld\MovieWorld\obj\Debug\MovieWorld.pdb
