@@ -1,0 +1,5 @@
+1-instal sts-spring IDE optional
+2-instal maven
+3-download the sql jarfile
+4-add it to maven
+mvn install:install-file -Dfile=C:\Users\Taha\Documents\GitHub\ICT-SEP3\SEP3\sqljdbc4-chs-4.0.2206.100.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar
